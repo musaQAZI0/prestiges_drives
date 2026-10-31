@@ -22,7 +22,7 @@ export default function HeroBanner({
   image,
   primaryLabel = 'Explore Fleet',
   primaryHref = '/fleet',
-  secondaryLabel = 'Make an Enquiry',
+  secondaryLabel = 'Get a quote',
   secondaryHref = '/contact',
   compact = false,
   home = false
@@ -39,7 +39,7 @@ export default function HeroBanner({
         </div>
       </div>
       <div className="heroMobileVisual" aria-hidden="true"><Image src={image} alt="" fill sizes="(max-width: 600px) 100vw, 1px" /></div>
-      {home && <div className="container heroHighlights" aria-label="Explore Prestige Drives"><span>Explore SUVs &amp; sedans</span><span>Plan your journey</span><span>Request a tailored quote</span></div>}
+      {home && <div className="container heroHighlights" aria-label="Explore Prestige Drives"><span>Explore SUVs &amp; sedans</span><span>Plan your journey</span><span>Get a quote</span></div>}
     </section>
   );
 }
