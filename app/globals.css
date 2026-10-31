@@ -82,8 +82,8 @@
 @media(prefers-reduced-motion:reduce){.vehicleCard{animation:none;transition:none}.vehicleCard:hover,.vehicleCard:focus-within{transform:none}.vehicleImage,.vehicleImageArrow,.vehicleDetailsLink span,.vehicleEnquiryLink span{transition:none}}
 
 /* Keep the logo fully inside the navigation at every scroll position. */
-.siteHeader{background:rgba(12,13,15,.72);backdrop-filter:blur(14px);transition:background .25s ease,box-shadow .25s ease}
-.siteHeader.isScrolled,.siteHeader.menuOpen{background:rgba(12,13,15,.96)}
+.siteHeader{background:#000;backdrop-filter:none;transition:background .25s ease,box-shadow .25s ease}
+.siteHeader.isScrolled,.siteHeader.menuOpen{background:#000;backdrop-filter:none}
 .navWrap{min-height:82px}
 .brandMark{flex:0 0 180px;width:180px;height:82px;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .brandMark img,.siteHeader.isScrolled .brandMark img,.siteHeader.menuOpen .brandMark img{position:static;display:block;width:180px;height:auto;max-height:76px;object-fit:contain;transition:none}
@@ -235,3 +235,6 @@
 @media(max-width:800px){.collectionHeading{gap:30px;grid-template-columns:1fr 1fr}.collectionComposition{grid-template-columns:1fr 1fr}.collectionLead{grid-column:1/-1;grid-row:auto}.collectionLead .collectionVisual{aspect-ratio:16/9}.collectionVisual{aspect-ratio:3/2}.servicesComposition{grid-template-columns:1fr 1fr;grid-template-rows:auto}.serviceStoryLead{grid-column:1/-1;grid-row:auto;min-height:480px}.serviceStory:not(.serviceStoryLead) .serviceStoryVisual{min-height:220px}.collectionCaption h3{font-size:26px}}
 @media(max-width:600px){.collectionHeading{grid-template-columns:1fr;gap:22px;margin-bottom:30px}.collectionHeading h2,.servicesHeading h2{font-size:48px}.collectionHeading p{font-size:14px}.collectionComposition{grid-template-columns:1fr;gap:30px}.collectionLead{grid-column:auto}.collectionLead .collectionVisual,.collectionVisual{aspect-ratio:3/2}.collectionLead .collectionCaption h3,.collectionCaption h3{font-size:30px}.collectionCaption{padding-top:14px;margin-top:10px}.servicesHeading{margin-bottom:30px}.servicesHeading .textLink{position:static;display:inline-block;margin-top:24px}.servicesComposition{grid-template-columns:1fr;gap:22px}.serviceStoryLead{grid-column:auto;min-height:460px}.serviceStoryLead .serviceStoryCopy{padding:26px}.serviceStoryLead h3{font-size:42px}.serviceStory:not(.serviceStoryLead) .serviceStoryVisual{min-height:0;aspect-ratio:16/9}.serviceStoryCopy{padding:25px}.serviceStoryCopy h3{font-size:34px}.serviceStoryCopy p{font-size:14px}}
 @media(prefers-reduced-motion:reduce){.collectionVisual img,.serviceStoryVisual img{transition:none}.collectionVisual:hover img,.serviceStory:hover .serviceStoryVisual img{transform:none}}
+
+/* Expanded fleet categories and reference pricing. */
+.fleetPage .filterBar{flex-wrap:wrap}.referenceRateNote{display:block;font-size:11px;color:#6d685f;margin-top:5px}.vehiclePlaceholder{height:100%;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:24px;text-align:center;background:linear-gradient(145deg,#f5f1e9,#e6dfd2);color:#77501e}.vehiclePlaceholder>span{font-size:10px;letter-spacing:.2em;text-transform:uppercase}.vehiclePlaceholder strong{font-family:Georgia,serif;font-size:26px;line-height:1.2;font-weight:400}.vehiclePlaceholder small{font-size:12px;color:#686057}.vehiclePlaceholderDetail{min-height:360px}.rateSource{font-size:12px!important}.rateSource a{text-decoration:underline}
