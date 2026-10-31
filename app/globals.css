@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{--gold:#b88a45;--champagne:#e1c38c;--bronze:#77501e;--ink:#17191b;--charcoal:#242629;--ivory:#f8f5ef;--stone:#e8e3da;--white:#fff;--max:1280px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--white);color:var(--ink);font-family:Inter,Arial,sans-serif;font-size:16px;line-height:1.6}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button{cursor:pointer}img{max-width:100%}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1}h1{font-size:clamp(3.5rem,7vw,6.8rem)}h2{font-size:clamp(2.7rem,5vw,4.25rem)}h3{font-size:2rem}p{line-height:1.75}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:3px}.container{width:min(var(--max),calc(100% - 64px));margin-inline:auto}.eyebrow{display:inline-block;color:var(--champagne);font-size:12px;font-weight:700;letter-spacing:.23em;text-transform:uppercase}.eyebrow.dark{color:var(--bronze)}.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:8px;border:1px solid transparent;font-size:14px;font-weight:700;letter-spacing:.02em;transition:background .2s,transform .2s}.btn:hover{transform:translateY(-2px)}.btnPrimary{background:var(--gold);color:#fff}.btnPrimary:hover{background:var(--bronze)}.btnGhost,.btnGoldOutline{border-color:var(--champagne);color:#fff;background:rgba(23,25,27,.28)}.btnGhost:hover,.btnGoldOutline:hover{background:rgba(225,195,140,.18)}.btnDark{background:var(--ink);color:#fff}.btnOutline{border-color:var(--ink);background:#fff;color:var(--ink)}.textLink{font-size:14px;font-weight:700;color:var(--bronze);border-bottom:1px solid var(--gold);padding-bottom:3px;white-space:nowrap}.textLink:hover{color:var(--ink)}
+.siteHeader{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--stone);backdrop-filter:blur(12px)}.navWrap{min-height:92px;display:flex;align-items:center;gap:32px}.brandMark{flex:0 0 auto;display:flex;align-items:center}.brandMark img{display:block;width:205px;height:auto}.siteNav{display:flex;align-items:center;gap:30px;margin-left:auto}.siteNav a{font-size:13px;font-weight:600;letter-spacing:.05em;text-transform:uppercase}.siteNav a:hover,.siteNav a[aria-current=page]{color:var(--bronze)}.headerCta{font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border-bottom:1px solid var(--gold);white-space:nowrap}.menuToggle{display:none;background:transparent;border:0;padding:10px;width:44px;height:44px}.menuToggle span{display:block;height:2px;background:var(--ink);margin:5px 0}
+.hero{min-height:650px;display:flex;align-items:center;background-size:cover;background-position:center}.heroCompact{min-height:490px}.heroContent{padding-block:90px;max-width:1280px}.heroContent>*{max-width:650px}.hero h1{margin:20px 0 24px;color:#fff;letter-spacing:-.045em}.hero p{font-size:clamp(17px,2vw,20px);color:#f3eee4;max-width:570px;margin-bottom:32px}.heroActions{display:flex;flex-wrap:wrap;gap:12px}.heroCompact h1{font-size:clamp(3.4rem,6vw,5.7rem)}
+.searchOverlap{position:relative;z-index:2;margin-top:-62px}.searchModule{background:var(--ivory);border:1px solid var(--stone);padding:32px 36px;box-shadow:0 15px 40px rgba(23,25,27,.08)}.searchIntro{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}.searchIntro h2{font-size:35px;margin:0}.searchIntro p{margin:0;color:#5a5c5d;font-size:14px}.searchFields{display:grid;grid-template-columns:1.1fr 1.2fr 1fr 1fr auto;align-items:end;gap:12px;margin-top:22px}.searchFields label,.enquiryForm label{display:grid;gap:7px;color:var(--ink);font-size:12px;font-weight:700;letter-spacing:.03em}.searchFields input,.searchFields select,.enquiryForm input,.enquiryForm select,.enquiryForm textarea{width:100%;min-height:48px;border:1px solid #cfc9be;border-radius:6px;background:#fff;padding:10px 12px;color:var(--ink);font-size:14px;font-weight:400}.searchFields .btn{white-space:nowrap}
+.section{padding:100px 0}.fleetSection{background:#fff}.sectionHeading{max-width:760px;margin-bottom:36px}.sectionHeading .eyebrow{margin-bottom:17px}.sectionHeading h2{margin-bottom:14px;letter-spacing:-.025em}.sectionHeading p{color:#626568;font-size:17px;max-width:650px}.sectionTop{display:flex;align-items:end;justify-content:space-between;gap:20px}.sectionTop>.textLink{margin-bottom:40px}.vehicleGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.vehicleCard{border:1px solid var(--stone);border-radius:12px;overflow:hidden;background:#fff}.vehicleImageWrap{display:block;aspect-ratio:4/3;background:#efebe4;overflow:hidden}.vehicleImage{width:100%;height:100%;object-fit:cover;transition:transform .4s}.vehicleCard:hover .vehicleImage{transform:scale(1.035)}.vehicleCardBody{padding:24px}.vehicleCardBody h3{margin:9px 0 8px;font-size:31px}.vehicleCardBody p{font-size:14px;color:#64686b;margin:0 0 22px}.cardActions{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px solid var(--stone);padding-top:17px}.cardActions .textLink{font-size:12px}.filterBar{display:flex;align-items:center;gap:8px;margin-bottom:24px}.filter{background:#fff;color:var(--ink);border:1px solid var(--stone);border-radius:6px;min-height:44px;padding:8px 20px;font-size:13px;font-weight:700}.filter:hover,.filter.active{background:var(--ink);color:#fff;border-color:var(--ink)}.resultCount{margin-left:auto;color:#696b6b;font-size:13px}.searchNotice{display:grid;gap:3px;background:var(--ivory);padding:17px 20px;border-left:3px solid var(--gold);margin-bottom:26px;font-size:14px}.searchNotice small{color:#696b6b}
+.darkEditorial{background:var(--ink);color:#fff}.editorialGrid{display:grid;grid-template-columns:1fr 1fr;gap:12%;align-items:center}.editorialGrid h2{margin:18px 0 20px}.editorialGrid p{color:#d1cfca}.editorialGrid .btn{margin-top:14px}.editorialSteps>div{display:grid;grid-template-columns:48px 1fr;column-gap:22px;padding:23px 0;border-bottom:1px solid rgba(255,255,255,.2)}.editorialSteps>div:first-child{border-top:1px solid rgba(255,255,255,.2)}.editorialSteps span{grid-row:span 2;color:var(--champagne);font-family:Georgia,serif;font-size:22px}.editorialSteps h3{font-size:28px;margin:0 0 4px}.editorialSteps p{margin:0;font-size:14px}.ivorySection{background:var(--ivory)}.serviceGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.serviceGrid.twoByTwo{grid-template-columns:repeat(2,1fr)}.serviceTile{display:block;min-height:280px;padding:30px;background:#fff;border:1px solid var(--stone);border-radius:12px}.serviceTile>span{font-size:12px;color:var(--bronze);font-weight:700;letter-spacing:.15em;text-transform:uppercase}.serviceTile h3{font-size:34px;margin:43px 0 12px}.serviceTile p{color:#686b6c;font-size:14px}.serviceTile b{font-size:13px;color:var(--bronze)}.closingCta{text-align:center;padding:90px 0;background:var(--charcoal);color:#fff}.closingCta h2{margin:15px 0 26px}
+.vehicleDetailIntro{padding:55px 0 44px;background:var(--ivory)}.backLink{display:block;width:max-content;margin-bottom:38px;color:var(--bronze);font-size:13px;font-weight:700}.vehicleDetailIntro h1{margin:14px 0;font-size:clamp(3.5rem,6vw,6rem)}.vehicleDetailIntro p{max-width:590px;margin:0;color:#626568}.detailGallery{display:grid;grid-template-columns:2fr 1fr;gap:14px;padding-top:28px}.detailMainImage{grid-row:span 2}.detailGallery>div{overflow:hidden;border-radius:10px;background:var(--stone);min-height:210px}.detailGallery img{display:block;width:100%;height:100%;object-fit:cover}.detailGallery:has(.detailMainImage:only-child){grid-template-columns:1fr}.detailGrid{display:grid;grid-template-columns:1.6fr 1fr;gap:12%;align-items:start}.detailGrid h2{margin:15px 0}.detailGrid p{color:#626568}.detailFacts{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;margin-top:36px}.detailFacts>div{border-top:1px solid var(--stone);padding:16px 0}.detailFacts small{display:block;color:#686b6c}.detailFacts strong{font-size:14px}.detailAside{background:var(--ivory);border:1px solid var(--stone);border-radius:12px;padding:34px}.detailAside h3{margin:17px 0;font-size:36px}.detailAside .btn{margin-top:14px}
+.contactGrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:8%;align-items:start}.contactNote{display:flex;gap:20px;align-items:start;padding:20px 0;border-top:1px solid var(--stone)}.contactNote span{color:var(--bronze);font-family:Georgia,serif;font-size:22px}.contactNote p{color:#656667;margin:0}.enquiryShell{background:#fff;border:1px solid var(--stone);padding:32px;border-radius:12px}.enquiryForm{display:grid;gap:20px}.formGrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.enquiryForm textarea{resize:vertical}.formHint{margin:0;color:#626568;font-size:13px}.enquiryForm>.btn{justify-self:start}.preparedMessage{margin-top:30px;border-top:1px solid var(--stone);padding-top:25px}.preparedMessage h3{margin:0 0 8px}.preparedMessage>p,.preparedMessage small{color:#626568;font-size:14px}.preparedMessage textarea{width:100%;padding:15px;border:1px solid var(--stone);background:var(--ivory);font:13px/1.6 monospace;resize:vertical}.preparedActions{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}.aboutGrid{display:grid;grid-template-columns:1fr 1fr;gap:10%}.aboutGrid h2{margin:18px 0}.aboutGrid p{font-size:18px;color:#5d6060}
+.footer{background:var(--ink);color:#fff;padding-top:70px}.footerGrid{display:grid;grid-template-columns:1.5fr .65fr 1fr;gap:12%;padding-bottom:60px}.footerLogo{display:block;width:230px;background:#fff;padding:5px}.footerLogo img{display:block;width:100%;height:auto}.footerIntro p{max-width:330px}.footer p,.footer li{font-size:14px;color:#c7c7c4}.footer h4{font-family:Inter,Arial,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.2em;color:var(--champagne);margin:0 0 23px}.footer ul{list-style:none;padding:0;margin:0}.footer li{margin:0 0 10px}.footer a:hover{color:var(--champagne)}.footerEnquire{font-size:14px;font-weight:700;border-bottom:1px solid var(--champagne);padding-bottom:4px}.footerBottom{display:flex;justify-content:space-between;gap:20px;padding:22px 0;border-top:1px solid #454749;color:#a9a9a6;font-size:12px}
+@media(max-width:1100px){.siteNav{gap:16px}.brandMark img{width:175px}.searchFields{grid-template-columns:repeat(2,1fr)}.searchFields .btn{grid-column:span 2}.cardActions .textLink{white-space:normal}.vehicleGrid{gap:14px}}
+@media(max-width:800px){.container{width:min(var(--max),calc(100% - 36px))}.navWrap{min-height:75px}.siteNav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;padding:15px 18px 22px;border-bottom:1px solid var(--stone);box-shadow:0 16px 25px rgba(0,0,0,.08)}.siteNav.isOpen{display:grid;gap:0}.siteNav a{padding:12px}.headerCta{margin-left:auto}.menuToggle{display:block}.hero{min-height:620px;background-position:58% center}.heroCompact{min-height:460px}.heroContent{padding-block:70px}.hero h1{font-size:clamp(3.7rem,10vw,5.6rem)}.section{padding:72px 0}.vehicleGrid{grid-template-columns:repeat(2,1fr)}.editorialGrid,.contactGrid,.aboutGrid,.detailGrid{grid-template-columns:1fr;gap:42px}.serviceGrid{grid-template-columns:1fr}.footerGrid{gap:40px;grid-template-columns:1.3fr 1fr}.footerGrid>div:last-child{grid-column:1/-1}.detailGallery{grid-template-columns:1fr 1fr}.detailMainImage{grid-column:1/-1;grid-row:auto}}
+@media(max-width:600px){.brandMark img{width:135px}.headerCta{font-size:11px}.hero{min-height:590px;background-position:62% center}.heroCompact{min-height:410px}.heroContent{padding-block:55px}.hero h1,.heroCompact h1{font-size:clamp(3.25rem,14vw,4.4rem)}.hero p{font-size:16px}.heroActions{gap:9px}.heroActions .btn{font-size:12px;padding-inline:14px}.searchOverlap{margin-top:0;width:100%}.searchModule{padding:28px 18px;box-shadow:none}.searchIntro{display:block}.searchIntro h2{margin:8px 0}.searchFields,.vehicleGrid,.serviceGrid.twoByTwo,.formGrid,.footerGrid,.detailFacts{grid-template-columns:1fr}.searchFields .btn{grid-column:auto}.sectionTop{display:block}.sectionTop>.textLink{display:inline-block;margin:-10px 0 28px}.vehicleCardBody{padding:20px}.editorialSteps{margin-top:22px}.serviceTile{min-height:230px}.serviceTile h3{margin-top:26px}.detailGallery{grid-template-columns:1fr}.detailMainImage{grid-column:auto}.detailGallery>div{min-height:220px}.detailAside,.enquiryShell{padding:23px}.footerGrid>div:last-child{grid-column:auto}.footerBottom{display:block}.footerBottom span{display:block;margin-bottom:5px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+/* The navigation sits inside the hero artwork, then becomes a dark bar on scroll. */
+.siteHeader{position:fixed;top:0;left:0;right:0;background:transparent;border:0;backdrop-filter:none;transition:background .25s,box-shadow .25s}
+.siteHeader.isScrolled,.siteHeader.menuOpen{background:rgba(14,15,17,.96);box-shadow:0 8px 28px rgba(0,0,0,.16);backdrop-filter:blur(12px)}
+.navWrap{min-height:76px;gap:32px}
+.brandMark{position:relative;width:230px;height:76px;overflow:visible;align-items:flex-start}
+.brandMark img{position:relative;top:16px;width:230px;height:103px;object-fit:contain;filter:none;mix-blend-mode:normal}
+.siteHeader.isScrolled .brandMark img,.siteHeader.menuOpen .brandMark img{top:0;width:165px;height:74px}
+.footerLogo{background:transparent;padding:0}
+.siteNav{gap:38px}.siteNav a{color:#f5f1ea;font-size:13px;font-weight:500;letter-spacing:.08em;padding:9px 0;border-bottom:1px solid transparent}
+.siteNav a:hover,.siteNav a[aria-current=page]{color:var(--champagne);border-color:var(--champagne)}
+.headerCta{border:1px solid var(--champagne);border-radius:8px;padding:13px 18px;color:var(--champagne);font-weight:600;letter-spacing:.07em}
+.headerCta span{font-size:19px;margin-left:14px;line-height:0;vertical-align:-1px}
+.headerCta:hover{background:rgba(225,195,140,.15)}
+.menuToggle span{background:#fff}
+.hero{padding-top:76px}
+.heroHome{min-height:min(940px,100svh);min-height:max(730px,100svh);display:flex;flex-direction:column;align-items:stretch;justify-content:center;background-position:center center}
+.heroHome .heroContent{flex:1;display:flex;flex-direction:column;justify-content:center;padding-top:0;padding-bottom:20px;transform:translateY(-28px)}
+.heroHome .eyebrow{color:#fff;letter-spacing:.36em}
+.heroHome h1{max-width:740px;font-size:clamp(4.6rem,7.2vw,7.7rem);line-height:.87;margin:20px 0 28px}
+.heroHome h1 em{font-style:normal;color:var(--champagne)}
+.heroHome p{max-width:520px;font-size:20px;line-height:1.65}
+.heroHome .heroActions .btn{min-height:62px;padding:15px 26px;font-size:16px;font-weight:600;gap:25px}
+.heroHome .btnPrimary{color:#161719;background:linear-gradient(180deg,#f4cf85,#c9964b)}
+.heroHome .btnGhost{border-color:var(--champagne);background:rgba(0,0,0,.34)}
+.heroHighlights{display:flex;align-items:center;gap:0;padding-top:20px;padding-bottom:42px;color:#fff;font-size:13px;letter-spacing:.04em}
+.heroHighlights span{padding:0 30px;border-right:1px solid rgba(255,255,255,.38)}
+.heroHighlights span:first-child{padding-left:0}.heroHighlights span:last-child{border:0}
+@media(max-width:1100px){.navWrap{gap:20px}.siteNav{gap:18px}.brandMark{width:195px}.brandMark img{width:195px;height:87px}.headerCta{padding:10px 12px;font-size:11px}.headerCta span{margin-left:7px}}
+@media(max-width:800px){.navWrap{min-height:66px}.brandMark{width:165px;height:66px}.brandMark img{width:165px;height:74px;top:12px}.siteNav{background:#151618;border-color:#414141}.siteNav a{color:#fff;padding:12px}.menuToggle{margin-left:0}.hero{padding-top:66px}.heroHome{min-height:740px;background-position:58% center}.heroHome .heroContent{padding-top:0;transform:translateY(-20px)}.heroHome h1{font-size:clamp(4.5rem,10vw,6.5rem)}.heroHighlights{padding-bottom:25px}}
+@media(max-width:600px){.navWrap{min-height:56px;gap:8px}.brandMark{width:135px;height:56px}.brandMark img{width:135px;height:60px;top:8px}.siteHeader.isScrolled .brandMark img,.siteHeader.menuOpen .brandMark img{width:120px;height:54px}.headerCta{font-size:0;min-width:44px;min-height:44px;padding:9px 10px}.headerCta span{font-size:22px;margin:0}.hero{padding-top:56px}.heroHome{min-height:690px;background-position:62% center}.heroHome .heroContent{padding-top:0;transform:translateY(-8px)}.heroHome .eyebrow{letter-spacing:.2em;font-size:10px}.heroHome h1{font-size:clamp(3.4rem,12.5vw,5rem);line-height:.93}.heroHome p{font-size:16px;max-width:370px}.heroHome .heroActions .btn{min-height:50px;font-size:12px;gap:8px;padding:10px 13px}.heroHighlights{flex-wrap:wrap;gap:8px 0;font-size:10px}.heroHighlights span{padding:0 9px}.heroHighlights span:first-child{padding-left:0}}
+
+/* Fleet card redesign */
+.vehicleGrid{gap:28px}
+.vehicleCard{position:relative;display:flex;flex-direction:column;overflow:hidden;border:1px solid #e8e2d8;border-radius:16px;background:#fff;box-shadow:0 8px 28px rgba(26,24,20,.045);animation:vehicleCardEnter .65s both;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.vehicleGrid .vehicleCard:nth-child(2){animation-delay:.09s}
+.vehicleGrid .vehicleCard:nth-child(3){animation-delay:.18s}
+.vehicleGrid .vehicleCard:nth-child(3n + 4){animation-delay:.09s}
+.vehicleGrid .vehicleCard:nth-child(3n + 5){animation-delay:.18s}
+.vehicleCard:hover,.vehicleCard:focus-within{transform:translateY(-7px);border-color:#d6c7ad;box-shadow:0 22px 46px rgba(36,30,21,.13)}
+.vehicleImageWrap{position:relative;aspect-ratio:1.35;background:#ece9e3;isolation:isolate}
+.vehicleImageWrap::after{content:'';position:absolute;inset:55% 0 0;background:linear-gradient(transparent,rgba(11,13,14,.2));pointer-events:none}
+.vehicleImage{display:block;transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .5s ease}
+.vehicleCard:hover .vehicleImage,.vehicleCard:focus-within .vehicleImage{transform:scale(1.075);filter:saturate(1.08)}
+.vehicleCategory{position:absolute;z-index:1;top:18px;left:18px;padding:8px 12px;border:1px solid rgba(255,255,255,.78);border-radius:3px;background:rgba(22,24,25,.68);backdrop-filter:blur(9px);color:#fff;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.vehicleImageArrow{position:absolute;z-index:1;right:18px;bottom:18px;display:grid;place-items:center;width:42px;height:42px;border:1px solid rgba(255,255,255,.72);border-radius:50%;background:rgba(255,255,255,.9);color:#252321;font-size:20px;line-height:1;transition:transform .3s ease,background .3s ease,color .3s ease}
+.vehicleCard:hover .vehicleImageArrow,.vehicleCard:focus-within .vehicleImageArrow{transform:rotate(45deg);background:var(--gold);color:#fff}
+.vehicleCardBody{display:flex;flex:1;flex-direction:column;padding:25px 27px 26px}
+.vehicleCardKicker{color:#9a794a;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.vehicleCardKicker span{margin:0 5px;color:#bcb6aa}
+.vehicleCardBody h3{margin:11px 0 8px;font-size:clamp(29px,2.5vw,36px);line-height:1.05;letter-spacing:-.025em}
+.vehicleCardBody h3 a{transition:color .25s ease}
+.vehicleCardBody h3 a:hover{color:var(--bronze)}
+.vehicleCardBody p{margin:0 0 24px;color:#74736f;font-size:13px;line-height:1.55}
+.cardActions{margin-top:auto;gap:14px;padding-top:18px;border-color:#eee9e0}
+.vehicleDetailsLink,.vehicleEnquiryLink{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.025em;transition:color .25s ease}
+.vehicleDetailsLink{color:#232426}
+.vehicleEnquiryLink{color:var(--bronze)}
+.vehicleDetailsLink span,.vehicleEnquiryLink span{display:inline-block;font-size:17px;font-weight:400;line-height:1;transition:transform .25s ease}
+.vehicleDetailsLink:hover,.vehicleEnquiryLink:hover{color:var(--gold)}
+.vehicleDetailsLink:hover span{transform:translate(2px,-2px)}
+.vehicleEnquiryLink:hover span{transform:translateX(3px)}
+@keyframes vehicleCardEnter{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1100px){.vehicleGrid{gap:18px}.vehicleCardBody{padding:22px}.cardActions{align-items:flex-start}}
+@media(max-width:600px){.vehicleGrid{gap:22px}.vehicleCardBody{padding:22px}.vehicleCardBody h3{font-size:32px}}
+@media(prefers-reduced-motion:reduce){.vehicleCard{animation:none;transition:none}.vehicleCard:hover,.vehicleCard:focus-within{transform:none}.vehicleImage,.vehicleImageArrow,.vehicleDetailsLink span,.vehicleEnquiryLink span{transition:none}}
+
+/* Keep the logo fully inside the navigation at every scroll position. */
+.siteHeader{background:rgba(12,13,15,.72);backdrop-filter:blur(14px);transition:background .25s ease,box-shadow .25s ease}
+.siteHeader.isScrolled,.siteHeader.menuOpen{background:rgba(12,13,15,.96)}
+.navWrap{min-height:82px}
+.brandMark{flex:0 0 180px;width:180px;height:82px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.brandMark img,.siteHeader.isScrolled .brandMark img,.siteHeader.menuOpen .brandMark img{position:static;display:block;width:180px;height:auto;max-height:76px;object-fit:contain;transition:none}
+.hero{padding-top:82px}
+@media(max-width:1100px){.brandMark{flex-basis:158px;width:158px}.brandMark img,.siteHeader.isScrolled .brandMark img,.siteHeader.menuOpen .brandMark img{width:158px;max-height:70px}}
+@media(max-width:800px){.navWrap{min-height:68px}.brandMark{flex-basis:145px;width:145px;height:68px}.brandMark img,.siteHeader.isScrolled .brandMark img,.siteHeader.menuOpen .brandMark img{width:145px;max-height:63px}.hero{padding-top:68px}}
+@media(max-width:600px){.navWrap{min-height:60px}.brandMark{flex-basis:128px;width:128px;height:60px}.brandMark img,.siteHeader.isScrolled .brandMark img,.siteHeader.menuOpen .brandMark img{width:128px;max-height:56px}.hero{padding-top:60px}}
+
+/* Studio fleet catalogue */
+.fleetPage{padding:150px 0 80px;background:#faf9f6;min-height:100vh;scroll-margin-top:82px}
+.fleetIntro{text-align:center;max-width:800px;margin:0 auto 48px}
+.fleetIntro .eyebrow{font-size:10px;letter-spacing:.28em}
+.fleetIntro h1{font-size:clamp(48px,5.6vw,76px);line-height:1.04;letter-spacing:-.04em;margin:20px 0}
+.fleetIntro h1 em{font-style:normal;color:var(--bronze)}
+.fleetIntro p{font-size:15px;color:#73716d;margin:0}
+.fleetPage .filterBar{padding:0 0 24px;border-bottom:1px solid var(--stone);margin-bottom:30px;gap:6px}
+.fleetPage .filter{border-radius:999px;background:transparent;border-color:transparent;padding:9px 22px}
+.fleetPage .filter.active,.fleetPage .filter:hover{background:var(--ink);color:#fff}
+.vehicleCard{border-radius:12px;box-shadow:none;animation:none}
+.vehicleCard:hover,.vehicleCard:focus-within{transform:translateY(-3px);box-shadow:0 12px 26px rgba(36,30,21,.07)}
+.vehicleImageWrap{aspect-ratio:3/2;background:#eeece7}
+.vehicleImageWrap::after{display:none}
+.vehicleImage{object-fit:contain}
+.vehicleCard:hover .vehicleImage,.vehicleCard:focus-within .vehicleImage{transform:scale(1.025);filter:none}
+.vehicleCategory{top:14px;left:14px;background:#ffffffed;border:1px solid #e8e3da;backdrop-filter:none;color:#68625a;border-radius:999px;padding:5px 10px;font-size:9px;letter-spacing:.1em}
+.vehicleCardBody{padding:22px 24px 24px}
+.vehicleCardKicker{font-size:9px;letter-spacing:.2em;color:#8c775b}
+.vehicleCardBody h3{font-size:30px;margin:10px 0 24px;line-height:1.15}
+.cardActions{padding-top:16px}
+.vehicleEnquiryLink{padding:8px 13px;border-radius:6px;background:#f6f1e8;color:#77501e}
+.fleetImageNote{margin:28px 0 0;font-size:11px;text-align:center;color:#77736b}
+@media(max-width:800px){.fleetPage{padding-top:115px}.fleetIntro{margin-bottom:36px}.vehicleCardBody{padding:20px}.vehicleCardBody h3{font-size:28px}}
+@media(max-width:600px){.fleetPage{padding:102px 0 56px}.fleetIntro h1{font-size:49px}.fleetIntro p{font-size:14px}.fleetPage .filter{padding:8px 14px;font-size:12px}.resultCount{font-size:11px}.fleetPage .vehicleGrid{gap:20px}}
+
+
+/* Let the footer take over navigation at the end of the page. */
+.siteHeader{transition:background .25s ease,box-shadow .25s ease,transform .25s ease,visibility .25s ease}
+.siteHeader.isHidden{transform:translateY(-100%);visibility:hidden;pointer-events:none}
+@media(max-width:800px){.menuToggle{margin-left:auto}}
+
+/* A moving photograph behind the experience section, with stationary text. */
+.experienceSection{position:relative;overflow:hidden;isolation:isolate;background:#141310}
+.experienceBackdrop{position:absolute;inset:-20% 0;z-index:-2;pointer-events:none;will-change:transform}
+.experienceBackdrop img{object-fit:cover;object-position:65% center}
+.experienceShade{position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(10,11,12,.92) 0%,rgba(10,11,12,.79) 46%,rgba(10,11,12,.7) 100%)}
+.experienceSection .editorialGrid{position:relative}
+.experienceSection .editorialGrid p{color:#eee9df}
+.experienceSection .editorialSteps>div{border-color:rgba(225,195,140,.3)}
+@media(max-width:800px){.experienceBackdrop img{object-position:70% center}.experienceShade{background:rgba(10,11,12,.8)}}
+@media(prefers-reduced-motion:reduce){.experienceBackdrop{transform:none!important;will-change:auto}}
+
+/* A warm photographic finish to the home page. */
+.closingCta.experienceSection{padding:100px 0;border-top:1px solid rgba(225,195,140,.2)}
+.closingCta .experienceBackdrop img{object-position:center 58%}
+.closingCta .experienceShade{background:linear-gradient(90deg,rgba(10,11,12,.76),rgba(10,11,12,.82) 50%,rgba(10,11,12,.7))}
+.closingCta>.container{position:relative}
+.closingCta .btnPrimary{background:linear-gradient(180deg,#f4cf85,#c9964b);color:#161719;box-shadow:0 8px 28px rgba(0,0,0,.2)}
+@media(max-width:600px){.closingCta.experienceSection{padding:80px 0}.closingCta h2{font-size:clamp(42px,10vw,60px);line-height:1.08}.closingCta .experienceBackdrop img{object-position:65% center}}
+
+/* Contact begins directly with the enquiry, below the fixed navigation. */
+.contactPage{padding-top:150px;scroll-margin-top:82px;min-height:75vh}
+.contactTitle{font-size:clamp(46px,5vw,68px);line-height:1.05;letter-spacing:-.025em;margin:0 0 20px}
+@media(max-width:800px){.contactPage{padding-top:115px;scroll-margin-top:68px}}
+@media(max-width:600px){.contactPage{padding-top:102px;scroll-margin-top:60px}}
+
+/* Compact footer, with both navigation headings side by side on mobile. */
+.footer{padding-top:40px}
+.footerGrid{gap:6%;padding-bottom:30px}
+.footerGrid>div{min-width:0}
+.footerLogo{width:180px;max-width:100%}
+.footerIntro p{max-width:300px;margin:12px 0 0}
+.footer p,.footer li{font-size:13px;line-height:1.65}
+.footer h4{font-size:11px;letter-spacing:.14em;line-height:1.5;margin:0 0 12px}
+.footer li{margin:0 0 6px}
+.footerEnquire{display:inline-block;font-size:12px;padding-bottom:2px}
+.footerBottom{padding:15px 0;font-size:11px;gap:12px}
+@media(max-width:800px){
+  .footer{padding-top:30px}
+  .footerGrid{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:24px 28px;padding-bottom:26px}
+  .footerIntro{grid-column:1/-1}
+  .footerGrid>div:last-child{grid-column:auto}
+  .footerLogo{width:160px}
+  .footerIntro p{max-width:390px;margin-top:8px}
+}
+@media(max-width:600px){
+  .footerGrid{gap:22px 20px}
+  .footer p,.footer li{font-size:12px}
+  .footer h4{font-size:10px;letter-spacing:.12em;margin-bottom:10px}
+  .footerGrid>div:last-child p{margin-bottom:10px}
+  .footerBottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;padding:13px 0;font-size:10px}
+  .footerBottom span{margin:0}
+}
+
+/* Service photography shares the site's warm gold palette. */
+.serviceImageCard{display:flex;flex-direction:column;min-width:0;border:1px solid var(--stone);border-radius:14px;overflow:hidden;background:#fff;transition:box-shadow .25s ease}
+.serviceImageCard:hover{box-shadow:0 12px 30px rgba(32,26,17,.08)}
+.serviceCardImage{aspect-ratio:16/9;overflow:hidden;background:#28231c}
+.serviceCardImage img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.serviceImageCard:hover .serviceCardImage img{transform:scale(1.025)}
+.serviceCardContent{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:28px 30px 30px}
+.serviceCardNumber{font-size:10px;font-weight:700;letter-spacing:.16em;color:var(--bronze)}
+.serviceCardContent h3{font-size:clamp(29px,3vw,36px);line-height:1.1;letter-spacing:-.02em;margin:18px 0 12px}
+.serviceCardContent p{font-size:14px;color:#686b6c;margin-bottom:22px}
+.serviceCardContent .textLink{margin-top:auto;font-size:13px}
+@media(max-width:600px){.serviceCardContent{padding:23px}.serviceCardContent h3{font-size:31px;margin-top:14px}}
+@media(prefers-reduced-motion:reduce){.serviceCardImage img{transition:none}.serviceImageCard:hover .serviceCardImage img{transform:none}}
+
+/* Mobile heroes: clear copy and actions above a separate photograph. */
+.heroMobileVisual{display:none}
+@media(max-width:600px){
+  .hero,.hero.heroHome,.hero.heroCompact{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;min-height:0;padding-top:60px;background:var(--ivory)!important}
+  .hero .heroContent,.heroHome .heroContent{display:block;flex:none;padding-top:34px;padding-bottom:28px;transform:none}
+  .hero .eyebrow,.heroHome .eyebrow{color:var(--bronze);font-size:10px;letter-spacing:.18em}
+  .hero h1,.hero.heroHome h1,.hero.heroCompact h1{color:var(--ink);font-size:clamp(38px,10.8vw,60px);line-height:1.04;letter-spacing:-.035em;margin:12px 0 16px;max-width:100%}
+  .heroHome h1 em{color:var(--bronze)}
+  .hero p,.heroHome p{font-size:14px;line-height:1.65;color:#67645e;margin-bottom:22px;max-width:100%}
+  .hero .heroActions{display:flex;flex-wrap:nowrap;gap:10px}
+  .hero .heroActions .btn{flex:1;min-width:0;min-height:46px;padding:10px 9px;font-size:11px;letter-spacing:0;gap:7px;border-radius:7px}
+  .hero .btnPrimary{color:#17191b;background:linear-gradient(180deg,#f4cf85,#c9964b)}
+  .hero .btnGhost{background:transparent;border-color:var(--bronze);color:var(--bronze)}
+  .heroMobileVisual{display:block;position:relative;flex:none;width:100%;aspect-ratio:16/10;overflow:hidden;background:#24201b}
+  .heroMobileVisual img{object-fit:cover;object-position:65% center}
+  .hero .heroHighlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;padding-top:18px;padding-bottom:18px;color:#686057;font-size:9px;letter-spacing:0;line-height:1.5;text-align:center}
+  .heroHighlights span,.heroHighlights span:first-child{padding:0 8px;border-color:#d8cdbb}
+}
