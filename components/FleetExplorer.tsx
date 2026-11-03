@@ -1,11 +1,14 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import VehicleCard from '@/components/VehicleCard';
 import { vehicleCategories, type Vehicle } from '@/lib/data';
 
 export default function FleetExplorer({ vehicles, initialCategory = 'all', city, pickup, dropoff }: { vehicles: Vehicle[]; initialCategory?: string; city?: string; pickup?: string; dropoff?: string }) {
   const [category, setCategory] = useState(vehicleCategories.some(type => type === initialCategory) ? initialCategory : 'all');
+  useEffect(() => {
+    setCategory(vehicleCategories.some(type => type === initialCategory) ? initialCategory : 'all');
+  }, [initialCategory]);
   const filtered = vehicles.filter(vehicle => category === 'all' || vehicle.category === category);
   const details = [city && `Pickup: ${city}`, pickup && `From: ${pickup}`, dropoff && `Until: ${dropoff}`].filter(Boolean);
   const query = new URLSearchParams();

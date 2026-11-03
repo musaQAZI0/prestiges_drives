@@ -11,13 +11,13 @@ const services = [
 
 export default function ServicesPage() {
   return <>
-    <HeroBanner eyebrow="What we can arrange" title="Travel on your terms." subtitle="From a simple transfer to an important occasion, start with the journey you have in mind." image="/assets/heroes/services-hero-v4.jpg" compact primaryLabel="Get a quote" primaryHref="/contact" secondaryLabel="Explore services" secondaryHref="#services" />
+    <HeroBanner eyebrow="What we can arrange" title="Travel on your terms." subtitle="From a simple transfer to an important occasion, start with the journey you have in mind." image="/assets/optimized/heroes/services-hero-v4.webp" compact primaryLabel="Get a quote" primaryHref="/contact" secondaryLabel="Explore services" secondaryHref="#services" />
     <section id="services" className="section ivorySection">
       <div className="container">
         <div className="sectionHeading"><span className="eyebrow dark">OUR SERVICES</span><h2>Thoughtful travel, from start to finish.</h2><p>Each request is shaped around your dates, route, vehicle preference, and requirements.</p></div>
         <div className="serviceGrid twoByTwo">
           {services.map(service => <article className="serviceImageCard" key={service.no}>
-            <div className="serviceCardImage"><Image src={`/assets/services/${service.image}.jpg`} alt={service.alt} width={1200} height={675} sizes="(max-width: 600px) 100vw, 50vw" /></div>
+            <div className="serviceCardImage"><Image src={`/assets/optimized/services/${service.image}.webp`} alt={service.alt} width={1200} height={675} sizes="(max-width: 600px) 100vw, 50vw" /></div>
             <div className="serviceCardContent">
               <span className="serviceCardNumber">{service.no} / SERVICE</span>
               <h3>{service.title}</h3>

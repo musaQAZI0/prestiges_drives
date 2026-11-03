@@ -1,0 +1,5 @@
+.hero{position:relative;isolation:isolate}
+.heroDesktopVisual{position:absolute;inset:0;z-index:-1}
+.heroDesktopVisual img{object-fit:cover;object-position:center}
+.heroDesktopShade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,8,.92),rgba(5,5,8,.78) 25%,rgba(5,5,8,.34) 49%,rgba(5,5,8,.04) 72%)}
+@media(max-width:600px){.heroDesktopVisual{display:none}}

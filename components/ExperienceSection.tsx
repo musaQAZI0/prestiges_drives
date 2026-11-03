@@ -3,7 +3,7 @@
 import { useEffect, useRef, type ReactNode } from 'react';
 import Image from 'next/image';
 
-export default function ExperienceSection({ children, image = '/assets/backgrounds/experience-drive.jpg', className = 'section darkEditorial' }: { children: ReactNode; image?: string; className?: string }) {
+export default function ExperienceSection({ children, image = '/assets/optimized/backgrounds/experience-drive.webp', className = 'section darkEditorial' }: { children: ReactNode; image?: string; className?: string }) {
   const sectionRef = useRef<HTMLElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
 

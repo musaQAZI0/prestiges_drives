@@ -236,5 +236,72 @@
 @media(max-width:600px){.collectionHeading{grid-template-columns:1fr;gap:22px;margin-bottom:30px}.collectionHeading h2,.servicesHeading h2{font-size:48px}.collectionHeading p{font-size:14px}.collectionComposition{grid-template-columns:1fr;gap:30px}.collectionLead{grid-column:auto}.collectionLead .collectionVisual,.collectionVisual{aspect-ratio:3/2}.collectionLead .collectionCaption h3,.collectionCaption h3{font-size:30px}.collectionCaption{padding-top:14px;margin-top:10px}.servicesHeading{margin-bottom:30px}.servicesHeading .textLink{position:static;display:inline-block;margin-top:24px}.servicesComposition{grid-template-columns:1fr;gap:22px}.serviceStoryLead{grid-column:auto;min-height:460px}.serviceStoryLead .serviceStoryCopy{padding:26px}.serviceStoryLead h3{font-size:42px}.serviceStory:not(.serviceStoryLead) .serviceStoryVisual{min-height:0;aspect-ratio:16/9}.serviceStoryCopy{padding:25px}.serviceStoryCopy h3{font-size:34px}.serviceStoryCopy p{font-size:14px}}
 @media(prefers-reduced-motion:reduce){.collectionVisual img,.serviceStoryVisual img{transition:none}.collectionVisual:hover img,.serviceStory:hover .serviceStoryVisual img{transform:none}}
 
+/* Home hero: layered photography with accessible slideshow controls. */
+.heroHome{position:relative;isolation:isolate;background-image:none!important;background-color:#151618}
+.heroHome .heroContent,.heroHome .heroHighlights{position:relative;z-index:1;pointer-events:none}
+.heroHome .heroContent a{pointer-events:auto}
+.heroSlideshow{position:absolute;inset:0;z-index:0;overflow:hidden}
+.heroSlideImages,.heroSlide{position:absolute;inset:0}
+.heroSlide{opacity:0;transition:opacity 1.4s ease-in-out;overflow:hidden}
+.heroSlide.isActive{opacity:1}
+.heroSlide img{object-fit:cover;object-position:center;transform:scale(1);transition:transform 8s linear}
+.heroSlide.isActive img{transform:scale(1.045)}
+.heroSlideImages::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,8,.92),rgba(5,5,8,.78) 25%,rgba(5,5,8,.34) 49%,rgba(5,5,8,.08) 72%),linear-gradient(0deg,rgba(5,5,8,.5),transparent 30%);pointer-events:none}
+.heroSlideControls{position:absolute;right:max(24px,calc((100% - 1220px)/2));bottom:30px;display:flex;align-items:center;gap:12px;z-index:2;color:#fff}
+.heroSlideDots{display:flex;gap:2px}
+.heroSlideControls button{display:flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;border:0;background:transparent;color:inherit;cursor:pointer}
+.heroSlideDots button span{width:20px;height:3px;border-radius:3px;background:rgba(255,255,255,.45);transition:background .3s,width .3s}
+.heroSlideDots button[aria-pressed=true] span{width:32px;background:var(--champagne)}
+.heroSlideControls button:focus-visible{outline:2px solid var(--champagne);outline-offset:2px}
+@media(min-width:601px){.heroHome .heroHighlights{padding-right:240px}}
+@media(max-width:800px) and (min-width:601px){.heroHome .heroHighlights{font-size:11px}.heroHome .heroHighlights span{padding-inline:12px}.heroHome .heroHighlights span:first-child{padding-left:0}.heroSlideControls{right:18px;bottom:15px;gap:4px}}
+@media(max-width:600px){.heroSlideshow{position:relative;inset:auto;flex:none;width:100%;aspect-ratio:16/10}.heroSlide img{object-position:65% center}.heroSlideImages::after{background:linear-gradient(0deg,rgba(5,5,8,.55),transparent 40%)}.heroSlideControls{right:14px;bottom:10px;gap:6px}}
+@media(prefers-reduced-motion:reduce){.heroSlide,.heroSlide img,.heroSlideDots button span{transition:none}.heroSlide.isActive img{transform:none}}
+
+/* Photo-first mobile home hero and compact vehicle search. */
+.heroMobileCopy,.searchMobileToggle{display:none}
+.heroDesktopHighlights{display:flex;align-items:center}
+@media(max-width:600px){
+  .heroHome .heroDesktopCopy,.heroHome .heroDesktopHighlights{display:none}
+  .heroHome .heroMobileCopy{display:block}
+  .heroHome .heroSlideshow{order:-1;aspect-ratio:auto;height:clamp(250px,70vw,310px)}
+  .heroHome .heroSlide img{object-position:85% center}
+  .heroHome .heroSlide:nth-child(2) img{object-position:90% center}
+  .heroHome .heroContent{position:static;width:calc(100% - 24px);margin-top:0;padding:0;background:var(--ivory);border-radius:0}
+  .heroHome .heroCopy{position:absolute;z-index:2;top:60px;left:20px;width:54%;height:clamp(250px,70vw,310px);display:flex;flex-direction:column;justify-content:center;padding-bottom:88px;transform:translateY(-30px)}
+  .heroHome .heroSlideImages::after{background:linear-gradient(90deg,rgba(5,5,8,.87),rgba(5,5,8,.65) 38%,rgba(5,5,8,.1) 78%),linear-gradient(0deg,rgba(5,5,8,.4),transparent 30%)}
+  .heroHome .heroContent .eyebrow{display:none}
+  .heroHome .heroContent .eyebrow::before{content:'';width:22px;height:1px;background:var(--bronze);flex:none}
+  .hero.heroHome h1{font-size:clamp(24px,7vw,40px);line-height:1.06;margin:12px 0;letter-spacing:-.04em;color:#fff}
+  .heroHome h1 .heroMobileCopy{white-space:nowrap}
+  .heroHome h1 em{color:var(--champagne)}
+  .heroHome p{font-size:11px;line-height:1.6;margin-bottom:0;max-width:190px;color:#f3eee4}
+  .heroHome .heroActions{display:none}
+  .heroHome .heroActions .btn{flex:1.35;width:auto;min-width:0;min-height:50px;font-size:12px;border-radius:8px;padding:10px 12px;gap:8px}
+  .heroHome .heroActions .btnPrimary{box-shadow:0 4px 12px #b5873820}
+  .heroHome .heroActions .btnGhost{flex:1;min-height:50px;border:1px solid #cdbb9c;background:transparent;font-size:12px;text-decoration:none;color:var(--bronze)}
+  .heroHome .heroHighlights{display:none}
+  .heroHome .heroHighlights .heroMobileCopy span{border:0;padding:0 7px;color:var(--bronze)}
+  .heroHome .heroSlideControls{left:14px;right:14px;bottom:24px;justify-content:center}
+  .heroHome .heroSlideDots button span{width:6px;height:6px;border-radius:50%}
+  .heroHome .heroSlideDots button[aria-pressed=true] span{width:18px;border-radius:6px}
+  .searchOverlap{margin-top:-20px;padding:0 18px 12px;background:transparent}
+  .searchModule{padding:18px 16px;border:1px solid #d8cdbb;border-radius:12px;background:#fff;box-shadow:0 6px 20px #17191b06}
+  .searchModule .searchIntro{display:block}
+  .searchModule .searchIntro .eyebrow{font-size:9px;letter-spacing:.16em}
+  .searchModule .searchIntro h2{font-size:27px;line-height:1.15;margin:8px 0}
+  .searchModule .searchIntro p{font-size:12px;line-height:1.5}
+  .searchMobileToggle{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:78px;padding:14px 0;border:0;background:transparent;text-align:left;color:var(--ink);font:inherit;cursor:pointer}
+  .searchMobileToggle strong{display:block;font-size:17px;font-weight:600;line-height:1.4}
+  .searchMobileToggle small{display:block;margin-top:3px;color:#67645e;font-size:12px}
+  .searchToggleIcon{display:grid;place-items:center;flex:none;width:36px;height:36px;border-radius:50%;background:var(--ivory);color:var(--bronze);font-size:23px}
+  .searchMobileToggle:focus-visible{outline:2px solid var(--bronze);outline-offset:4px}
+  .searchModule .searchFields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:18px;padding:0;gap:14px 10px}
+  .searchModule .searchFields label{min-width:0;font-size:11px}
+  .searchModule .searchFields label:nth-child(-n+2),.searchModule .searchFields .btn{grid-column:1/-1}
+  .searchModule .searchFields input,.searchModule .searchFields select{font-size:16px;min-width:0;min-height:50px}
+  .searchModule .searchFields .btn{min-height:50px}
+}
+
 /* Expanded fleet categories and reference pricing. */
 .fleetPage .filterBar{flex-wrap:wrap}.referenceRateNote{display:block;font-size:11px;color:#6d685f;margin-top:5px}.vehiclePlaceholder{height:100%;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:24px;text-align:center;background:linear-gradient(145deg,#f5f1e9,#e6dfd2);color:#77501e}.vehiclePlaceholder>span{font-size:10px;letter-spacing:.2em;text-transform:uppercase}.vehiclePlaceholder strong{font-family:Georgia,serif;font-size:26px;line-height:1.2;font-weight:400}.vehiclePlaceholder small{font-size:12px;color:#686057}.vehiclePlaceholderDetail{min-height:360px}.rateSource{font-size:12px!important}.rateSource a{text-decoration:underline}
