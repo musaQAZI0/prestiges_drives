@@ -7,7 +7,11 @@ import ContactChannels from '@/components/ContactChannels';
 
 export const metadata: Metadata = {
   title: 'Prestige Drives',
-  description: 'Premium car rental services in Pakistan.'
+  description: 'Premium car rental services in Pakistan.',
+  icons: {
+    icon: { url: '/favicon.svg', type: 'image/svg+xml' },
+    shortcut: '/favicon.svg'
+  }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
