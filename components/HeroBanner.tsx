@@ -33,11 +33,9 @@ export default function HeroBanner({
       {!home && <div className="heroDesktopVisual" aria-hidden="true"><Image src={image} alt="" fill priority sizes="100vw" /><div className="heroDesktopShade" /></div>}
       <div className="container heroContent">
         <div className="heroCopy">
-        <div className="heroCopy">
         {eyebrow && <span className="eyebrow">{eyebrow}</span>}
         <h1>{home ? <><span className="heroDesktopCopy">{title}</span><span className="heroMobileCopy">Your Journey.<br /><em>Your Drive.</em></span></> : title}</h1>
         <p>{home ? <><span className="heroDesktopCopy">{subtitle}</span><span className="heroMobileCopy">Premium SUVs and sedans for every occasion.</span></> : subtitle}</p>
-        </div>
         </div>
         <div className="heroActions">
           <Link href={primaryHref} className="btn btnPrimary">{primaryLabel} <span aria-hidden="true">→</span></Link>
