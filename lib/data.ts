@@ -1,7 +1,10 @@
 export type Vehicle = { slug: string; name: string; category: 'SUV' | 'Sedan' | 'Hatchback' | 'MPV' | 'Pickup' | 'Van' | 'Bus'; referenceRate?: number | 'on-call'; image: string; gallery: string[] };
 
 export const vehicles: Vehicle[] = [
-  { slug: 'toyota-land-cruiser', name: 'Toyota Land Cruiser', category: 'SUV', image: '/assets/optimized/fleet/generated/toyota-land-cruiser.webp', gallery: ['/assets/optimized/fleet/generated/toyota-land-cruiser.webp'] },
+  { slug: 'lexus-lx-570', name: 'Lexus LX 570', category: 'SUV', image: '', gallery: [] },
+  { slug: 'lexus-lx-600', name: 'Lexus LX 600', category: 'SUV', image: '', gallery: [] },
+  { slug: 'toyota-lc-200', name: 'Toyota LC 200', category: 'SUV', image: '/assets/optimized/fleet/generated/toyota-land-cruiser.webp', gallery: ['/assets/optimized/fleet/generated/toyota-land-cruiser.webp'] },
+  { slug: 'toyota-lc-300', name: 'Toyota LC 300', category: 'SUV', image: '', gallery: [] },
   { slug: 'toyota-prado', name: 'Toyota Prado', category: 'SUV', image: '/assets/optimized/fleet/generated/toyota-prado.webp', gallery: ['/assets/optimized/fleet/generated/toyota-prado.webp'] },
   { slug: 'range-rover', name: 'Range Rover', category: 'SUV', image: '/assets/optimized/fleet/generated/range-rover.webp', gallery: ['/assets/optimized/fleet/generated/range-rover.webp'] },
   { slug: 'kia-sportage', name: 'Kia Sportage', category: 'SUV', image: '/assets/optimized/fleet/generated/kia-sportage.webp', gallery: ['/assets/optimized/fleet/generated/kia-sportage.webp'] },
