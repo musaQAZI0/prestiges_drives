@@ -7,13 +7,12 @@ import { fleetServices } from '@/lib/fleet-services';
 import { sortFleetByModel } from '@/lib/fleet-order';
 
 const categories = [
-  { id: 'SUV', label: 'SUVs', types: ['SUV'] },
+  { id: 'SUV', label: 'SUVs', types: ['SUV', 'Pickup'] },
   { id: 'MPV', label: 'MUVs', types: ['MPV'] },
   { id: 'Hatchback', label: 'Hatchback', types: ['Hatchback'] },
   { id: 'Sedan', label: 'Sedan', types: ['Sedan'] },
   { id: 'Bus', label: 'Buses', types: ['Bus'] },
   { id: 'Van', label: 'Hiace', types: ['Van'] },
-  { id: 'Pickup', label: 'Pickups', types: ['Pickup'] },
 ];
 const resolveCategory = (value: string) => value === 'all' ? 'all' : categories.some(item => item.id === value) ? value : 'SUV';
 
@@ -23,9 +22,11 @@ export default function FleetExplorer({ vehicles, initialCategory = 'SUV', city,
   useEffect(() => setCategory(resolveCategory(initialCategory)), [initialCategory]);
   const selectedService = serviceMode ? fleetServices.find(item => item.id === service) : undefined;
   const selectedCategory = categories.find(item => item.id === category);
+  // Customer-requested browsing groups; crossovers are presented under MUVs.
+  const muvSlugs = ['kia-sportage', 'mg-hs', 'hyundai-tucson', 'honda-brv-new-model', 'honda-brv-7-seater'];
   const matching = vehicles.filter(vehicle => serviceMode
     ? !selectedService || (selectedService.vehicleSlugs ? selectedService.vehicleSlugs.includes(vehicle.slug) : selectedService.types.includes(vehicle.category))
-    : category === 'all' || selectedCategory?.types.includes(vehicle.category));
+    : category === 'all' || (category === 'MPV' ? vehicle.category === 'MPV' || muvSlugs.includes(vehicle.slug) : category === 'SUV' ? selectedCategory?.types.includes(vehicle.category) && !muvSlugs.includes(vehicle.slug) : selectedCategory?.types.includes(vehicle.category)));
   const filtered = sortFleetByModel(matching);
   const details = [city && `Pickup: ${city}`, pickup && `From: ${pickup}`, dropoff && `Until: ${dropoff}`].filter(Boolean);
   const query = new URLSearchParams();

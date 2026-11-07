@@ -1,6 +1,12 @@
 export type Vehicle = { slug: string; name: string; category: 'SUV' | 'Sedan' | 'Hatchback' | 'MPV' | 'Pickup' | 'Van' | 'Bus'; referenceRate?: number | 'on-call'; image: string; gallery: string[] };
 
 export const vehicles: Vehicle[] = [
+  { slug: 'lexus-lx-570', name: 'Lexus LX 570', category: 'SUV', image: '', gallery: [] },
+  { slug: 'toyota-prado-tx', name: 'Toyota Prado TX', category: 'SUV', image: '', gallery: [] },
+  { slug: 'toyota-prado-txl', name: 'Toyota Prado TXL', category: 'SUV', image: '', gallery: [] },
+  { slug: 'toyota-hilux-revo-rocco', name: 'Toyota Hilux Revo Rocco', category: 'Pickup', image: '', gallery: [] },
+  { slug: 'mg-hs', name: 'MG HS', category: 'SUV', image: '', gallery: [] },
+  { slug: 'hyundai-tucson', name: 'Hyundai Tucson', category: 'SUV', image: '', gallery: [] },
   { slug: 'lexus-lx-600', name: 'Lexus LX 600', category: 'SUV', image: '', gallery: [] },
   { slug: 'toyota-lc-200', name: 'Toyota LC 200', category: 'SUV', image: '/assets/optimized/fleet/generated/toyota-land-cruiser.webp', gallery: ['/assets/optimized/fleet/generated/toyota-land-cruiser.webp'] },
   { slug: 'toyota-lc-300', name: 'Toyota LC 300', category: 'SUV', image: '', gallery: [] },
