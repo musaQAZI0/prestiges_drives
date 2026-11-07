@@ -18,14 +18,21 @@ const generationLaunch: Record<string, number> = {
 };
 
 export function sortFleetByModel(vehicles: Vehicle[]): Vehicle[] {
+  const brandOrder = (vehicle: Vehicle) => {
+    if (vehicle.name.startsWith('Range Rover')) return 0;
+    if (vehicle.name.startsWith('Lexus')) return 1;
+    if (vehicle.name.startsWith('Toyota') || vehicle.name.startsWith('Land Cruiser')) return 2;
+    return 3;
+  };
   const year = (vehicle: Vehicle) => Number(vehicle.name.match(/\b(?:19|20)\d{2}\b/)?.[0] ?? generationLaunch[vehicle.slug] ?? 0);
   const previousGeneration: Record<string, string> = {
     'lexus-lx-600': 'lexus-lx-570',
     'toyota-lc-300': 'toyota-lc-200',
   };
-  // Known dates first; undated entries stay stable, with "New" ahead of other
+  // Requested brand sequence first, then known dates within each brand group.
+  // Undated entries stay stable, with "New" ahead of other
   // undated entries. Never interpret A6, S500, etc. as dates.
-  const sorted = [...vehicles].sort((a, b) => year(b) - year(a) || Number(/\bnew\b/i.test(b.name)) - Number(/\bnew\b/i.test(a.name)));
+  const sorted = [...vehicles].sort((a, b) => brandOrder(a) - brandOrder(b) || year(b) - year(a) || Number(/\bnew\b/i.test(b.name)) - Number(/\bnew\b/i.test(a.name)));
   // Keep known successor models ahead of their predecessors without assigning
   // unverified years to the individual rental vehicles.
   for (const [newer, older] of Object.entries(previousGeneration)) {
