@@ -13,7 +13,6 @@ const generationLaunch: Record<string, number> = {
   'audi-a3': 2020,
   'mercedes-s400': 2020,
   'mercedes-s500': 2020,
-  'lexus-lx-570': 2008,
   'toyota-lc-200': 2007,
 };
 
@@ -26,7 +25,6 @@ export function sortFleetByModel(vehicles: Vehicle[]): Vehicle[] {
   };
   const year = (vehicle: Vehicle) => Number(vehicle.name.match(/\b(?:19|20)\d{2}\b/)?.[0] ?? generationLaunch[vehicle.slug] ?? 0);
   const previousGeneration: Record<string, string> = {
-    'lexus-lx-600': 'lexus-lx-570',
     'toyota-lc-300': 'toyota-lc-200',
   };
   // Requested brand sequence first, then known dates within each brand group.
