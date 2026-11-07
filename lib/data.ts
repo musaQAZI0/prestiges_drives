@@ -1,6 +1,9 @@
 export type Vehicle = { slug: string; name: string; category: 'SUV' | 'Sedan' | 'Hatchback' | 'MPV' | 'Pickup' | 'Van' | 'Bus'; referenceRate?: number | 'on-call'; image: string; gallery: string[] };
 
 export const vehicles: Vehicle[] = [
+  { slug: 'suzuki-swift', name: 'Suzuki Swift', category: 'Hatchback', image: '', gallery: [] },
+  { slug: 'suzuki-wagon-r', name: 'Suzuki Wagon R', category: 'Hatchback', image: '', gallery: [] },
+  { slug: 'suzuki-alto-japanese', name: 'Suzuki Alto (Japanese)', category: 'Hatchback', image: '', gallery: [] },
   { slug: 'lexus-lx-570', name: 'Lexus LX 570', category: 'SUV', image: '', gallery: [] },
   { slug: 'toyota-prado-tx', name: 'Toyota Prado TX', category: 'SUV', image: '', gallery: [] },
   { slug: 'toyota-prado-txl', name: 'Toyota Prado TXL', category: 'SUV', image: '', gallery: [] },
@@ -17,7 +20,7 @@ export const vehicles: Vehicle[] = [
   { slug: 'toyota-corolla', name: 'Toyota Corolla', category: 'Sedan', image: '/assets/optimized/fleet/generated/toyota-corolla.webp', gallery: ['/assets/optimized/fleet/generated/toyota-corolla.webp'] },
   { slug: 'hyundai-sonata', name: 'Hyundai Sonata', category: 'Sedan', image: '/assets/optimized/fleet/generated/hyundai-sonata.webp', gallery: ['/assets/optimized/fleet/generated/hyundai-sonata.webp'] },
   { slug: 'lexus-lx', name: 'Lexus LX', category: 'SUV', image: '/assets/optimized/fleet/generated/lexus-lx.webp', gallery: ['/assets/optimized/fleet/generated/lexus-lx.webp'] },
-  {"slug": "suzuki-alto", "name": "Suzuki Alto", "category": "Hatchback", "referenceRate": 4000, "image": "/assets/optimized/fleet/generated/suzuki-alto-studio.webp", "gallery": ["/assets/optimized/fleet/generated/suzuki-alto-studio.webp"]},
+  {"slug": "suzuki-alto", "name": "Suzuki Alto (Pakistani)", "category": "Hatchback", "referenceRate": 4000, "image": "/assets/optimized/fleet/generated/suzuki-alto-studio.webp", "gallery": ["/assets/optimized/fleet/generated/suzuki-alto-studio.webp"]},
   {"slug": "suzuki-cultus", "name": "Suzuki Cultus", "category": "Hatchback", "referenceRate": 4500, "image": "/assets/optimized/fleet/generated/suzuki-cultus-studio.webp", "gallery": ["/assets/optimized/fleet/generated/suzuki-cultus-studio.webp"]},
   {"slug": "honda-city-new", "name": "Honda City New", "category": "Sedan", "referenceRate": 6000, "image": "/assets/optimized/fleet/generated/honda-city-new-studio.webp", "gallery": ["/assets/optimized/fleet/generated/honda-city-new-studio.webp"]},
   {"slug": "toyota-gli-2014", "name": "Toyota GLI 2014", "category": "Sedan", "referenceRate": 5000, "image": "/assets/optimized/fleet/generated/toyota-gli-2014-studio.webp", "gallery": ["/assets/optimized/fleet/generated/toyota-gli-2014-studio.webp"]},

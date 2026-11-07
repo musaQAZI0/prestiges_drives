@@ -14,12 +14,11 @@ const categories = [
   { id: 'Bus', label: 'Buses', types: ['Bus'] },
   { id: 'Van', label: 'Hiace', types: ['Van'] },
 ];
-const resolveCategory = (value: string) => value === 'all' ? 'all' : categories.some(item => item.id === value) ? value : 'SUV';
 
 export default function FleetExplorer({ vehicles, initialCategory = 'SUV', city, pickup, dropoff, serviceMode = false }: { vehicles: Vehicle[]; initialCategory?: string; city?: string; pickup?: string; dropoff?: string; serviceMode?: boolean }) {
-  const [category, setCategory] = useState(resolveCategory(initialCategory));
+  const [category, setCategory] = useState('');
   const [service, setService] = useState('events');
-  useEffect(() => setCategory(resolveCategory(initialCategory)), [initialCategory]);
+  useEffect(() => setCategory(''), [initialCategory]);
   const selectedService = serviceMode ? fleetServices.find(item => item.id === service) : undefined;
   const selectedCategory = categories.find(item => item.id === category);
   // Customer-requested browsing groups; crossovers are presented under MUVs.
@@ -48,7 +47,9 @@ export default function FleetExplorer({ vehicles, initialCategory = 'SUV', city,
       {serviceMode && <p>{selectedService?.description ?? 'Browse the full fleet for any occasion.'} Availability and suitability are confirmed when you enquire.</p>}
     </section>
     {details.length > 0 && <div className="searchNotice"><strong>Your trip details</strong><span>{details.join(' · ')}</span><small>Vehicle availability and service area are confirmed when you enquire.</small></div>}
-    <div aria-live="polite" className="fleetResultSummary">{filtered.length} vehicles · {serviceMode ? selectedService?.label ?? 'All services' : selectedCategory?.label ?? 'All vehicles'}</div>
-    {filtered.length ? <div className="vehicleGrid fleetServiceResults" key={active}>{filtered.map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} enquiryQuery={enquiryQuery} />)}</div> : <div className="searchNotice"><strong>No vehicles in this category.</strong><button type="button" className="btn btnPrimary" onClick={() => select('all')}>Show all vehicles</button></div>}
+    {!serviceMode && !category ? <div className="fleetResultSummary" role="status">Choose a category above to explore the vehicles.</div> : <>
+      <div aria-live="polite" className="fleetResultSummary">{filtered.length} vehicles · {serviceMode ? selectedService?.label ?? 'All services' : selectedCategory?.label ?? 'All vehicles'}</div>
+      {filtered.length ? <div className="vehicleGrid fleetServiceResults" key={active}>{filtered.map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} enquiryQuery={enquiryQuery} />)}</div> : <div className="searchNotice"><strong>No vehicles in this category.</strong><button type="button" className="btn btnPrimary" onClick={() => select('all')}>Show all vehicles</button></div>}
+    </>}
   </>;
 }
