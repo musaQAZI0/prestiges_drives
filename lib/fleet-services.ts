@@ -2,7 +2,7 @@ import type { Vehicle } from './data';
 
 // Suggested vehicle types; specific arrangements are confirmed on enquiry.
 export const fleetServices: { id: string; label: string; description: string; types: Vehicle['category'][]; vehicleSlugs?: string[] }[] = [
-  { id: 'events', label: 'Events', description: 'Range Rover, Lexus LX, Mercedes-Benz and Audi for your special occasions.', types: ['SUV', 'Sedan'], vehicleSlugs: ['range-rover', 'lexus-lx-570', 'lexus-lx-600', 'mercedes-c300', 'mercedes-e300', 'mercedes-s400', 'mercedes-s500', 'audi-a3', 'audi-a5', 'audi-a6'] },
+  { id: 'events', label: 'Wedding Events', description: 'Range Rover, Lexus LX, Mercedes-Benz and Audi for your special occasions.', types: ['SUV', 'Sedan'], vehicleSlugs: ['range-rover', 'lexus-lx-570', 'lexus-lx-600', 'mercedes-c300', 'mercedes-e300', 'mercedes-s400', 'mercedes-s500', 'audi-a3', 'audi-a5', 'audi-a6'] },
   { id: 'weddings', label: 'Weddings', description: 'Explore SUVs and executive sedans for your wedding-day plans.', types: ['SUV', 'Sedan'] },
   { id: 'airport', label: 'Airport Transfers', description: 'Options for individual arrivals, family luggage and group transfers.', types: ['Sedan', 'SUV', 'MPV', 'Van'] },
   { id: 'corporate', label: 'Corporate Travel', description: 'Sedans, SUVs and group transport for meetings and business itineraries.', types: ['Sedan', 'SUV', 'Van', 'Bus'] },
