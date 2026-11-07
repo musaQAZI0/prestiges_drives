@@ -1,13 +1,31 @@
 import type { Vehicle } from './data';
 
-// Only use years stated in the catalogue. A trim number is not a model year.
+// Family-generation launch dates are editorial sorting hints, NOT rental-car
+// model years. Sources and limitations are recorded in fleet-model-order.md.
+const generationLaunch: Record<string, number> = {
+  'audi-a6': 2025,
+  'audi-a5': 2024,
+  'mercedes-e300': 2023,
+  'range-rover': 2022,
+  'lexus-lx-600': 2022,
+  'mercedes-c300': 2021,
+  'toyota-lc-300': 2021,
+  'audi-a3': 2020,
+  'mercedes-s400': 2020,
+  'mercedes-s500': 2020,
+  'lexus-lx-570': 2008,
+  'toyota-lc-200': 2007,
+};
+
 export function sortFleetByModel(vehicles: Vehicle[]): Vehicle[] {
-  const year = (vehicle: Vehicle) => Number(vehicle.name.match(/\b(?:19|20)\d{2}\b/)?.[0] ?? 0);
+  const year = (vehicle: Vehicle) => Number(vehicle.name.match(/\b(?:19|20)\d{2}\b/)?.[0] ?? generationLaunch[vehicle.slug] ?? 0);
   const previousGeneration: Record<string, string> = {
     'lexus-lx-600': 'lexus-lx-570',
     'toyota-lc-300': 'toyota-lc-200',
   };
-  const sorted = [...vehicles].sort((a, b) => year(b) - year(a));
+  // Known dates first; undated entries stay stable, with "New" ahead of other
+  // undated entries. Never interpret A6, S500, etc. as dates.
+  const sorted = [...vehicles].sort((a, b) => year(b) - year(a) || Number(/\bnew\b/i.test(b.name)) - Number(/\bnew\b/i.test(a.name)));
   // Keep known successor models ahead of their predecessors without assigning
   // unverified years to the individual rental vehicles.
   for (const [newer, older] of Object.entries(previousGeneration)) {

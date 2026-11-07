@@ -1,5 +1,7 @@
 ﻿import HeroBanner from '@/components/HeroBanner';
 import Image from 'next/image';
+import FleetExplorer from '@/components/FleetExplorer';
+import { vehicles } from '@/lib/data';
 import Link from 'next/link';
 
 const services = [
@@ -15,7 +17,8 @@ export default function ServicesPage() {
     <section id="services" className="section ivorySection">
       <div className="container">
         <div className="sectionHeading"><span className="eyebrow dark">OUR SERVICES</span><h2>Thoughtful travel, from start to finish.</h2><p>Each request is shaped around your dates, route, vehicle preference, and requirements.</p></div>
-        <div className="serviceGrid twoByTwo">
+        <FleetExplorer vehicles={vehicles} serviceMode />
+        <div className="serviceGrid twoByTwo" style={{ marginTop: 48 }}>
           {services.map(service => <article className="serviceImageCard" key={service.no}>
             <div className="serviceCardImage"><Image src={`/assets/optimized/services/${service.image}.webp`} alt={service.alt} width={1200} height={675} sizes="(max-width: 600px) 100vw, 50vw" /></div>
             <div className="serviceCardContent">
