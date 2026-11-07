@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, type FormEvent } from 'react';
-import { vehicles } from '@/lib/data';
+import { serviceVehicles as vehicles } from '@/lib/data';
 
 const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, '');
 const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL;

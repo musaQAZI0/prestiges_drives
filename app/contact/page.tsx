@@ -1,7 +1,7 @@
 import EnquiryForm from '@/components/EnquiryForm';
 import ContactChannels from '@/components/ContactChannels';
 
-import { vehicles } from '@/lib/data';
+import { serviceVehicles as vehicles } from '@/lib/data';
 
 export default function ContactPage({ searchParams }: { searchParams: { vehicle?: string; city?: string; pickup?: string; dropoff?: string; service?: string } }) {
   const selectedVehicle = vehicles.some(vehicle => vehicle.name === searchParams.vehicle) ? searchParams.vehicle : '';

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import VehicleCard from '@/components/VehicleCard';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { vehicles, rateLabel } from '@/lib/data';
+import { serviceVehicles as vehicles, rateLabel } from '@/lib/data';
 
 export function generateStaticParams() { return vehicles.map(vehicle => ({ slug: vehicle.slug })); }
 

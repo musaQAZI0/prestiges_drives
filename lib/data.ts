@@ -1,6 +1,6 @@
 export type Vehicle = { slug: string; name: string; category: 'SUV' | 'Sedan' | 'Hatchback' | 'MPV' | 'Pickup' | 'Van' | 'Bus'; referenceRate?: number | 'on-call'; image: string; gallery: string[] };
 
-export const vehicles: Vehicle[] = [
+const existingVehicles: Vehicle[] = [
   { slug: 'suzuki-swift', name: 'Suzuki Swift', category: 'Hatchback', image: '', gallery: [] },
   { slug: 'suzuki-wagon-r', name: 'Suzuki Wagon R', category: 'Hatchback', image: '', gallery: [] },
   { slug: 'suzuki-alto-japanese', name: 'Suzuki Alto (Japanese)', category: 'Hatchback', image: '', gallery: [] },
@@ -56,8 +56,53 @@ export const vehicles: Vehicle[] = [
   {"slug": "audi-a6", "name": "Audi A6", "category": "Sedan", "referenceRate": 60000, "image": "/assets/optimized/fleet/generated/audi-a6-studio.webp", "gallery": ["/assets/optimized/fleet/generated/audi-a6-studio.webp"]}
 ];
 
+// Fleet catalogue order follows the owner's requested browsing sequence.
+function fleetVehicle(slug: string, name: string, category: Vehicle['category'], imageFrom?: string): Vehicle {
+  const source = existingVehicles.find(vehicle => vehicle.slug === (imageFrom ?? slug));
+  return { slug, name, category, image: source?.image ?? '', gallery: source?.gallery ?? [] };
+}
+
+export const vehicles: Vehicle[] = [
+  fleetVehicle('lexus-lx-600', 'Lexus LX 600', 'SUV'),
+  fleetVehicle('lexus-lx-570', 'Lexus LX 570', 'SUV'),
+  fleetVehicle('toyota-lc-300', 'Toyota LC 300', 'SUV'),
+  fleetVehicle('toyota-lc-200', 'Toyota LC 200', 'SUV'),
+  fleetVehicle('toyota-prado-txl', 'Toyota Prado TXL', 'SUV'),
+  fleetVehicle('toyota-prado-tx', 'Toyota Prado TX', 'SUV'),
+  fleetVehicle('toyota-fortuner-gr', 'Toyota Fortuner GR', 'SUV'),
+  fleetVehicle('toyota-fortuner-sigma', 'Toyota Fortuner Sigma', 'SUV'),
+  fleetVehicle('toyota-hilux-revo-rocco', 'Toyota Hilux Revo Rocco', 'SUV'),
+  fleetVehicle('toyota-revo-new-model', 'Toyota Hilux Revo', 'SUV'),
+  fleetVehicle('honda-brv-new-model', 'Honda BR-V', 'MPV'),
+  fleetVehicle('kia-sportage', 'Kia Sportage', 'MPV'),
+  fleetVehicle('kia-sportage-hybrid', 'Kia Sportage Facelift Hybrid', 'MPV'),
+  fleetVehicle('mg-hs-hybrid', 'MG HS Hybrid', 'MPV'),
+  fleetVehicle('mg-hs', 'MG HS', 'MPV'),
+  fleetVehicle('hyundai-tucson', 'Hyundai Tucson', 'MPV'),
+  fleetVehicle('honda-civic-11th-gen', 'Honda Civic 11th Generation', 'Sedan'),
+  fleetVehicle('honda-civic-10th-gen', 'Honda Civic X (10th Generation)', 'Sedan'),
+  fleetVehicle('toyota-corolla-grande', 'Toyota Corolla Grande', 'Sedan'),
+  fleetVehicle('toyota-corolla-altis-16', 'Toyota Corolla Altis 1.6', 'Sedan'),
+  fleetVehicle('toyota-yaris', 'Toyota Yaris', 'Sedan'),
+  fleetVehicle('toyota-gli', 'Toyota GLI', 'Sedan'),
+  fleetVehicle('suzuki-swift', 'Suzuki Swift GLX', 'Hatchback'),
+  fleetVehicle('suzuki-cultus', 'Suzuki Cultus', 'Hatchback'),
+  fleetVehicle('suzuki-wagon-r', 'Suzuki Wagon R', 'Hatchback'),
+  fleetVehicle('suzuki-alto-japanese', 'Suzuki Alto (Japanese)', 'Hatchback'),
+  fleetVehicle('suzuki-alto', 'Suzuki Alto (Pakistani)', 'Hatchback'),
+  fleetVehicle('toyota-coaster', 'Toyota Coaster', 'Bus', 'toyota-coaster-5c-saloon'),
+  fleetVehicle('toyota-hiace-standard-roof', 'Toyota Hiace Standard Roof', 'Van'),
+  fleetVehicle('toyota-hiace-high-roof', 'Toyota Hiace High Roof', 'Van'),
+  fleetVehicle('toyota-grand-cabin-224', 'Toyota Hiace Grand Cabin', 'Van'),
+];
+
+// Preserve the separate service catalogue, including the wedding collection.
+export const serviceVehicles: Vehicle[] = [
+  ...vehicles,
+  ...existingVehicles.filter(vehicle => ['range-rover', 'mercedes-c300', 'mercedes-e300', 'mercedes-s400', 'mercedes-s500', 'audi-a3', 'audi-a5', 'audi-a6'].includes(vehicle.slug)),
+];
 export const featuredVehicles = vehicles;
 
 
-export const vehicleCategories = ['SUV', 'Sedan', 'Hatchback', 'MPV', 'Pickup', 'Van', 'Bus'] as const;
+export const vehicleCategories = ['SUV', 'MPV', 'Sedan', 'Hatchback', 'Bus', 'Van'] as const;
 export function rateLabel(vehicle: Vehicle) { return typeof vehicle.referenceRate === 'number' ? `PKR ${vehicle.referenceRate.toLocaleString('en-PK')} / day` : vehicle.referenceRate === 'on-call' ? 'Price on enquiry' : 'Request a tailored quote'; }

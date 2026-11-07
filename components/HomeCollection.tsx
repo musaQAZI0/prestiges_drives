@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { vehicles } from '@/lib/data';
 
-const picks = ['toyota-lc-200', 'range-rover', 'honda-civic'].map(slug => vehicles.find(vehicle => vehicle.slug === slug)!);
+const picks = ['toyota-lc-200', 'kia-sportage', 'toyota-yaris'].map(slug => vehicles.find(vehicle => vehicle.slug === slug)!);
 export default function HomeCollection() {
   return <section className="section homeCollection"><div className="container">
     <div className="collectionHeading"><div><span className="eyebrow dark">THE COLLECTION / 01</span><h2>Find your<br /><em>kind of drive.</em></h2></div><div><p>A city arrival. A change of scenery. An occasion to remember. Start with a car that suits your plans.</p><Link href="/fleet" className="textLink">Discover the full collection &rarr;</Link></div></div>
