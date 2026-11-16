@@ -28,6 +28,15 @@ export default function HeroBanner({
   compact = false,
   home = false
 }: HeroBannerProps) {
+  if (home) return <section className="hero heroHome heroCinematic" aria-label="Prestige Drives luxury journeys">
+    <HeroSlideshow />
+    <div className="container cinematicContent">
+      <span className="cinematicEyebrow">PRESTIGE DRIVES · PAKISTAN</span>
+      <h1>Every Journey.<br /><span>Extraordinary.</span></h1>
+      <p>Premium vehicles. Considered journeys.<br />Arrive in a class of your own.</p>
+      <Link href="/contact" className="cinematicBooking">Plan Your Ride <span aria-hidden="true">↗</span></Link>
+    </div>
+  </section>;
   return (
     <section className={`hero ${compact ? 'heroCompact' : ''} ${home ? 'heroHome' : ''}`}>
       {!home && <div className="heroDesktopVisual" aria-hidden="true"><Image src={image} alt="" fill priority sizes="100vw" /><div className="heroDesktopShade" /></div>}

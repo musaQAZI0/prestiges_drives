@@ -19,7 +19,7 @@ const generationLaunch: Record<string, number> = {
 export function sortFleetByModel(vehicles: Vehicle[]): Vehicle[] {
   const brandOrder = (vehicle: Vehicle) => {
     if (vehicle.name.startsWith('Range Rover')) return 0;
-    if (vehicle.name.startsWith('Lexus')) return 1;
+    if (vehicle.slug.startsWith('lexus-')) return 1;
     if (vehicle.name.startsWith('Toyota') || vehicle.name.startsWith('Land Cruiser')) return 2;
     return 3;
   };

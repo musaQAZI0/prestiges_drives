@@ -1,0 +1,124 @@
+{
+  "mode": "Built-in imagegen tool",
+  "styleReference": "public/assets/fleet/studio/toyota-lc-200.png",
+  "promptRecipe": "Input 1 is the edit target vehicle: MODEL. Input 2 is ONLY a studio style/composition reference (white LC200); NEVER copy its vehicle. Produce ONE photorealistic automotive catalogue image, landscape 3:2, full target vehicle including all tyres entirely inside frame, front three-quarter view facing LEFT, level camera headlamp height, vehicle centered occupying 78% image width with generous consistent margins. Precisely match input 2's seamless dark charcoal studio cyclorama (#121410), matte dark floor, soft overhead light, restrained champagne rim light, and soft grounding shadow. Preserve input 1's exact vehicle identity, model generation, grille, lights, body proportions, doors, windows, trim, wheels and paint colour. Remove source text, scenery and banner graphics. No typography, watermarks, dealer plates, people, extra cars, props, artificial body modifications or decorative stripes. Keep manufacturer badge appropriate. Natural polished car surfaces; model fidelity is the priority.",
+  "models": [
+    [
+      "toyota-lc-200",
+      "early-generation white Toyota Land Cruiser LC200"
+    ],
+    [
+      "toyota-prado",
+      "silver Toyota Prado J150"
+    ],
+    [
+      "toyota-lc-300",
+      "black Toyota Land Cruiser LC300"
+    ],
+    [
+      "toyota-fortuner-gr",
+      "white Toyota Fortuner GR-S"
+    ],
+    [
+      "toyota-fortuner-sigma",
+      "black Toyota Fortuner Sigma"
+    ],
+    [
+      "toyota-rocco",
+      "silver Toyota Hilux Revo Rocco double-cab pickup, Rocco trim"
+    ],
+    [
+      "toyota-revo",
+      "silver Toyota Hilux Revo double-cab pickup"
+    ],
+    [
+      "toyota-corolla-grande",
+      "white Pakistan-market Toyota Corolla Altis Grande, exact reference body generation"
+    ],
+    [
+      "toyota-corolla-altis",
+      "silver Pakistan-market Toyota Corolla Altis 1.6, exact reference body generation"
+    ],
+    [
+      "toyota-yaris",
+      "the Toyota Yaris sedan in reference, preserving its paint colour rather than coloured scene lighting"
+    ],
+    [
+      "toyota-hiace-standard",
+      "silver Toyota Hiace H200 standard-roof passenger van"
+    ],
+    [
+      "toyota-hiace-high",
+      "white Toyota Hiace H200 high-roof passenger van, preserve high roof and passenger windows; reconstruct full vehicle from partial reference"
+    ],
+    [
+      "toyota-coaster",
+      "white Toyota Coaster passenger bus, preserve full bus length, reference generation, closed intact body; show front three-quarter instead of reference rear"
+    ],
+    [
+      "suzuki-alto",
+      "silver Pakistan-market Suzuki Alto 660cc hatchback, exact reference generation"
+    ],
+    [
+      "suzuki-cultus",
+      "silver Pakistan-market Suzuki Cultus hatchback, exact reference generation"
+    ],
+    [
+      "suzuki-swift",
+      "red Pakistan-market Suzuki Swift GLX hatchback, exact reference generation"
+    ],
+    [
+      "honda-civic-11",
+      "dark blue Honda Civic 11th-generation sedan"
+    ],
+    [
+      "kia-sportage-hybrid",
+      "dark grey Kia Sportage L facelift Hybrid SUV, exact reference generation and vertical lighting"
+    ],
+    [
+      "mg-hs",
+      "white MG HS petrol SUV, exact reference generation"
+    ],
+    [
+      "mg-hs-hybrid",
+      "dark grey MG HS Hybrid SUV, exact reference generation"
+    ],
+    [
+      "hyundai-tucson",
+      "silver Hyundai Tucson SUV, exact older reference generation, not latest hybrid generation"
+    ],
+    [
+      "suzuki-alto-japanese",
+      "pale yellow Japan-market Suzuki Alto hatchback, exact reference generation"
+    ],
+    [
+      "lexus-lx-600",
+      "dark grey Lexus LX600 SUV, exact reference generation, NOT LX700h"
+    ],
+    [
+      "lexus-lx-570",
+      "white Lexus LX570 SUV, exact reference generation, NOT LX600"
+    ],
+    [
+      "honda-brv",
+      "red first-generation Honda BR-V passenger MPV, exact reference generation"
+    ],
+    [
+      "kia-sportage",
+      "silver fourth-generation Kia Sportage SUV, exact reference model, NOT Sportage L"
+    ],
+    [
+      "honda-civic-x",
+      "red tenth-generation Honda Civic X sedan, exact reference, not hatchback or coupe"
+    ],
+    [
+      "toyota-gli",
+      "dark blue Pakistan-market Toyota Corolla GLI sedan, exact reference generation, not newer Altis X"
+    ],
+    [
+      "suzuki-wagon-r",
+      "silver Pakistan-market Suzuki Wagon R tall hatchback, exact reference generation"
+    ]
+  ],
+  "notes": "Each image generated individually from its matching official reference; style reference used only for scene and composition. AI may alter small details. Official reference originals retained. 29 unique assets map to 31 fleet entries."
+}

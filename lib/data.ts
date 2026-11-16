@@ -1,4 +1,7 @@
-export type Vehicle = { slug: string; name: string; category: 'SUV' | 'Sedan' | 'Hatchback' | 'MPV' | 'Pickup' | 'Van' | 'Bus'; referenceRate?: number | 'on-call'; image: string; gallery: string[] };
+import { officialFleetImages } from './official-fleet-images';
+import { studioFleetImages } from './studio-fleet-images';
+
+export type Vehicle = { slug: string; name: string; category: 'SUV' | 'Sedan' | 'Hatchback' | 'MPV' | 'Pickup' | 'Van' | 'Bus'; referenceRate?: number | 'on-call'; image: string; gallery: string[]; imageSource?: string; imageNote?: string; studioImage?: boolean };
 
 const existingVehicles: Vehicle[] = [
   { slug: 'suzuki-swift', name: 'Suzuki Swift', category: 'Hatchback', image: '', gallery: [] },
@@ -59,12 +62,16 @@ const existingVehicles: Vehicle[] = [
 // Fleet catalogue order follows the owner's requested browsing sequence.
 function fleetVehicle(slug: string, name: string, category: Vehicle['category'], imageFrom?: string): Vehicle {
   const source = existingVehicles.find(vehicle => vehicle.slug === (imageFrom ?? slug));
+  const official = officialFleetImages[slug];
+  const studio = studioFleetImages[slug];
+  if (official && studio) return { slug, name, category, image: studio, gallery: [studio], imageSource: official.source, imageNote: `Studio vehicle illustration. Small details may differ. ${official.note}`, studioImage: true };
+  if (official) return { slug, name, category, image: official.image, gallery: [official.image], imageSource: official.source, imageNote: official.note };
   return { slug, name, category, image: source?.image ?? '', gallery: source?.gallery ?? [] };
 }
 
 export const vehicles: Vehicle[] = [
-  fleetVehicle('lexus-lx-600', 'Lexus LX 600', 'SUV'),
-  fleetVehicle('lexus-lx-570', 'Lexus LX 570', 'SUV'),
+  fleetVehicle('lexus-lx-600', 'LX 600', 'SUV'),
+  fleetVehicle('lexus-lx-570', 'LX 570', 'SUV'),
   fleetVehicle('toyota-lc-300', 'Toyota LC 300', 'SUV'),
   fleetVehicle('toyota-lc-200', 'Toyota LC 200', 'SUV'),
   fleetVehicle('toyota-prado-txl', 'Toyota Prado TXL', 'SUV'),

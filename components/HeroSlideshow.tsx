@@ -4,9 +4,9 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 const slides = [
-  { src: '/assets/optimized/heroes/home-original-hotel.webp', label: 'Luxury arrival in Islamabad' },
-  { src: '/assets/optimized/heroes/home-original-mountains.webp', label: 'Discover the northern mountains' },
-  { src: '/assets/optimized/heroes/home-original-city.webp', label: 'An executive journey through the city' },
+  { src: '/assets/optimized/heroes/stock/land-cruiser.webp', label: 'Toyota Land Cruiser LC 200 on a cobblestone driveway', position: '50% 55%' },
+  { src: '/assets/optimized/heroes/stock/prado-desert.webp', label: 'Toyota Prado in a rugged desert landscape', position: '50% 58%' },
+  { src: '/assets/optimized/heroes/stock/lc200-mountain.webp', label: 'Toyota Land Cruiser LC 200 on a mountain road', position: '65% 55%' },
 ];
 
 export default function HeroSlideshow() {
@@ -45,7 +45,7 @@ export default function HeroSlideshow() {
       <div className="heroSlideImages" aria-hidden="true">
         {slides.map((slide, index) => (
           <div key={slide.src} className={`heroSlide ${index === active ? 'isActive' : ''}`}>
-            {(index === 0 || ready || index === active) && <Image src={slide.src} alt="" fill priority={index === 0} loading={index === 0 ? undefined : 'eager'} sizes="100vw" />}
+            {(index === 0 || ready || index === active) && <Image src={slide.src} alt="" fill priority={index === 0} loading={index === 0 ? undefined : 'eager'} sizes="100vw" style={{ objectPosition: slide.position }} />}
           </div>
         ))}
       </div>

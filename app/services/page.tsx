@@ -1,35 +1,20 @@
 ﻿import HeroBanner from '@/components/HeroBanner';
-import Image from 'next/image';
-import FleetExplorer from '@/components/FleetExplorer';
-import { serviceVehicles } from '@/lib/data';
 import Link from 'next/link';
 
 const services = [
-  { no: '01', title: 'Airport & city transfers', image: 'airport-transfers', alt: 'Black SUV outside a warmly lit airport terminal', text: 'Plan an airport arrival or a journey across the city. Include your flight details, pickup point, destination, and luggage requirements in your request.' },
-  { no: '02', title: 'Corporate travel', image: 'corporate-travel', alt: 'Executive sedan at a modern corporate office entrance', text: 'Plan transport around meetings, guest visits, and business itineraries. Share the number of passengers, stops, and timings so the details can be discussed together.' },
-  { no: '03', title: 'Events & weddings', image: 'events-weddings', alt: 'White luxury SUV with flowers at an elegant wedding venue', text: 'Choose a vehicle for a wedding or special event. Share the venue, arrival time, and any decoration preferences so availability and arrangements can be confirmed.' },
-  { no: '04', title: 'Private journeys', image: 'private-journeys', alt: 'Black SUV beside a scenic mountain road at sunset', text: 'From a city visit to a longer route, begin with your travel dates and destination. Include passenger numbers, luggage, and planned stops for a tailored discussion.' }
+  { title: 'Wedding Events', text: 'A considered arrival for your most memorable day. Share your venue, timings and preferred vehicle.' },
+  { title: 'Airport Transfers', text: 'Plan your arrival around flight details, your destination and luggage requirements.' },
+  { title: 'Corporate Travel', text: 'Transport shaped around meetings, guest visits and business itineraries.' },
+  { title: 'Private Journeys', text: 'City visits, family occasions and longer escapes. Choose the route that suits your plans.' },
+  { title: 'Group Travel', text: 'Bring everyone together with spacious transport for shared journeys and guest arrivals.' },
 ];
-
 export default function ServicesPage() {
-  return <>
-    <HeroBanner eyebrow="What we can arrange" title="Travel on your terms." subtitle="From a simple transfer to an important occasion, start with the journey you have in mind." image="/assets/optimized/heroes/services-hero-v4.webp" compact primaryLabel="Get a quote" primaryHref="/contact" secondaryLabel="Explore services" secondaryHref="#services" />
-    <section id="services" className="section ivorySection">
-      <div className="container">
-        <div className="sectionHeading"><span className="eyebrow dark">OUR SERVICES</span><h2>Thoughtful travel, from start to finish.</h2><p>Each request is shaped around your dates, route, vehicle preference, and requirements.</p></div>
-        <FleetExplorer vehicles={serviceVehicles} serviceMode />
-        <div className="serviceGrid twoByTwo" style={{ marginTop: 48 }}>
-          {services.map(service => <article className="serviceImageCard" key={service.no}>
-            <div className="serviceCardImage"><Image src={`/assets/optimized/services/${service.image}.webp`} alt={service.alt} width={1200} height={675} sizes="(max-width: 600px) 100vw, 50vw" /></div>
-            <div className="serviceCardContent">
-              <span className="serviceCardNumber">{service.no} / SERVICE</span>
-              <h3>{service.title}</h3>
-              <p>{service.text}</p>
-              <Link className="textLink" href={`/contact?service=${encodeURIComponent(service.title)}`}>Get a quote <span aria-hidden="true">↗</span></Link>
-            </div>
-          </article>)}
-        </div>
-      </div>
-    </section>
-  </>;
+  return <div className="premiumServices">
+    <div className="servicesFlow" aria-hidden="true" />
+    <div className="container premiumServicesInner">
+      <header className="premiumServicesIntro"><span className="premiumServicesEyebrow">PRESTIGE DRIVES / TRAVEL, CONSIDERED</span><h1>Our Premium <span>Services</span></h1><div className="servicesGoldRule" /><p>From life's special occasions to everyday journeys.<br />Thoughtful transport, tailored around you.</p></header>
+      <section className="premiumServiceCards" aria-label="Our services">{services.map((service, index) => <article className="premiumServiceCard" key={service.title}><span className="premiumServiceNumber">0{index + 1} / PRESTIGE DRIVES</span><h2>{service.title}</h2><p>{service.text}</p><Link href={`/contact?service=${encodeURIComponent(service.title)}`}>Plan this journey <span aria-hidden="true">↗</span></Link></article>)}</section>
+      <section className="customServicePanel"><span className="premiumServicesEyebrow">YOUR JOURNEY, YOUR WAY</span><h2>Need a custom service?</h2><p>Tell us your route, dates and preferences. We'll help you explore a transport arrangement for your occasion.</p><div><Link href="/contact" className="customServicePrimary">Get a Custom Quote ↗</Link><Link href="/fleet" className="customServiceSecondary">Explore Our Fleet</Link></div></section>
+    </div>
+  </div>;
 }

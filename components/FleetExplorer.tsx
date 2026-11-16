@@ -5,6 +5,10 @@ import VehicleCard from '@/components/VehicleCard';
 import { type Vehicle } from '@/lib/data';
 import { fleetServices } from '@/lib/fleet-services';
 import { sortFleetByModel } from '@/lib/fleet-order';
+import Link from 'next/link';
+
+// Temporary editorial picks; replace this list when the owner confirms them.
+const featuredSlugs = ['kia-sportage', 'toyota-lc-200', 'suzuki-alto', 'honda-brv-new-model', 'toyota-yaris', 'suzuki-cultus', 'toyota-revo-new-model', 'toyota-coaster', 'toyota-grand-cabin-224'];
 
 const categories = [
   { id: 'SUV', label: 'SUVs', types: ['SUV'] },
@@ -18,13 +22,17 @@ const categories = [
 export default function FleetExplorer({ vehicles, initialCategory = 'SUV', city, pickup, dropoff, serviceMode = false }: { vehicles: Vehicle[]; initialCategory?: string; city?: string; pickup?: string; dropoff?: string; serviceMode?: boolean }) {
   const [category, setCategory] = useState('');
   const [service, setService] = useState('events');
+  const [search, setSearch] = useState('');
+  const [submittedSearch, setSubmittedSearch] = useState('');
+  const showingFeatured = !serviceMode && !category;
   useEffect(() => setCategory(''), [initialCategory]);
   const selectedService = serviceMode ? fleetServices.find(item => item.id === service) : undefined;
   const selectedCategory = categories.find(item => item.id === category);
   const matching = vehicles.filter(vehicle => serviceMode
     ? !selectedService || (selectedService.vehicleSlugs ? selectedService.vehicleSlugs.includes(vehicle.slug) : selectedService.types.includes(vehicle.category))
-    : category === 'all' || selectedCategory?.types.includes(vehicle.category));
-  const filtered = serviceMode ? sortFleetByModel(matching) : matching;
+    : showingFeatured ? featuredSlugs.includes(vehicle.slug) : category === 'all' || selectedCategory?.types.includes(vehicle.category));
+  const searched = matching.filter(vehicle => vehicle.name.toLowerCase().includes(submittedSearch.trim().toLowerCase()));
+  const filtered = serviceMode ? sortFleetByModel(searched) : searched;
   const details = [city && `Pickup: ${city}`, pickup && `From: ${pickup}`, dropoff && `Until: ${dropoff}`].filter(Boolean);
   const query = new URLSearchParams();
   if (selectedService) query.set('service', selectedService.label);
@@ -36,7 +44,11 @@ export default function FleetExplorer({ vehicles, initialCategory = 'SUV', city,
   const active = serviceMode ? service : category;
   const select = serviceMode ? setService : setCategory;
   return <>
-    <section className="fleetServicePicker" aria-label={serviceMode ? 'Browse by service' : 'Browse by vehicle category'}>
+    {!serviceMode && <form className="fleetSearchPanel" onSubmit={event => { event.preventDefault(); setSubmittedSearch(search); if (!category) setCategory('all'); }}>
+      <div className="fleetSearchHeading"><strong>Search &amp; Filter</strong><button type="button" onClick={() => { setCategory(''); setSearch(''); setSubmittedSearch(''); }}>Reset filters</button></div>
+      <div className="fleetSearchFields"><label>Search car<input type="search" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search by vehicle name or model" /></label><label>Car type<select value={category} onChange={event => setCategory(event.target.value)}><option value="">Featured selection</option><option value="all">All vehicles</option>{categories.map(item => <option key={item.id} value={item.id}>{item.label}</option>)}</select></label><button type="submit" className="btn btnPrimary">Search <span aria-hidden="true">↗</span></button></div>
+    </form>}
+    <section className={`fleetServicePicker ${!serviceMode ? 'fleetCategoryPills' : ''}`} aria-label={serviceMode ? 'Browse by service' : 'Browse by vehicle category'}>
       <span className="eyebrow dark">{serviceMode ? 'Choose your service' : 'Choose your vehicle'}</span>
       <div className="fleetServiceOptions" role="group" aria-label={serviceMode ? 'Service categories' : 'Vehicle categories'}>
         {options.map(item => <button type="button" key={item.id} className={`fleetServiceOption ${active === item.id ? 'active' : ''}`} aria-pressed={active === item.id} onClick={() => select(item.id)}>{item.label}<span aria-hidden="true">↗</span></button>)}
@@ -45,9 +57,10 @@ export default function FleetExplorer({ vehicles, initialCategory = 'SUV', city,
       {serviceMode && <p>{selectedService?.description ?? 'Browse the full fleet for any occasion.'} Availability and suitability are confirmed when you enquire.</p>}
     </section>
     {details.length > 0 && <div className="searchNotice"><strong>Your trip details</strong><span>{details.join(' · ')}</span><small>Vehicle availability and service area are confirmed when you enquire.</small></div>}
-    {!serviceMode && !category ? <div className="fleetResultSummary" role="status">Choose a category above to explore the vehicles.</div> : <>
-      <div aria-live="polite" className="fleetResultSummary">{filtered.length} vehicles · {serviceMode ? selectedService?.label ?? 'All services' : selectedCategory?.label ?? 'All vehicles'}</div>
+    <>
+      <div aria-live="polite" className="fleetResultSummary">Showing <strong>{filtered.length}</strong> cars <span>{showingFeatured ? 'Featured selection' : serviceMode ? selectedService?.label ?? 'All services' : selectedCategory?.label ?? 'All vehicles'}</span></div>
       {filtered.length ? <div className="vehicleGrid fleetServiceResults" key={active}>{filtered.map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} enquiryQuery={enquiryQuery} />)}</div> : <div className="searchNotice"><strong>No vehicles in this category.</strong><button type="button" className="btn btnPrimary" onClick={() => select('all')}>Show all vehicles</button></div>}
-    </>}
+    </>
+    {!serviceMode && <div className="fleetBackHome"><Link href="/" className="customServicePrimary">Back to Home <span aria-hidden="true">→</span></Link></div>}
   </>;
 }
