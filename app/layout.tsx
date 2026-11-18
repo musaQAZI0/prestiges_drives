@@ -11,7 +11,7 @@ import './fleet-featured.css';
 import './home-sections.css';
 import './home-natural.css';
 import './responsive.css';
-import './responsive.css';
+import './page-refinements.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ContactChannels from '@/components/ContactChannels';

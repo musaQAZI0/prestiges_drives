@@ -70,10 +70,10 @@ function fleetVehicle(slug: string, name: string, category: Vehicle['category'],
 }
 
 export const vehicles: Vehicle[] = [
-  fleetVehicle('lexus-lx-600', 'LX 600', 'SUV'),
-  fleetVehicle('lexus-lx-570', 'LX 570', 'SUV'),
-  fleetVehicle('toyota-lc-300', 'Toyota LC 300', 'SUV'),
-  fleetVehicle('toyota-lc-200', 'Toyota LC 200', 'SUV'),
+  fleetVehicle('lexus-lx-600', 'Lexus LX 600', 'SUV'),
+  fleetVehicle('lexus-lx-570', 'Lexus LX 570', 'SUV'),
+  fleetVehicle('toyota-lc-300', 'Toyota Land Cruiser (LC-300)', 'SUV'),
+  fleetVehicle('toyota-lc-200', 'Toyota Land Cruiser (LC-200)', 'SUV'),
   fleetVehicle('toyota-prado-txl', 'Toyota Prado TXL', 'SUV'),
   fleetVehicle('toyota-prado-tx', 'Toyota Prado TX', 'SUV'),
   fleetVehicle('toyota-fortuner-gr', 'Toyota Fortuner GR', 'SUV'),

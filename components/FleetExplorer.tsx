@@ -6,6 +6,7 @@ import { type Vehicle } from '@/lib/data';
 import { fleetServices } from '@/lib/fleet-services';
 import { sortFleetByModel } from '@/lib/fleet-order';
 import Link from 'next/link';
+import { normalizeFleetCategory } from '@/lib/fleet-filters';
 
 // Temporary editorial picks; replace this list when the owner confirms them.
 const featuredSlugs = ['kia-sportage', 'toyota-lc-200', 'suzuki-alto', 'honda-brv-new-model', 'toyota-yaris', 'suzuki-cultus', 'toyota-revo-new-model', 'toyota-coaster', 'toyota-grand-cabin-224'];
@@ -19,13 +20,13 @@ const categories = [
   { id: 'Van', label: 'Hiace', types: ['Van'] },
 ];
 
-export default function FleetExplorer({ vehicles, initialCategory = 'SUV', city, pickup, dropoff, serviceMode = false }: { vehicles: Vehicle[]; initialCategory?: string; city?: string; pickup?: string; dropoff?: string; serviceMode?: boolean }) {
-  const [category, setCategory] = useState('');
+export default function FleetExplorer({ vehicles, initialCategory = '', city, pickup, dropoff, serviceMode = false }: { vehicles: Vehicle[]; initialCategory?: string; city?: string; pickup?: string; dropoff?: string; serviceMode?: boolean }) {
+  const [category, setCategory] = useState(() => normalizeFleetCategory(initialCategory));
   const [service, setService] = useState('events');
   const [search, setSearch] = useState('');
   const [submittedSearch, setSubmittedSearch] = useState('');
   const showingFeatured = !serviceMode && !category;
-  useEffect(() => setCategory(''), [initialCategory]);
+  useEffect(() => setCategory(normalizeFleetCategory(initialCategory)), [initialCategory]);
   const selectedService = serviceMode ? fleetServices.find(item => item.id === service) : undefined;
   const selectedCategory = categories.find(item => item.id === category);
   const matching = vehicles.filter(vehicle => serviceMode
@@ -45,12 +46,13 @@ export default function FleetExplorer({ vehicles, initialCategory = 'SUV', city,
   const select = serviceMode ? setService : setCategory;
   return <>
     {!serviceMode && <form className="fleetSearchPanel" onSubmit={event => { event.preventDefault(); setSubmittedSearch(search); if (!category) setCategory('all'); }}>
-      <div className="fleetSearchHeading"><strong>Search &amp; Filter</strong><button type="button" onClick={() => { setCategory(''); setSearch(''); setSubmittedSearch(''); }}>Reset filters</button></div>
-      <div className="fleetSearchFields"><label>Search car<input type="search" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search by vehicle name or model" /></label><label>Car type<select value={category} onChange={event => setCategory(event.target.value)}><option value="">Featured selection</option><option value="all">All vehicles</option>{categories.map(item => <option key={item.id} value={item.id}>{item.label}</option>)}</select></label><button type="submit" className="btn btnPrimary">Search <span aria-hidden="true">↗</span></button></div>
+      <div className="fleetSearchHeading"><strong>Find a vehicle</strong><button type="button" onClick={() => { setCategory(''); setSearch(''); setSubmittedSearch(''); }}>Reset filters</button></div>
+      <div className="fleetSearchFields"><label>Search car<input type="search" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search by vehicle name or model" /></label><button type="submit" className="btn btnPrimary">Search <span aria-hidden="true">↗</span></button></div>
     </form>}
     <section className={`fleetServicePicker ${!serviceMode ? 'fleetCategoryPills' : ''}`} aria-label={serviceMode ? 'Browse by service' : 'Browse by vehicle category'}>
       <span className="eyebrow dark">{serviceMode ? 'Choose your service' : 'Choose your vehicle'}</span>
       <div className="fleetServiceOptions" role="group" aria-label={serviceMode ? 'Service categories' : 'Vehicle categories'}>
+        {!serviceMode && <button type="button" className={`fleetServiceOption ${active === '' ? 'active' : ''}`} aria-pressed={active === ''} onClick={() => select('')}>Featured</button>}
         {options.map(item => <button type="button" key={item.id} className={`fleetServiceOption ${active === item.id ? 'active' : ''}`} aria-pressed={active === item.id} onClick={() => select(item.id)}>{item.label}<span aria-hidden="true">↗</span></button>)}
         <button type="button" className={`fleetServiceOption ${active === 'all' ? 'active' : ''}`} aria-pressed={active === 'all'} onClick={() => select('all')}>{serviceMode ? 'All services' : 'All vehicles'}<span aria-hidden="true">↗</span></button>
       </div>
@@ -59,7 +61,7 @@ export default function FleetExplorer({ vehicles, initialCategory = 'SUV', city,
     {details.length > 0 && <div className="searchNotice"><strong>Your trip details</strong><span>{details.join(' · ')}</span><small>Vehicle availability and service area are confirmed when you enquire.</small></div>}
     <>
       <div aria-live="polite" className="fleetResultSummary">Showing <strong>{filtered.length}</strong> cars <span>{showingFeatured ? 'Featured selection' : serviceMode ? selectedService?.label ?? 'All services' : selectedCategory?.label ?? 'All vehicles'}</span></div>
-      {filtered.length ? <div className="vehicleGrid fleetServiceResults" key={active}>{filtered.map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} enquiryQuery={enquiryQuery} />)}</div> : <div className="searchNotice"><strong>No vehicles in this category.</strong><button type="button" className="btn btnPrimary" onClick={() => select('all')}>Show all vehicles</button></div>}
+      {filtered.length ? <div className="vehicleGrid fleetServiceResults" key={active}>{filtered.map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} enquiryQuery={enquiryQuery} />)}</div> : <div className="searchNotice"><strong>No vehicles match your search.</strong><button type="button" className="btn btnPrimary" onClick={() => { select('all'); setSearch(''); setSubmittedSearch(''); }}>Clear filters</button></div>}
     </>
     {!serviceMode && <div className="fleetBackHome"><Link href="/" className="customServicePrimary">Back to Home <span aria-hidden="true">→</span></Link></div>}
   </>;
