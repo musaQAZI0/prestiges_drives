@@ -9,6 +9,7 @@ import './pages-premium.css';
 import './theme-completion.css';
 import './fleet-featured.css';
 import './home-sections.css';
+import './home-natural.css';
 import './responsive.css';
 import './responsive.css';
 import Header from '@/components/Header';

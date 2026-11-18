@@ -1,0 +1,48 @@
+/* A quiet, light continuation of the homepage hero. */
+.homeNatural{background:#faf9f6;color:#252a28}
+.homeNatural h2{font-family:Arial,sans-serif;font-size:clamp(30px,3.2vw,44px);font-weight:500;line-height:1.2;letter-spacing:-.035em;color:#252a28;margin:14px 0 20px}
+.homeNatural p{color:#656960;line-height:1.8}
+.homeEyebrow{font-size:10px;font-weight:600;letter-spacing:.18em;color:#876d36}
+.homeNatural .homeBooking{padding-top:30px;padding-bottom:0}
+.homeNatural .searchModule{background:transparent;border:0;border-bottom:1px solid #deddd5;border-radius:0;padding:0 0 30px;box-shadow:none;backdrop-filter:none}
+.homeNatural .searchIntro{display:none}
+.homeNatural .searchFields{margin-top:0}
+.homeNatural .searchFields label{color:#41473e;font-size:11px}
+.homeNatural .searchFields input,.homeNatural .searchFields select{background:#fff;color:#252a28;color-scheme:light;border:1px solid #d9d9cf;border-radius:4px;min-height:50px}
+.homeNatural .searchModule input::placeholder{color:#777c72}
+.homeNatural .searchFields .btn,.homePrimaryLink{background:#b59a5d;border:1px solid #b59a5d;color:#1d241d;border-radius:4px;min-height:50px}
+.homeWelcome{display:grid;grid-template-columns:1fr 2fr;gap:50px;padding-top:90px;padding-bottom:90px;align-items:start}
+.homeWelcome>.homeEyebrow{padding-top:22px}
+.homeWelcome p{max-width:650px;margin:0;font-size:17px}
+.homeNatural .homeFeaturedFleet{background:#f1f1eb;padding:80px 0}
+.homeNatural .homeSectionIntro{max-width:650px;text-align:left;margin:0 0 38px}
+.homeNatural .homeSectionBadge{padding:0;border:0;background:none;border-radius:0;color:#876d36;font-size:10px;letter-spacing:.18em;text-transform:uppercase}
+.homeNatural .homeSectionBadge::before{content:none}
+.homeNatural .homeSectionIntro h2{color:#252a28;font-weight:500}
+.homeNatural .homeSectionIntro p{color:#656960}
+.homeNatural .vehicleCard{background:#faf9f6;border:0;border-radius:4px;box-shadow:none;animation:none}
+.homeNatural .vehicleCard:hover{transform:none;box-shadow:none}
+.homeNatural .vehicleCard .vehicleImageWrap{aspect-ratio:3/2;background:#e9e9e1;border-radius:4px}
+.homeNatural .vehicleImage{object-fit:contain}
+.homeNatural .vehicleCardBadges,.homeNatural .vehicleCardKicker,.homeNatural .vehicleCardSummary,.homeNatural .vehicleEnquiryLink{display:none}
+.homeNatural .vehicleCardBody{padding:22px 20px;background:#faf9f6}
+.homeNatural .vehicleCardBody h3,.homeNatural .vehicleCardBody h3 a{color:#252a28;font-size:24px;margin:0 0 16px;font-weight:500}
+.homeNatural .cardActions{border:0;padding:0}
+.homeNatural .vehicleDetailsLink{color:#6f592c;font-size:12px}
+.homeNatural .homeFleetEnd{margin-top:32px}
+.homeNatural .homeFleetEnd p{color:#74796e}
+.homeNatural .homeFleetEnd .btn{border-radius:4px;color:#655127;border-color:#b6a47b;background:transparent}
+.homeNatural .homeWhyChoose{padding:90px 0;background:#faf9f6;border:0}
+.homeNatural .homeBenefitsGrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:42px;margin-top:46px}
+.homeNatural .homeBenefit{padding:24px 0 0;text-align:left;border:0;border-top:1px solid #d9d9cf;border-radius:0;background:none;box-shadow:none}
+.homeBenefitNumber{font-size:12px;color:#876d36;display:block;margin-bottom:20px}
+.homeNatural .homeBenefit h3{color:#252a28;font-size:19px;font-weight:500;margin-bottom:12px}
+.homeNatural .homeBenefit p{color:#656960;font-size:15px}
+.homeClosing{display:flex;justify-content:space-between;align-items:center;gap:40px;padding-top:60px;padding-bottom:75px;border-top:1px solid #deddd5}
+.homeClosing h2{font-size:clamp(28px,3vw,38px);margin-bottom:12px}
+.homeClosing p{margin:0}
+.homePrimaryLink{display:inline-flex;align-items:center;justify-content:center;gap:30px;padding:14px 25px;font-size:14px;white-space:nowrap}
+.homeNatural a:focus-visible,.homeNatural button:focus-visible{outline:2px solid #876d36;outline-offset:5px}
+.homePrimaryLink:hover{background:#c4ad77}
+@media(max-width:1000px){.homeNatural .vehicleGrid{gap:18px}.homeNatural .vehicleCardBody{padding:20px 16px}.homeNatural .vehicleCardBody h3 a{font-size:21px}}
+@media(max-width:700px){.homeNatural .homeBooking{padding-top:24px}.homeNatural .searchFields{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 10px}.homeNatural .searchFields label:nth-child(-n+2),.homeNatural .searchFields .btn{grid-column:1/-1}.homeNatural .searchFields input,.homeNatural .searchFields select{font-size:16px;min-width:0}.homeWelcome{grid-template-columns:1fr;gap:10px;padding-top:54px;padding-bottom:54px}.homeWelcome>.homeEyebrow{padding:0}.homeWelcome p{font-size:16px}.homeNatural .homeFeaturedFleet{padding:54px 0}.homeNatural .vehicleGrid{grid-template-columns:1fr;gap:28px}.homeNatural .homeFleetEnd{align-items:flex-start;text-align:left;gap:20px}.homeNatural .homeWhyChoose{padding:56px 0}.homeNatural .homeBenefitsGrid{grid-template-columns:1fr;gap:26px;margin-top:30px}.homeNatural .homeBenefit{padding-top:22px}.homeClosing{flex-direction:column;align-items:flex-start;padding-top:46px;padding-bottom:54px;gap:25px}.homeNatural .homeSectionIntro h2{font-size:32px}}
