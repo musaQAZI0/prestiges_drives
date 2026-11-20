@@ -19,7 +19,8 @@ input,select,textarea{max-width:100%;min-width:0}
   .cinematicHeader .brandMark img,.cinematicHeader.isScrolled .brandMark img,.cinematicHeader.menuOpen .brandMark img{width:150px;height:67px;top:0}
   .cinematicHeader .headerCta{margin-left:auto;flex-shrink:0;min-height:44px;font-size:11px;padding:10px 16px}
   .cinematicHeader .menuToggle{display:block;flex:0 0 44px}
-  .cinematicHeader .siteNav{top:100%;left:0;right:0;margin:0;padding:12px 18px 18px;border-radius:0;border:0;border-bottom:1px solid #bfa15c50;background:#10120ffA;max-height:calc(100dvh - 76px);overflow-y:auto}
+  .siteHeader.cinematicHeader.menuOpen{background:#10120f;backdrop-filter:none}
+  .cinematicHeader .siteNav{top:100%;left:0;right:0;margin:0;padding:12px 18px 18px;border-radius:0;border:0;border-bottom:1px solid #bfa15c50;background:#10120f;backdrop-filter:none;max-height:calc(100dvh - 76px);overflow-y:auto}
   .cinematicHeader .siteNav.isOpen{display:grid;grid-template-columns:1fr;gap:4px}
   .cinematicHeader .siteNav a{display:flex;align-items:center;min-height:48px;padding:12px 16px;border-radius:8px}
   .cinematicHeader .siteNav a[aria-current=page]{background:#c5a65e1c}
