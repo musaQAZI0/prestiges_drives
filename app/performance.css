@@ -3,3 +3,11 @@
 .heroDesktopVisual img{object-fit:cover;object-position:center}
 .heroDesktopShade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,8,.92),rgba(5,5,8,.78) 25%,rgba(5,5,8,.34) 49%,rgba(5,5,8,.04) 72%)}
 @media(max-width:600px){.heroDesktopVisual{display:none}}
+.routeLoading{min-height:85svh;padding:150px 0 70px;background:#080906;color:#d4c7ab}
+.routeLoading p{font-size:14px;margin-bottom:30px}
+.routeLoadingHeading,.routeLoadingLine,.routeLoadingGrid>div{background:#171a13;border-radius:6px}
+.routeLoadingHeading{height:48px;max-width:520px;margin-bottom:20px}
+.routeLoadingLine{height:18px;max-width:360px;margin-bottom:48px}
+.routeLoadingGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.routeLoadingGrid>div{height:260px}
+@media(max-width:600px){.routeLoading{padding-top:110px}.routeLoadingGrid{grid-template-columns:1fr}.routeLoadingGrid>div{height:180px}.routeLoadingGrid>div:not(:first-child){display:none}}
