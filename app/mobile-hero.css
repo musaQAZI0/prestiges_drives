@@ -1,0 +1,9 @@
+/* Portrait art direction; landscape phones use the existing wide scene. */
+@media(max-width:800px) and (orientation:portrait){
+ .hero.heroCinematic{min-height:640px;min-height:max(640px,100svh);padding:110px 0 80px;align-content:start}
+ .heroCinematic .cinematicContent{align-self:start;top:0;padding:0;width:calc(100% - 36px);max-width:540px}
+ .heroCinematic .heroSlide{background:#000}
+ .heroCinematic .heroSlide img,.heroCinematic .heroSlide:nth-child(2) img{object-fit:contain;object-position:center bottom;transform:none}
+ .heroCinematic .heroSlideImages::after{background:transparent}
+ .heroCinematic .heroSlideControls{bottom:max(24px,env(safe-area-inset-bottom))}
+}

@@ -1,12 +1,12 @@
 'use client';
 
-import Image from 'next/image';
+import { getImageProps } from 'next/image';
 import { useEffect, useState } from 'react';
 
 const slides = [
-  { src: '/assets/optimized/heroes/home-original-hotel.webp', label: 'Luxury arrival in Islamabad' },
-  { src: '/assets/optimized/heroes/home-original-mountains.webp', label: 'Discover the northern mountains' },
-  { src: '/assets/optimized/heroes/home-original-city.webp', label: 'An executive journey through the city' },
+  { src: '/assets/optimized/heroes/home-original-hotel.webp', mobileSrc: '/assets/optimized/heroes/home-mobile-hotel.webp', label: 'Luxury arrival in Islamabad' },
+  { src: '/assets/optimized/heroes/home-original-mountains.webp', mobileSrc: '/assets/optimized/heroes/home-mobile-mountains.webp', label: 'Discover the northern mountains' },
+  { src: '/assets/optimized/heroes/home-original-city.webp', mobileSrc: '/assets/optimized/heroes/home-mobile-city.webp', label: 'An executive journey through the city' },
 ];
 
 export default function HeroSlideshow() {
@@ -43,11 +43,16 @@ export default function HeroSlideshow() {
   return (
     <div className="heroSlideshow" role="group" aria-label="Featured journeys">
       <div className="heroSlideImages" aria-hidden="true">
-        {slides.map((slide, index) => (
-          <div key={slide.src} className={`heroSlide ${index === active ? 'isActive' : ''}`}>
-            {(index === 0 || ready || index === active) && <Image src={slide.src} alt="" fill priority={index === 0} loading={index === 0 ? undefined : 'eager'} sizes="100vw" />}
-          </div>
-        ))}
+        {slides.map((slide, index) => {
+          const { props: desktop } = getImageProps({ src: slide.src, alt: '', fill: true, sizes: '100vw' });
+          const { props: mobile } = getImageProps({ src: slide.mobileSrc, alt: '', width: 1080, height: 1920, sizes: '100vw' });
+          return <div key={slide.src} className={`heroSlide ${index === active ? 'isActive' : ''}`}>
+            {(index === 0 || ready || index === active) && <picture>
+              <source media="(max-width: 800px) and (orientation: portrait)" srcSet={mobile.srcSet} sizes={mobile.sizes} />
+              <img {...desktop} alt="" loading="eager" fetchPriority={index === 0 ? 'high' : 'low'} />
+            </picture>}
+          </div>;
+        })}
       </div>
       <div className="heroSlideControls">
         <div className="heroSlideDots" role="group" aria-label="Choose a hero image">
