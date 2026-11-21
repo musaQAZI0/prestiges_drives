@@ -1,0 +1,18 @@
+/* Solid black page surfaces across the site. */
+body,main,.premiumServices.refinedPages,.routeLoading{background:#000}
+.servicesFlow{display:none}
+body:has(.vehicleDetailIntro) main,.vehicleDetailIntro{background:#000}
+body:has(.vehicleDetailIntro) .section,body:has(.vehicleDetailIntro) .ivorySection{background:#000}
+.footer,body:has(.premiumAbout) .footer,body:has(.premiumServices) .footer,
+.footer .footerGrid{background:#000;backdrop-filter:none}
+.premiumFleet.refinedPages .fleetSearchPanel,
+.premiumFleet.refinedPages .vehicleCard,
+.premiumFleet .searchNotice,
+.premiumContact.refinedPages .enquiryShell,
+.detailAside,.detailFacts>div{background:#000;backdrop-filter:none}
+.vehicleCard,.vehicleCard .vehicleCardBody,
+.vehicleCard .vehicleImageWrap,.vehicleCard.vehicleCardStudio .vehicleImageWrap,
+.vehicleCard .vehiclePlaceholder,.vehiclePlaceholderDetail{background:#000}
+.refinedPages .premiumServiceCard,.refinedPages .premiumServiceCard:hover,
+.refinedPages .customServicePanel,.refinedPages .aboutStoryPanel,
+.refinedPages .aboutPhotoPanel{background:#000;backdrop-filter:none}
