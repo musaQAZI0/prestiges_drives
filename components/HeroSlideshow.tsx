@@ -33,7 +33,7 @@ export default function HeroSlideshow() {
     if (!visible || reducedMotion) return;
     const timer = window.setInterval(() => {
       setActive(current => loaded[(current + 1) % slides.length] ? (current + 1) % slides.length : current);
-    }, 7000);
+    }, 4000);
     return () => window.clearInterval(timer);
   }, [active, visible, reducedMotion, loaded]);
 
