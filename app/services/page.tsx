@@ -1,3 +1,4 @@
+import ArrowIcon from '@/components/ArrowIcon';
 ﻿import Link from 'next/link';
 
 const services = [
@@ -12,8 +13,8 @@ export default function ServicesPage() {
     <div className="servicesFlow" aria-hidden="true" />
     <div className="container premiumServicesInner">
       <header className="premiumServicesIntro"><span className="premiumServicesEyebrow">PRESTIGE DRIVES / TRAVEL, CONSIDERED</span><h1>Travel for every <span>occasion.</span></h1><div className="servicesGoldRule" /><p>From life's special occasions to everyday journeys.<br />Thoughtful transport, tailored around you.</p></header>
-      <section className="premiumServiceCards" aria-label="Our services">{services.map((service, index) => <article className="premiumServiceCard" key={service.title}><span className="premiumServiceNumber">0{index + 1}</span><h2>{service.title}</h2><p>{service.text}</p><Link href={`/contact?service=${encodeURIComponent(service.title)}`}>Enquire about this service <span aria-hidden="true">↗</span></Link></article>)}</section>
-      <section className="customServicePanel"><span className="premiumServicesEyebrow">YOUR JOURNEY, YOUR WAY</span><h2>Need a custom service?</h2><p>Tell us your route, dates and preferences. We'll help you explore a transport arrangement for your occasion.</p><div><Link href="/contact" className="customServicePrimary">Get a Custom Quote ↗</Link><Link href="/fleet" className="customServiceSecondary">Explore Our Fleet</Link></div></section>
+      <section className="premiumServiceCards" aria-label="Our services">{services.map((service, index) => <article className="premiumServiceCard" key={service.title}><span className="premiumServiceNumber">0{index + 1}</span><h2>{service.title}</h2><p>{service.text}</p><Link href={`/contact?service=${encodeURIComponent(service.title)}`}>Enquire about this service <span aria-hidden="true"><ArrowIcon direction="up-right" /></span></Link></article>)}</section>
+      <section className="customServicePanel"><span className="premiumServicesEyebrow">YOUR JOURNEY, YOUR WAY</span><h2>Need a custom service?</h2><p>Tell us your route, dates and preferences. We'll help you explore a transport arrangement for your occasion.</p><div><Link href="/contact" className="customServicePrimary">Get a Custom Quote <ArrowIcon direction="up-right" /></Link><Link href="/fleet" className="customServiceSecondary">Explore Our Fleet</Link></div></section>
     </div>
   </div>;
 }

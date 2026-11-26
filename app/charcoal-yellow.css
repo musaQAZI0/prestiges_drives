@@ -1,0 +1,41 @@
+/* Charcoal surfaces and deep-yellow actions. */
+:root{--surface-page:#1b1d20;--surface-card:#25282c;--surface-input:#202226;--accent:#e4b21b;--accent-hover:#f2c43a;--text-primary:#f5f3eb;--text-secondary:#c4c5c6;--gold:var(--accent);--champagne:#f0cb58;--bronze:#e4b21b}
+html body{background:var(--surface-page);color:var(--text-primary)}
+#main-content,#main-content .homeNatural,#main-content .homeFeaturedFleet,#main-content .homeWhyChoose,
+#main-content .premiumServices,#main-content .fleetPage,#main-content .vehicleDetailIntro,
+#main-content .section,#main-content .ivorySection,#main-content .customServicePanel,
+#main-content .aboutStoryPanel,#main-content .aboutPhotoPanel{background:var(--surface-page)}
+html body .siteHeader.siteHeader,html body .siteHeader.cinematicHeader.isScrolled,
+html body .siteHeader.cinematicHeader.menuOpen,html body .cinematicHeader .siteNav.isOpen{background:#191b1e}
+#main-content .hero.heroCinematic{background:#1b1d20!important}
+#main-content .vehicleCard,#main-content .vehicleCardBody,#main-content .vehicleImageWrap,
+#main-content .vehiclePlaceholder,#main-content .homeBenefit,#main-content .premiumServiceCard,
+#main-content .enquiryShell,#main-content .detailAside,#main-content .detailFacts>div,
+#main-content .fleetSearchPanel,#main-content .searchNotice{background:var(--surface-card)}
+#main-content input,#main-content select,#main-content textarea{background:var(--surface-input);color:var(--text-primary);border-color:#65605a}
+#main-content input::placeholder,#main-content textarea::placeholder{color:#aeb1b5}
+#main-content h1,#main-content h2,#main-content h3,#main-content .vehicleCard h3 a{color:var(--text-primary)}
+#main-content p,#main-content .vehicleCardSummary{color:var(--text-secondary)}
+#main-content .eyebrow,#main-content .homeEyebrow,#main-content .premiumServicesEyebrow,
+#main-content .cinematicEyebrow,#main-content .premiumServiceNumber,#main-content .homeBenefitNumber,
+#main-content .textLink,#main-content .vehicleDetailsLink,#main-content .backLink{color:#f0cb58}
+#main-content .hero h1 span,#main-content .hero h1 em{color:#f0cb58}
+#main-content .btnPrimary,#main-content .homePrimaryLink,#main-content .customServicePrimary,
+#main-content .vehicleEnquiryLink,#main-content .fleetServiceOption.active{background:var(--accent);border-color:var(--accent);color:#1b1d20}
+#main-content .btnPrimary:hover,#main-content .homePrimaryLink:hover,#main-content .customServicePrimary:hover{background:var(--accent-hover);color:#1b1d20}
+html body .arrowIcon,html body .collectionArrow{background:var(--accent);border-color:var(--accent);color:#1b1d20}
+html body a:hover .arrowIcon,html body button:hover .arrowIcon{background:var(--accent-hover)}
+html body .collectionArrow .arrowIcon,html body .fleetServiceOption .arrowIcon{background:transparent;border:0;color:inherit}
+#main-content .vehicleCard,#main-content .homeBenefit,#main-content .premiumServiceCard,#main-content .serviceStory,#main-content .collectionPick{border-color:#82702f}
+#main-content .vehicleCard:hover,#main-content .vehicleCard:focus-within,#main-content .premiumServiceCard:hover{border-color:var(--accent)}
+#main-content .vehicleImageWrap{border-bottom-color:#82702f}
+#main-content .premiumBadge{background:#302c20;border-color:#a58a35;color:#f0cb58}
+#main-content .premiumBadgeIcon{background:#e4b21b12;border-color:#e4b21b40;color:#f0cb58}
+#main-content .premiumBadgeLabel{background:none;color:inherit}
+#main-content .fleetServiceOption{background:#25282c;border-color:#82702f;color:#e5e5e2}
+#main-content .servicesGoldRule{background:var(--accent)}
+#main-content .btnGoldOutline,#main-content .btnOutline,#main-content .customServiceSecondary,#main-content .cinematicBooking{border-color:#d6ad37;color:#f0cb58}
+html body .footer.footer,html body .footer.footer .footerGrid{background:#191b1e}
+html body .footer h4,html body .footerEnquire{color:#f0cb58;border-color:#a58a35}
+html body .footer p,html body .footer li a,html body .footerBottom{color:#c4c5c6}
+::selection{background:#e4b21b;color:#1b1d20}

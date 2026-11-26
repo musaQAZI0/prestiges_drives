@@ -1,3 +1,4 @@
+import ArrowIcon from '@/components/ArrowIcon';
 import Link from 'next/link';
 import HeroBanner from '@/components/HeroBanner';
 import SearchModule from '@/components/SearchModule';
@@ -15,7 +16,7 @@ export default function HomePage() {
     </section>
     <HomeFeaturedFleet />
     <HomeWhyChoose />
-    <section className="homeClosing container" aria-labelledby="home-closing-heading"><div><span className="homeEyebrow">LET’S MAKE A PLAN</span><h2 id="home-closing-heading">Where are you headed next?</h2><p>Tell us a little about your journey. We’ll take it from there.</p></div><Link href="/contact" className="homePrimaryLink">Plan Your Ride <span aria-hidden="true">↗</span></Link></section>
+    <section className="homeClosing container" aria-labelledby="home-closing-heading"><div><span className="homeEyebrow">LET’S MAKE A PLAN</span><h2 id="home-closing-heading">Where are you headed next?</h2><p>Tell us a little about your journey. We’ll take it from there.</p></div><Link href="/contact" className="homePrimaryLink">Plan Your Ride <span aria-hidden="true"><ArrowIcon direction="up-right" /></span></Link></section>
     </div>
   </>;
 }

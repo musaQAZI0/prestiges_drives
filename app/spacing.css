@@ -1,0 +1,141 @@
+/* Shared spacing rhythm: 8 / 16 / 24 / 32, with fluid section spacing. */
+:root {
+  --page-gutter: clamp(16px, 3vw, 32px);
+  --section-space: clamp(48px, 6vw, 80px);
+  --card-space: clamp(20px, 2.5vw, 28px);
+  --grid-space: clamp(16px, 2.5vw, 24px);
+}
+.container {
+  width: min(var(--max), calc(100% - var(--page-gutter) * 2));
+}
+.homeNatural .homeBooking { padding-top: 32px; }
+.homeNatural .searchModule { padding-bottom: 32px; }
+.homeWelcome {
+  padding-block: var(--section-space) 0;
+  gap: 32px;
+}
+.homeWelcome > .homeEyebrow { padding-top: 16px; }
+.homeNatural .homeFeaturedFleet,
+.homeNatural .homeWhyChoose { padding-block: var(--section-space) 0; }
+.homeNatural .homeSectionIntro { margin-bottom: 32px; }
+.homeNatural .homeSectionIntro h2,
+.homeNatural .homeWelcome h2,
+.homeNatural .homeClosing h2 { margin: 12px 0 16px; }
+.homeNatural .homeSectionIntro p { margin-bottom: 0; }
+.homeNatural .homeBenefitsGrid {
+  gap: var(--grid-space);
+  margin-top: 32px;
+}
+.homeNatural .homeBenefit,
+.refinedPages .premiumServiceCard { padding: var(--card-space); }
+.homeNatural .homeBenefitNumber { margin-bottom: 16px; }
+.homeNatural .vehicleGrid,
+.fleetPage .vehicleGrid,
+.refinedPages .premiumServiceCards { gap: var(--grid-space); }
+.vehicleCard .vehicleCardBody,
+.homeNatural .vehicleCardBody { padding: var(--card-space); }
+.vehicleCard .vehicleCardBody h3,
+.homeNatural .vehicleCardBody h3,
+.homeNatural .vehicleCardBody h3 a { margin: 0 0 16px; }
+.homeNatural .homeFleetEnd { margin-top: 24px; gap: 24px; }
+.homeClosing {
+  margin-top: var(--section-space);
+  padding-block: 40px var(--section-space);
+  gap: 24px;
+}
+.fleetPage.premiumFleet,
+.premiumServices.refinedPages {
+  padding-top: 138px;
+  padding-bottom: var(--section-space);
+}
+.refinedPages .premiumServicesIntro {
+  margin: 0 auto 40px;
+}
+.refinedPages .premiumServicesIntro h1 { margin: 16px 0; }
+.refinedPages .servicesGoldRule { margin: 20px auto; }
+.premiumFleet.refinedPages .fleetIntro.premiumServicesIntro {
+  padding: 0 0 32px;
+  margin: 0 auto;
+}
+.premiumFleet.refinedPages .fleetSearchPanel {
+  padding: var(--card-space);
+  margin-bottom: 24px;
+}
+.premiumFleet.refinedPages .fleetServicePicker {
+  margin-bottom: 24px;
+  padding-bottom: 0;
+}
+.refinedPages .premiumServiceNumber { margin-bottom: 16px; }
+.refinedPages .premiumServiceCard h2,
+.refinedPages .premiumServiceCard h3 { margin: 0 0 16px; line-height: 1.25; }
+.refinedPages .premiumServiceCard p { margin: 0 0 24px; }
+.refinedPages .premiumServiceCard p:last-child { margin-bottom: 0; }
+.refinedPages .premiumServiceCard a {
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 8px 0 0;
+}
+.refinedPages .customServicePanel {
+  margin-top: var(--section-space);
+  padding-top: 32px;
+}
+.refinedPages .customServicePanel h2 { margin: 16px 0; }
+.refinedPages .customServicePanel p { margin-bottom: 24px; }
+.customServicePanel > div { gap: 12px; }
+.refinedPages .aboutStoryPanels { gap: 40px; }
+.refinedPages .aboutStoryPanel h2 { margin: 16px 0; }
+.refinedPages .aboutStoryPanel p { margin-bottom: 16px; }
+.refinedPages .aboutValues {
+  padding-block: 40px;
+  margin: 40px 0;
+  gap: 24px;
+}
+.aboutProcess { padding: 0; }
+.serviceFleetHeading { margin-bottom: 24px; }
+.premiumContact.refinedPages .enquiryShell { padding: var(--card-space); }
+.premiumContact .formIntro { margin-bottom: 8px; }
+.premiumContact .formIntro h2 { margin: 12px 0 16px; }
+.enquiryForm { gap: 24px; }
+.formGrid { gap: 20px; }
+.enquiryForm label { gap: 8px; }
+.enquirySubmitActions { margin-top: 0; gap: 12px; }
+.optionalFields .formGrid { margin-block: 20px 0; }
+.optionalFields .formHint { margin-top: 16px; }
+.btn, .homePrimaryLink, .cinematicBooking,
+.customServicePanel a, .footerEnquire {
+  gap: 12px;
+  min-height: 48px;
+  padding-block: 10px;
+}
+.homePrimaryLink, .cinematicBooking { padding-inline: 24px; }
+.footerEnquire { align-items: center; }
+.footer { padding-top: 0; }
+.footer .footerGrid { padding: 32px; gap: 32px; }
+.footer h4 { margin: 0 0 16px; }
+.footer p { margin-bottom: 16px; }
+.footerBottom { margin-top: 24px; padding-block: 24px; }
+@media (max-width: 800px) {
+  .fleetPage.premiumFleet, .premiumServices.refinedPages { padding-top: 112px; }
+  .refinedPages .aboutStoryPanels { gap: 32px; }
+}
+@media (max-width: 600px) {
+  .homeNatural .homeBooking { padding-top: 24px; }
+  .homeNatural .searchModule { padding-bottom: 24px; }
+  .homeWelcome { gap: 12px; }
+  .homeWelcome > .homeEyebrow { padding-top: 0; }
+  .homeNatural .homeSectionIntro { margin-bottom: 24px; }
+  .homeNatural .homeBenefitsGrid { margin-top: 24px; }
+  .homeClosing { padding-top: 32px; }
+  .fleetPage.premiumFleet, .premiumServices.refinedPages { padding-top: 100px; }
+  .refinedPages .premiumServicesIntro { margin-bottom: 32px; }
+  .refinedPages .premiumServiceCards { gap: 16px; }
+  .refinedPages .aboutValues { margin-block: 32px; padding-block: 32px; }
+  .enquiryForm, .formGrid { gap: 20px; }
+  .footer .footerGrid { padding: 24px 20px; gap: 24px; }
+  .footerBottom { margin-top: 16px; padding-block: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .siteHeader { transition: none; }
+}

@@ -1,0 +1,4 @@
+Mode: built-in image_gen.
+Selected output: /assets/optimized/logo/prestige-drives-charcoal-yellow-v2.webp
+Final prompt: A perfectly clean flat graphic automotive wordmark on a uniform solid charcoal #191b1e background. Wide horizontal 3:1 layout. A minimal graceful deep yellow #e4b21b car roofline above the exact word PRESTIGE in large smooth solid ivory italic high contrast serif letters. Below, exact word DRIVES in smaller widely spaced bold geometric sans serif deep yellow letters, with short thin yellow horizontal lines at either side. No texture, distress, erosion, speckles, noise or metallic chrome; crisp professional edges.
+Homepage hero: uses existing project photographs, not generated replacement photos. The photographed Sportage and Prado are models in the fleet catalogue. Photos are illustrative references; availability and exact vehicles require confirmation.

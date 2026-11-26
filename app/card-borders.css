@@ -1,0 +1,48 @@
+/* Full card outlines remain visible against the black page surfaces. */
+.vehicleCard,
+.homeNatural .vehicleCard,
+.premiumFleet.refinedPages .vehicleCard,
+.homeNatural .homeBenefit,
+.refinedPages .premiumServiceCard,
+.serviceStory,
+.collectionPick {
+  border: 1px solid #8f7745;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.homeNatural .homeBenefit,
+.refinedPages .premiumServiceCard {
+  padding: 28px 24px;
+}
+.collectionPick {
+  padding: 16px;
+}
+.homeNatural .vehicleCard .vehicleImageWrap {
+  border-radius: 0;
+  border-bottom: 1px solid #8f7745;
+}
+@media (hover: hover) {
+  .vehicleCard:hover,
+  .homeNatural .vehicleCard:hover,
+  .premiumFleet.refinedPages .vehicleCard:hover,
+  .homeNatural .homeBenefit:hover,
+  .refinedPages .premiumServiceCard:hover,
+  .serviceStory:hover,
+  .collectionPick:hover {
+    border-color: #d6b96f;
+  }
+}
+.vehicleCard:focus-within,
+.homeNatural .vehicleCard:focus-within,
+.premiumFleet.refinedPages .vehicleCard:focus-within,
+.refinedPages .premiumServiceCard:focus-within,
+.serviceStory:focus-within,
+.collectionPick:focus-within {
+  border-color: #d6b96f;
+}
+@media (max-width: 600px) {
+  .homeNatural .homeBenefit,
+  .refinedPages .premiumServiceCard {
+    padding: 24px 20px;
+  }
+}

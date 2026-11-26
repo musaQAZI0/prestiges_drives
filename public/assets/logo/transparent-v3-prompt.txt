@@ -1,0 +1,3 @@
+Built-in image_gen edit; source: prestige-drives-charcoal-yellow-v2.webp.
+Selected output: prestige-drives-transparent-v3.webp.
+Prompt: Use case: background-extraction. Edit this existing Prestige Drives logo only by removing its charcoal background and replacing every background area with genuine alpha transparency, including between and inside letters and under the car outline. Preserve exact PRESTIGE and DRIVES lettering, typography, layout, aspect ratio, ivory PRESTIGE fill, golden yellow car outline, yellow DRIVES text and horizontal rules. Keep crisp antialiased edges, no dark halo. No redesign, no new elements, no shadows, no replacement colors. Output isolated original logo on a truly transparent background.

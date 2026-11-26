@@ -1,0 +1,17 @@
+/* Premium labels with a dedicated icon compartment. */
+.premiumBadge{display:inline-flex;align-items:center;max-width:100%;gap:12px;padding:6px 16px 6px 6px;border:1px solid #c5a65e70;border-radius:12px;background:linear-gradient(125deg,#282219,#12110e 65%);color:#e7d2a2;box-shadow:inset 0 1px 0 #f5dfac18,0 4px 12px #0003;vertical-align:middle}
+.premiumBadgeIcon{display:grid;place-items:center;width:30px;height:30px;flex:0 0 30px;background:#c5a65e14;border:1px solid #c5a65e30;border-radius:8px}
+.premiumBadgeLabel{min-width:0;font-size:12px;font-weight:600;line-height:1.5;letter-spacing:.08em;text-transform:uppercase;overflow-wrap:anywhere}
+.homeNatural .vehicleCardBadges{display:flex}
+.vehicleCard .vehicleCardBadges{top:16px;left:16px;right:16px}
+.vehicleCardBadges .premiumBadge{padding:4px 12px 4px 4px;border-radius:10px;background:#14120ff2;color:#e7d2a2;font-weight:600}
+.vehicleCardBadges .premiumBadgeIcon{padding:0;width:26px;height:26px;flex-basis:26px;background:#c5a65e14;color:#e7d2a2;border-radius:6px}
+.vehicleCard .vehicleCardBadges .premiumBadgeLabel{padding:0;background:none;color:inherit;font-size:11px;border-radius:0}
+.premiumFleet.refinedPages .fleetServiceOptions{gap:10px}
+.premiumFleet.refinedPages .fleetServiceOption{position:relative;gap:10px;min-height:46px;padding:10px 16px;border:1px solid #bfa15c55;border-radius:12px;background:#13120f;color:#d8ccb4;font-size:13px;line-height:1.5}
+.premiumFleet.refinedPages .fleetServiceOption.active{background:linear-gradient(120deg,#dfc58a,#bfa15c);border-color:#e1c38c;color:#15130e;box-shadow:inset 0 1px 0 #fff4}
+.premiumFleet.refinedPages .fleetServiceOption.active::before{content:'';width:12px;height:7px;flex:0 0 12px;border-left:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg) translateY(-2px)}
+@media(hover:hover){.premiumFleet.refinedPages .fleetServiceOption:hover{border-color:#e1c38c}}
+@media(max-width:600px){.premiumBadge{gap:10px;padding-right:12px}.premiumBadgeLabel{font-size:11px;letter-spacing:.06em}.premiumFleet.refinedPages .fleetServiceOption{padding-inline:12px}.vehicleCard .vehicleCardBadges{top:12px;left:12px;right:12px}}
+
+.premiumFleet.refinedPages .vehicleCardBadges .premiumBadgeLabel{display:inline;background:none;color:inherit}

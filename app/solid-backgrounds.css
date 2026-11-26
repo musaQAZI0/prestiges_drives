@@ -16,3 +16,13 @@ body:has(.vehicleDetailIntro) .section,body:has(.vehicleDetailIntro) .ivorySecti
 .refinedPages .premiumServiceCard,.refinedPages .premiumServiceCard:hover,
 .refinedPages .customServicePanel,.refinedPages .aboutStoryPanel,
 .refinedPages .aboutPhotoPanel{background:#000;backdrop-filter:none}
+
+/* Opaque header across all routes and scroll states. */
+.siteHeader,
+.siteHeader.cinematicHeader,
+.siteHeader.cinematicHeader.isScrolled,
+.siteHeader.cinematicHeader.menuOpen {
+  background: #000;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}

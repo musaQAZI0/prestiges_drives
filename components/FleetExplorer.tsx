@@ -1,4 +1,5 @@
 'use client';
+import ArrowIcon from '@/components/ArrowIcon';
 
 import { useEffect, useState } from 'react';
 import VehicleCard from '@/components/VehicleCard';
@@ -66,14 +67,14 @@ export default function FleetExplorer({ vehicles, initialCategory = '', initialS
   return <>
     {!serviceMode && <form className="fleetSearchPanel" onSubmit={event => { event.preventDefault(); setSubmittedSearch(search); const nextCategory = category || 'all'; setCategory(nextCategory); updateUrl(nextCategory, search); }}>
       <div className="fleetSearchHeading"><strong>Find a vehicle</strong><button type="button" onClick={() => reset()}>Reset filters</button></div>
-      <div className="fleetSearchFields"><label>Search car<input type="search" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search by vehicle name or model" /></label><button type="submit" className="btn btnPrimary">Search <span aria-hidden="true">↗</span></button></div>
+      <div className="fleetSearchFields"><label>Search car<input type="search" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search by vehicle name or model" /></label><button type="submit" className="btn btnPrimary">Search <span aria-hidden="true"><ArrowIcon direction="up-right" /></span></button></div>
     </form>}
     <section className={`fleetServicePicker ${!serviceMode ? 'fleetCategoryPills' : ''}`} aria-label={serviceMode ? 'Browse by service' : 'Browse by vehicle category'}>
       <span className="eyebrow dark">{serviceMode ? 'Choose your service' : 'Choose your vehicle'}</span>
       <div className="fleetServiceOptions" role="group" aria-label={serviceMode ? 'Service categories' : 'Vehicle categories'}>
         {!serviceMode && <button type="button" className={`fleetServiceOption ${active === '' ? 'active' : ''}`} aria-pressed={active === ''} onClick={() => select('')}>Featured</button>}
-        {options.map(item => <button type="button" key={item.id} className={`fleetServiceOption ${active === item.id ? 'active' : ''}`} aria-pressed={active === item.id} onClick={() => select(item.id)}>{item.label}<span aria-hidden="true">↗</span></button>)}
-        <button type="button" className={`fleetServiceOption ${active === 'all' ? 'active' : ''}`} aria-pressed={active === 'all'} onClick={() => select('all')}>{serviceMode ? 'All services' : 'All vehicles'}<span aria-hidden="true">↗</span></button>
+        {options.map(item => <button type="button" key={item.id} className={`fleetServiceOption ${active === item.id ? 'active' : ''}`} aria-pressed={active === item.id} onClick={() => select(item.id)}>{item.label}<span aria-hidden="true"><ArrowIcon direction="up-right" /></span></button>)}
+        <button type="button" className={`fleetServiceOption ${active === 'all' ? 'active' : ''}`} aria-pressed={active === 'all'} onClick={() => select('all')}>{serviceMode ? 'All services' : 'All vehicles'}<span aria-hidden="true"><ArrowIcon direction="up-right" /></span></button>
       </div>
       {serviceMode && <p>{selectedService?.description ?? 'Browse the full fleet for any occasion.'} Availability and suitability are confirmed when you enquire.</p>}
     </section>
@@ -82,6 +83,6 @@ export default function FleetExplorer({ vehicles, initialCategory = '', initialS
       <div aria-live="polite" className="fleetResultSummary">Showing <strong>{filtered.length}</strong> cars <span>{showingFeatured ? 'Featured selection' : serviceMode ? selectedService?.label ?? 'All services' : selectedCategory?.label ?? 'All vehicles'}</span></div>
       {filtered.length ? <div className="vehicleGrid fleetServiceResults" key={active}>{filtered.map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} enquiryQuery={enquiryQuery} />)}</div> : <div className="searchNotice"><strong>No vehicles match your search.</strong><button type="button" className="btn btnPrimary" onClick={() => reset('all')}>Clear filters</button></div>}
     </>
-    {!serviceMode && <div className="fleetBackHome"><Link href="/" className="customServicePrimary">Back to Home <span aria-hidden="true">→</span></Link></div>}
+    {!serviceMode && <div className="fleetBackHome"><Link href="/" className="customServicePrimary">Back to Home <span aria-hidden="true"><ArrowIcon /></span></Link></div>}
   </>;
 }

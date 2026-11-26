@@ -7,3 +7,53 @@
  .heroCinematic .heroSlideImages::after{background:transparent}
  .heroCinematic .heroSlideControls{bottom:max(24px,env(safe-area-inset-bottom))}
 }
+
+/* Rounded actions and circular vector arrow controls. */
+body .btn,
+body .headerCta,
+body .cinematicBooking,
+body .homePrimaryLink,
+body .customServicePrimary,
+body .customServiceSecondary,
+body .mobileContact,
+body .vehicleEnquiryLink {
+  border-radius: 999px !important;
+}
+body .arrowIcon {
+  width: 36px;
+  height: 36px;
+  padding: 9px;
+  background: #c5a65e;
+  color: #10110d;
+  border: 1px solid #c5a65e;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+body .collectionArrow .arrowIcon,
+body .fleetServiceOption .arrowIcon {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+}
+
+body .collectionArrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #c5a65e;
+  border-color: #c5a65e;
+  color: #10110d;
+}
+body .collectionArrow:hover,
+body a:hover .arrowIcon,
+body button:hover .arrowIcon {
+  background: #e2c783;
+}
+body a:focus-visible,
+body button:focus-visible {
+  outline: 2px solid #c5a65e;
+  outline-offset: 4px;
+}
