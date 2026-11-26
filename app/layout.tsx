@@ -20,6 +20,7 @@ import './spacing.css';
 import './badges.css';
 import './charcoal-yellow.css';
 import './hero-realism.css';
+import './vehicle-detail.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ContactChannels from '@/components/ContactChannels';

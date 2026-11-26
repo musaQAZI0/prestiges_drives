@@ -1,11 +1,20 @@
-import ArrowIcon from '@/components/ArrowIcon';
 import Image from 'next/image';
-import VehicleCard from '@/components/VehicleCard';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import VehicleCard from '@/components/VehicleCard';
 import { serviceVehicles as vehicles, rateLabel } from '@/lib/data';
+import { contactPhone, contactPhoneHref, whatsappNumber } from '@/lib/contact';
 
 export function generateStaticParams() { return vehicles.map(vehicle => ({ slug: vehicle.slug })); }
+
+const descriptions: Record<string, string> = {
+  SUV: 'Make room for a memorable journey. An SUV for your city plans, longer routes, or a special arrival.',
+  Sedan: 'A considered choice for business travel, airport arrivals, and days that deserve a little more comfort.',
+  MPV: 'Bring your people and your plans together. A versatile choice for shared journeys and time away.',
+  Hatchback: 'Keep your everyday journeys simple, from errands around the city to a flexible day out.',
+  Van: 'Travel together, with transport arranged around your group, route, and schedule.',
+  Bus: 'Bring the whole group along. Share your passenger count and itinerary to start planning.',
+};
 
 export default function VehiclePage({ params, searchParams }: { params: { slug: string }; searchParams: { category?: string; q?: string; city?: string; pickup?: string; dropoff?: string } }) {
   const vehicle = vehicles.find(item => item.slug === params.slug);
@@ -15,10 +24,31 @@ export default function VehiclePage({ params, searchParams }: { params: { slug: 
     const value = searchParams[key];
     if (typeof value === 'string' && value) fleetParams.set(key, value);
   }
-  const backHref = fleetParams.size ? `/fleet?${fleetParams.toString()}` : '/fleet';
+  const backHref = fleetParams.size ? `/fleet?${fleetParams}` : '/fleet';
   const enquiryParams = new URLSearchParams({ vehicle: vehicle.name });
-  if (searchParams.city) enquiryParams.set('city', searchParams.city);
-  if (searchParams.pickup) enquiryParams.set('pickup', searchParams.pickup);
-  if (searchParams.dropoff) enquiryParams.set('dropoff', searchParams.dropoff);
-  return <><section className="vehicleDetailIntro"><div className="container"><Link href={backHref} className="backLink"><ArrowIcon direction="left" /> Back to the fleet</Link><span className="eyebrow dark">{vehicle.category} / THE COLLECTION</span><h1>{vehicle.name}</h1><p>Explore the {vehicle.category.toLowerCase()} collection. Share your route and preferences for a quote tailored to your journey.</p></div></section><section className="detailGallery container"><div className="detailMainImage">{vehicle.gallery.length ? <Image src={vehicle.gallery[0]} alt={`Front or exterior view of ${vehicle.name}`} width={1200} height={850} sizes="(max-width: 800px) 100vw, 70vw" priority /> : <div className="vehiclePlaceholder vehiclePlaceholderDetail"><span>{vehicle.category}</span><strong>{vehicle.name}</strong><small>Photo coming soon</small></div>}</div>{vehicle.gallery.slice(1).map((image, index) => <div className="detailExtraImage" key={image}><Image src={image} alt={`Additional view ${index + 2} of ${vehicle.name}`} width={800} height={600} sizes="(max-width: 800px) 100vw, 35vw" /></div>)}</section><p className="container imageDisclosure">{vehicle.imageSource ? <>{vehicle.imageNote} <a href={vehicle.imageSource} target="_blank" rel="noopener noreferrer">Manufacturer reference <ArrowIcon direction="up-right" /></a></> : <>Illustrative vehicle image. Actual vehicle, model year, and condition are confirmed before booking.</>}</p><section className="section"><div className="container detailGrid"><div><span className="eyebrow dark">THE DETAILS</span><h2>Make the journey yours.</h2><p>Share your pickup, destination, dates, and any requirements. We’ll confirm the vehicle’s specifications, availability, inclusions, and rental terms when preparing your quotation.</p><div className="detailFacts"><div><small>Vehicle type</small><strong>{vehicle.category === 'MPV' ? 'MUV' : vehicle.category === 'Van' ? 'Hiace' : vehicle.category}</strong></div><div><small>Model</small><strong>{vehicle.name}</strong></div><div><small>Plan your trip</small><strong>Choose your route and dates</strong></div><div><small>Pricing & terms</small><strong>{rateLabel(vehicle)}</strong></div></div></div><aside className="detailAside"><span className="eyebrow dark">ENQUIRE ABOUT THIS VEHICLE</span><h3>{rateLabel(vehicle)}</h3>{vehicle.referenceRate && <p className="rateSource">Reference listing from <a href="https://isbrentacar.pk/" target="_blank" rel="noopener noreferrer">Islamabad Rent a Car</a>, checked 1 November 2026. Final pricing and inclusions are confirmed for your trip.</p>}<p>Your quote request will include this vehicle. Add your pickup, destination, and date to get started.</p><ul className="quoteChecklist"><li>Availability for your dates</li><li>Route, driver options, and inclusions</li><li>Pricing and rental terms before booking</li></ul><Link href={`/contact?${enquiryParams.toString()}`} className="btn btnPrimary">Request availability <ArrowIcon /></Link></aside></div></section><section className="section ivorySection"><div className="container"><div className="sectionHeading"><span className="eyebrow dark">CONTINUE EXPLORING</span><h2>Another way to travel.</h2><p>Discover more from the collection.</p></div><div className="vehicleGrid">{vehicles.filter(item => item.category === vehicle.category && item.slug !== vehicle.slug).slice(0, 3).map(item => <VehicleCard key={item.slug} vehicle={item} enquiryQuery={`?${new URLSearchParams(Object.entries(searchParams).filter((entry): entry is [string, string] => typeof entry[1] === 'string')).toString()}`} />)}</div></div></section></>;
+  for (const key of ['city', 'pickup', 'dropoff'] as const) {
+    const value = searchParams[key];
+    if (typeof value === 'string' && value) enquiryParams.set(key, value);
+  }
+  const category = vehicle.category === 'MPV' ? 'MUV' : vehicle.category === 'Van' ? 'Hiace' : vehicle.category;
+  const images = Array.from(new Set([vehicle.image, ...vehicle.gallery].filter(Boolean)));
+  const related = vehicles.filter(item => item.category === vehicle.category && item.slug !== vehicle.slug).slice(0, 3);
+  const message = ['Hello Prestige Drives, I would like to enquire about the ' + vehicle.name + '.', ...(['city', 'pickup', 'dropoff'] as const).filter(key => searchParams[key]).map(key => key + ': ' + searchParams[key])].join('\n');
+  return <div className="vehicleDetailPage"><div className="container">
+    <nav className="vdBreadcrumb" aria-label="Breadcrumb"><Link href={backHref}>Fleet</Link><span aria-hidden="true">/</span><span aria-current="page">{vehicle.name}</span></nav>
+    <header className="vdHeading"><div><span className="vdEyebrow">{category} / PRESTIGE DRIVES</span><h1>{vehicle.name}</h1><p>{descriptions[vehicle.category]}</p></div></header>
+    <div className="vdLayout"><div className="vdMain">
+      <section className="vdGallery" aria-label={vehicle.name + ' photos'}>
+        <div className="vdMainPhoto">{images.length ? <Image src={images[0]} alt={vehicle.name + ' exterior'} width={1200} height={850} priority sizes="(max-width: 900px) 100vw, 65vw" /> : <div className="vdNoPhoto"><span>{category}</span><strong>{vehicle.name}</strong><p>Vehicle photos available on enquiry</p></div>}</div>
+        {images.length > 1 && <div className="vdAdditionalPhotos">{images.slice(1).map((image, index) => <Image key={image} src={image} alt={'Additional view ' + (index + 2) + ' of ' + vehicle.name} width={800} height={600} sizes="(max-width: 600px) 100vw, 32vw" />)}</div>}
+        <p className="vdImageNote">{vehicle.imageSource ? <>{vehicle.imageNote} <a href={vehicle.imageSource} target="_blank" rel="noopener noreferrer">Manufacturer reference</a></> : 'Illustrative vehicle image. Actual model year, specification, and condition are confirmed before booking.'}</p>
+      </section>
+      <section className="vdOverview" aria-labelledby="vehicle-overview"><h2 id="vehicle-overview">Good to know.</h2><p>Share your route and dates. We will confirm the model year, specifications, availability, and inclusions with your quote.</p><dl className="vdFacts"><div><dt>Journeys</dt><dd>City &amp; outstation enquiries</dd></div><div><dt>Availability</dt><dd>Confirmed for your dates</dd></div></dl></section>
+    </div>
+    <aside className="vdQuote" aria-labelledby="quote-heading"><span className="vdEyebrow">YOUR JOURNEY</span><h2 id="quote-heading">{typeof vehicle.referenceRate === 'number' ? rateLabel(vehicle) : 'Travel with Prestige.'}</h2><p>Tell us your plans for a tailored quote.</p>{vehicle.referenceRate && <p className="vdRateNote">Reference listing from <a href="https://isbrentacar.pk/" target="_blank" rel="noopener noreferrer">Islamabad Rent a Car</a>, checked 1 November 2026. Final pricing and inclusions are confirmed for your trip.</p>}
+      {(searchParams.city || searchParams.pickup || searchParams.dropoff) && <dl className="vdQuoteSummary">{searchParams.city && <div><dt>Pickup city</dt><dd>{searchParams.city}</dd></div>}{searchParams.pickup && <div><dt>Pickup date</dt><dd>{searchParams.pickup}</dd></div>}{searchParams.dropoff && <div><dt>Return date</dt><dd>{searchParams.dropoff}</dd></div>}</dl>}
+      <Link href={'/contact?' + enquiryParams} className="vdPrimary">Request a quote</Link><a className="vdSecondary" href={'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(message)} target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a><div className="vdCall"><a href={contactPhoneHref}>{contactPhone}</a></div>
+    </aside></div>
+    {related.length > 0 && <section className="vdRelated"><div className="vdRelatedHeading"><div><h2>Explore similar vehicles.</h2></div><Link href={backHref}>Explore the fleet</Link></div><div className="vehicleGrid">{related.map(item => <VehicleCard key={item.slug} vehicle={item} enquiryQuery={fleetParams.size ? '?' + fleetParams : ''} />)}</div></section>}
+  </div></div>;
 }

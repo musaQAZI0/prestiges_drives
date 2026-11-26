@@ -32,7 +32,6 @@ export default function HeroBanner({
   if (home) return <section className="hero heroHome heroCinematic" aria-label="Prestige Drives luxury journeys">
     <HeroSlideshow />
     <div className="container cinematicContent">
-      <span className="cinematicEyebrow">PRESTIGE DRIVES · PAKISTAN</span>
       <h1>Arrive in <span>Prestige.</span></h1>
       <p>Exceptional cars. Considered journeys.<br />For every destination that matters.</p>
       <Link href="/contact" className="cinematicBooking">Book Your Ride</Link>
