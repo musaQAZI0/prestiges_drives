@@ -1,39 +1,39 @@
 .fleetPage.premiumFleet{padding:120px 0 80px;background:#080906}
 .premiumFleet .fleetIntro.premiumServicesIntro{padding:0;border:0;background:none;border-radius:0;margin:16px auto 72px;max-width:1100px}
-.premiumFleet .fleetIntro>.eyebrow{background:none;color:#dec58b;font-size:9px;letter-spacing:.28em;padding:0;border-radius:0}
-.premiumFleet .fleetIntro h1{font-weight:600;font-size:clamp(34px,4.5vw,66px);letter-spacing:.12em;margin:24px 0;text-transform:uppercase;color:#f4e9d1}
-.premiumFleet .fleetIntro h1 span{color:#c5a65e}.premiumFleet .fleetIntro p{color:#e7dac0;letter-spacing:.055em;font-size:17px}
-.premiumFleet .fleetSearchPanel{margin:0 0 24px;padding:26px;border-color:#bfa15c50;background:#080906b8;backdrop-filter:blur(10px);box-shadow:none}
-.premiumFleet .fleetSearchHeading{color:#ead4a5}.premiumFleet .fleetSearchHeading button{color:#d6b96f}
-.premiumFleet .fleetSearchFields label{color:#e7dac0}
-.premiumFleet .fleetSearchFields input,.premiumFleet .fleetSearchFields select{background:#161711;border-color:#bfa15c50;color:#f4e9d1;color-scheme:dark}
-.premiumFleet .fleetSearchFields input::placeholder{color:#aaa18b}
-.premiumFleet .fleetSearchFields .btn{background:#c5a65e;color:#10110d;border-color:#c5a65e;border-radius:99px}
+.premiumFleet .fleetIntro>.eyebrow{background:none;color:#c6c6c6;font-size:9px;letter-spacing:.28em;padding:0;border-radius:0}
+.premiumFleet .fleetIntro h1{font-weight:600;font-size:clamp(34px,4.5vw,66px);letter-spacing:.12em;margin:24px 0;text-transform:uppercase;color:#eaeaea}
+.premiumFleet .fleetIntro h1 span{color:#a7a7a7}.premiumFleet .fleetIntro p{color:#dbdbdb;letter-spacing:.055em;font-size:17px}
+.premiumFleet .fleetSearchPanel{margin:0 0 24px;padding:26px;border-color:#a2a2a250;background:#080906b8;backdrop-filter:blur(10px);box-shadow:none}
+.premiumFleet .fleetSearchHeading{color:#d5d5d5}.premiumFleet .fleetSearchHeading button{color:#b9b9b9}
+.premiumFleet .fleetSearchFields label{color:#dbdbdb}
+.premiumFleet .fleetSearchFields input,.premiumFleet .fleetSearchFields select{background:#161616;border-color:#a2a2a250;color:#eaeaea;color-scheme:dark}
+.premiumFleet .fleetSearchFields input::placeholder{color:#a1a1a1}
+.premiumFleet .fleetSearchFields .btn{background:#a7a7a7;color:#10110d;border-color:#a7a7a7;border-radius:99px}
 .premiumFleet .fleetCategoryPills{background:transparent}
-.premiumFleet .fleetCategoryPills .fleetServiceOption.active{background:#c5a65e;color:#10110d}
-.premiumFleet .fleetImageNote{color:#b6aa90;font-size:11px;line-height:1.7;margin-top:30px}
-.premiumFleet .vehicleCard{background:#10120e;border-color:#bfa15c40;box-shadow:0 8px 28px #0003}
-.premiumFleet .vehicleCard h3 a{color:#f0e5ce}.premiumFleet .vehicleCard .vehicleCardSummary{color:#d4c7ab}
-.premiumFleet .vehicleCard .cardActions a{border-color:#bfa15c80;color:#e2c783}
-.premiumFleet .vehicleCard .cardActions .vehicleEnquiryLink{background:#c5a65e;color:#10110d;border-color:#c5a65e}
-.premiumFleet .searchNotice{background:#191a13;color:#f0e5ce;border-color:#c5a65e}.premiumFleet .searchNotice small{color:#d6c7a9}
+.premiumFleet .fleetCategoryPills .fleetServiceOption.active{background:#a7a7a7;color:#10110d}
+.premiumFleet .fleetImageNote{color:#ababab;font-size:11px;line-height:1.7;margin-top:30px}
+.premiumFleet .vehicleCard{background:#10120e;border-color:#a2a2a240;box-shadow:0 8px 28px #0003}
+.premiumFleet .vehicleCard h3 a{color:#e6e6e6}.premiumFleet .vehicleCard .vehicleCardSummary{color:#c8c8c8}
+.premiumFleet .vehicleCard .cardActions a{border-color:#a2a2a280;color:#c7c7c7}
+.premiumFleet .vehicleCard .cardActions .vehicleEnquiryLink{background:#a7a7a7;color:#10110d;border-color:#a7a7a7}
+.premiumFleet .searchNotice{background:#191919;color:#e6e6e6;border-color:#a7a7a7}.premiumFleet .searchNotice small{color:#c8c8c8}
 .premiumContact{padding-top:120px}.premiumContact .premiumServicesIntro{margin-top:16px;margin-bottom:56px}
 .premiumContact .contactGrid{grid-template-columns:.85fr 1.15fr;gap:30px}
 .premiumContact .contactFormOnly{max-width:860px;margin-inline:auto}
-.contactInfoPanel,.premiumContact .enquiryShell{padding:32px;background:#080906b8;border:1px solid #bfa15c60;border-radius:20px;backdrop-filter:blur(10px)}
-.contactInfoPanel h2{font-size:34px;line-height:1.2;color:#d6b96f;margin:22px 0}
-.contactInfoPanel>p,.premiumContact .contactNote p{font-size:14px;color:#e0d3b9;line-height:1.85}
-.premiumContact .contactNote{border-color:#bfa15c40}.premiumContact .contactNote span{color:#d6b96f}
-.premiumContact .contactChannels{border-color:#bfa15c40}.premiumContact .contactChannels a,.premiumContact .contactChannels .eyebrow{color:#d6b96f}
-.premiumContact .formIntro .eyebrow{color:#d6b96f}.premiumContact .formIntro h2{font-size:30px;color:#ead4a5}.premiumContact .formIntro p,.premiumContact .formHint{color:#d4c7ab}
-.premiumContact .enquiryForm label{color:#e7dac0;font-weight:500}
-.premiumContact .enquiryForm input,.premiumContact .enquiryForm select,.premiumContact .enquiryForm textarea,.premiumContact .preparedMessage textarea{background:#161711;color:#f4e9d1;color-scheme:dark;border:1px solid #bfa15c50;border-radius:10px;min-height:50px;font-size:14px}
-.premiumContact input::placeholder,.premiumContact textarea::placeholder{color:#aaa18b}
-.premiumContact .optionalFields{border-color:#bfa15c40}.premiumContact .optionalFields summary{color:#e2c783}.premiumContact .optionalFields summary span{color:#aaa18b}
-.premiumContact .serviceSelection{background:#c5a65e18;color:#e2c783;border-radius:10px}
-.premiumContact .enquiryForm>.btn{border-radius:99px;background:#c5a65e;color:#10110d;min-height:50px;padding-inline:26px}
-.premiumContact .preparedMessage{border-color:#bfa15c40}.premiumContact .preparedMessage h3{color:#ead4a5}.premiumContact .preparedMessage>p,.premiumContact .preparedMessage small{color:#d4c7ab}
-.premiumContact .preparedActions .btn{color:#e2c783;border:1px solid #bfa15c;background:#161711;border-radius:99px}
-.premiumContact .enquiryForm :focus-visible{outline:2px solid #e2c783;outline-offset:3px}
+.contactInfoPanel,.premiumContact .enquiryShell{padding:32px;background:#080906b8;border:1px solid #a2a2a260;border-radius:20px;backdrop-filter:blur(10px)}
+.contactInfoPanel h2{font-size:34px;line-height:1.2;color:#b9b9b9;margin:22px 0}
+.contactInfoPanel>p,.premiumContact .contactNote p{font-size:14px;color:#d4d4d4;line-height:1.85}
+.premiumContact .contactNote{border-color:#a2a2a240}.premiumContact .contactNote span{color:#b9b9b9}
+.premiumContact .contactChannels{border-color:#a2a2a240}.premiumContact .contactChannels a,.premiumContact .contactChannels .eyebrow{color:#b9b9b9}
+.premiumContact .formIntro .eyebrow{color:#b9b9b9}.premiumContact .formIntro h2{font-size:30px;color:#d5d5d5}.premiumContact .formIntro p,.premiumContact .formHint{color:#c8c8c8}
+.premiumContact .enquiryForm label{color:#dbdbdb;font-weight:500}
+.premiumContact .enquiryForm input,.premiumContact .enquiryForm select,.premiumContact .enquiryForm textarea,.premiumContact .preparedMessage textarea{background:#161616;color:#eaeaea;color-scheme:dark;border:1px solid #a2a2a250;border-radius:10px;min-height:50px;font-size:14px}
+.premiumContact input::placeholder,.premiumContact textarea::placeholder{color:#a1a1a1}
+.premiumContact .optionalFields{border-color:#a2a2a240}.premiumContact .optionalFields summary{color:#c7c7c7}.premiumContact .optionalFields summary span{color:#a1a1a1}
+.premiumContact .serviceSelection{background:#a7a7a718;color:#c7c7c7;border-radius:10px}
+.premiumContact .enquiryForm>.btn{border-radius:99px;background:#a7a7a7;color:#10110d;min-height:50px;padding-inline:26px}
+.premiumContact .preparedMessage{border-color:#a2a2a240}.premiumContact .preparedMessage h3{color:#d5d5d5}.premiumContact .preparedMessage>p,.premiumContact .preparedMessage small{color:#c8c8c8}
+.premiumContact .preparedActions .btn{color:#c7c7c7;border:1px solid #a2a2a2;background:#161616;border-radius:99px}
+.premiumContact .enquiryForm :focus-visible{outline:2px solid #c7c7c7;outline-offset:3px}
 @media(max-width:800px){.premiumContact .contactGrid{grid-template-columns:1fr}.contactInfoPanel{padding:28px}}
 @media(max-width:600px){.fleetPage.premiumFleet,.premiumContact{padding-top:90px}.premiumFleet .fleetIntro.premiumServicesIntro{margin-top:12px;margin-bottom:36px}.premiumFleet .fleetIntro h1{font-size:33px;letter-spacing:.055em}.premiumFleet .fleetIntro p{font-size:14px}.premiumFleet .fleetSearchPanel{padding:20px;margin-inline:0}.contactInfoPanel,.premiumContact .enquiryShell{padding:23px;border-radius:16px}.contactInfoPanel h2{font-size:29px}.premiumContact .premiumServicesIntro{margin-top:12px;margin-bottom:34px}.premiumContact .enquiryForm input,.premiumContact .enquiryForm select,.premiumContact .enquiryForm textarea{font-size:16px}}

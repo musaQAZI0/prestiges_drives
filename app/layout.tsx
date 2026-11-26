@@ -18,9 +18,9 @@ import './card-borders.css';
 import './mobile-layout.css';
 import './spacing.css';
 import './badges.css';
-import './charcoal-yellow.css';
 import './hero-realism.css';
 import './vehicle-detail.css';
+import './silver-red-black.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ContactChannels from '@/components/ContactChannels';
@@ -29,8 +29,13 @@ export const metadata: Metadata = {
   title: 'Prestige Drives',
   description: 'Premium car rental services in Pakistan.',
   icons: {
-    icon: { url: '/favicon.svg', type: 'image/svg+xml' },
-    shortcut: '/favicon.svg'
+    icon: [
+      { url: '/prestige-icon-red-32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/prestige-icon-red-64.png', type: 'image/png', sizes: '64x64' },
+      { url: '/prestige-icon-red-192.png', type: 'image/png', sizes: '192x192' }
+    ],
+    shortcut: '/favicon-red-silver.ico',
+    apple: { url: '/prestige-icon-red-180.png', sizes: '180x180', type: 'image/png' }
   }
 };
 

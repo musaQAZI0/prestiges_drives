@@ -1,18 +1,18 @@
-.premiumAbout .servicesFlow{background:radial-gradient(ellipse at 80% 8%,#b49a5855,transparent 40%),radial-gradient(ellipse at 10% 60%,#9e7e3e44,transparent 40%),repeating-conic-gradient(from 80deg at 70% 30%,#080906 0deg,#8b743b30 30deg,#0c0c08 65deg)}
+.premiumAbout .servicesFlow{background:radial-gradient(ellipse at 80% 8%,#9a9a9a55,transparent 40%),radial-gradient(ellipse at 10% 60%,#80808044,transparent 40%),repeating-conic-gradient(from 80deg at 70% 30%,#080906 0deg,#74747430 30deg,#0c0c08 65deg)}
 .aboutStoryPanels{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
-.aboutStoryPanel,.aboutPhotoPanel{margin:0;border:1px solid #c5a65e;border-radius:18px;padding:34px;background:#080906cc;overflow:hidden}
-.aboutStoryPanel h2{font-family:Arial,sans-serif;font-size:26px;font-weight:600;letter-spacing:.065em;text-transform:uppercase;color:#d6b96f;margin:20px 0 26px}
-.aboutStoryPanel p{font-size:16px;line-height:1.85;color:#e8dcc3;margin-bottom:22px}
-.aboutStoryLink{display:inline-flex;gap:22px;align-items:center;border-bottom:1px solid #c5a65e;color:#e2c783;padding:10px 0;font-size:13px;min-height:44px}
+.aboutStoryPanel,.aboutPhotoPanel{margin:0;border:1px solid #a7a7a7;border-radius:18px;padding:34px;background:#080906cc;overflow:hidden}
+.aboutStoryPanel h2{font-family:Arial,sans-serif;font-size:26px;font-weight:600;letter-spacing:.065em;text-transform:uppercase;color:#b9b9b9;margin:20px 0 26px}
+.aboutStoryPanel p{font-size:16px;line-height:1.85;color:#dddddd;margin-bottom:22px}
+.aboutStoryLink{display:inline-flex;gap:22px;align-items:center;border-bottom:1px solid #a7a7a7;color:#c7c7c7;padding:10px 0;font-size:13px;min-height:44px}
 .aboutPhotoPanel{display:flex;flex-direction:column;padding:20px}
 .aboutPhotoPanel img{width:100%;height:100%;min-height:330px;object-fit:cover;object-position:75% center;border-radius:10px;flex:1}
-.aboutPhotoPanel figcaption{padding:18px 4px 0;font-size:8px;letter-spacing:.17em;color:#cfb77c}
+.aboutPhotoPanel figcaption{padding:18px 4px 0;font-size:8px;letter-spacing:.17em;color:#b7b7b7}
 .aboutValues{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;text-align:center;padding:64px 0}
-.aboutValues span{font-family:Georgia,serif;font-size:32px;color:#d6b96f}
-.aboutValues p{font-size:12px;letter-spacing:.04em;color:#e0d3b9;margin:12px 0 0;line-height:1.6}
+.aboutValues span{font-family:Georgia,serif;font-size:32px;color:#b9b9b9}
+.aboutValues p{font-size:12px;letter-spacing:.04em;color:#d4d4d4;margin:12px 0 0;line-height:1.6}
 .aboutProcess{padding:24px 0}.aboutProcess .premiumServiceCard{min-height:210px}
-.aboutProcess h3{font-family:Arial,sans-serif;font-size:21px;font-weight:600;color:#d6b96f;margin:0 0 18px}
-body:has(.premiumAbout) .footer,body:has(.premiumServices) .footer{background:#080906;border-top:1px solid #c5a65e30;color:#e0d3b9}
-body:has(.premiumServices) .footer h4{color:#d6b96f}
+.aboutProcess h3{font-family:Arial,sans-serif;font-size:21px;font-weight:600;color:#b9b9b9;margin:0 0 18px}
+body:has(.premiumAbout) .footer,body:has(.premiumServices) .footer{background:#080906;border-top:1px solid #a7a7a730;color:#d4d4d4}
+body:has(.premiumServices) .footer h4{color:#b9b9b9}
 @media(max-width:800px){.aboutStoryPanels{grid-template-columns:1fr}.aboutPhotoPanel img{min-height:0;aspect-ratio:1.6}.aboutValues{grid-template-columns:repeat(2,minmax(0,1fr));padding:40px 0;gap:30px}.aboutProcess .premiumServiceCards{grid-template-columns:1fr}}
 @media(max-width:600px){.aboutStoryPanel{padding:26px}.aboutStoryPanel p{font-size:14px}.aboutPhotoPanel{padding:14px}.aboutValues span{font-size:27px}.aboutValues p{font-size:11px}.premiumAbout .premiumServicesIntro h1{font-size:30px}}

@@ -4,29 +4,29 @@
 .heroCinematic .heroSlide img{object-position:center 58%}
 .heroCinematic .heroSlideImages::after{background:radial-gradient(ellipse at 50% 38%,#080b105c 0%,transparent 75%),linear-gradient(180deg,#080b1055 0%,#10100e66 35%,#100e0b70 70%,#06090cbb 100%)}
 .cinematicContent{position:relative;top:-32px;z-index:1;text-align:center;display:flex;flex-direction:column;align-items:center;padding:40px 0;animation:cinematicEntrance .9s ease both}
-.cinematicEyebrow{font-size:10px;color:#f1dfbb;letter-spacing:.35em;margin-bottom:24px}
-.hero.heroCinematic h1{font-family:Arial,sans-serif;font-size:clamp(44px,5.8vw,88px);font-weight:400;line-height:1.18;letter-spacing:.14em;text-transform:uppercase;color:#d9ba76;max-width:1200px;margin:0 0 10px;text-wrap:balance}
-.heroCinematic h1 span{color:#e6ca8c}
-.hero.heroCinematic p{font-size:clamp(16px,1.7vw,24px);line-height:1.7;letter-spacing:.14em;color:#f4ead6;max-width:760px;margin:0 0 36px}
-.cinematicBooking{display:inline-flex;align-items:center;justify-content:center;gap:24px;padding:15px 30px;min-height:56px;color:#f4ead6;border:1.5px solid #f4ead6;border-radius:99px;background:#090c1040;font-size:16px;font-weight:600;transition:background .25s,color .25s,transform .25s}
-.cinematicBooking:hover{background:#e6ca8c;color:#151618;transform:translateY(-2px)}
-.cinematicBooking:focus-visible{outline:3px solid #e6ca8c;outline-offset:5px}
+.cinematicEyebrow{font-size:10px;color:#e0e0e0;letter-spacing:.35em;margin-bottom:24px}
+.hero.heroCinematic h1{font-family:Arial,sans-serif;font-size:clamp(44px,5.8vw,88px);font-weight:400;line-height:1.18;letter-spacing:.14em;text-transform:uppercase;color:#bcbcbc;max-width:1200px;margin:0 0 10px;text-wrap:balance}
+.heroCinematic h1 span{color:#cbcbcb}
+.hero.heroCinematic p{font-size:clamp(16px,1.7vw,24px);line-height:1.7;letter-spacing:.14em;color:#ebebeb;max-width:760px;margin:0 0 36px}
+.cinematicBooking{display:inline-flex;align-items:center;justify-content:center;gap:24px;padding:15px 30px;min-height:56px;color:#ebebeb;border:1.5px solid #ebebeb;border-radius:99px;background:#090c1040;font-size:16px;font-weight:600;transition:background .25s,color .25s,transform .25s}
+.cinematicBooking:hover{background:#cbcbcb;color:#151618;transform:translateY(-2px)}
+.cinematicBooking:focus-visible{outline:3px solid #cbcbcb;outline-offset:5px}
 .heroCinematic .heroSlideControls{left:0;right:0;bottom:34px;justify-content:center}
 .siteHeader.cinematicHeader{background:transparent;border:0;box-shadow:none;backdrop-filter:none}
 .cinematicHeader .navWrap{position:relative;min-height:90px;justify-content:space-between}
 .cinematicHeader .brandMark{flex-basis:180px}
-.cinematicHeader .headerCta{margin-left:auto;border:1px solid #d9ba76;border-radius:99px;color:#e6ca8c;padding:10px 22px;background:#11161b40}
+.cinematicHeader .headerCta{margin-left:auto;border:1px solid #bcbcbc;border-radius:99px;color:#cbcbcb;padding:10px 22px;background:#11161b40}
 .siteHeader.cinematicHeader.isScrolled,.siteHeader.cinematicHeader.menuOpen{background:#101213f5}
 @media(min-width:801px){
  .cinematicHeader .navWrap{display:grid;grid-template-columns:180px minmax(0,1fr) 180px;align-items:center;gap:16px}
  .cinematicHeader .headerCta{justify-self:end;margin:0}
- .cinematicHeader .siteNav{position:static;transform:none;justify-self:center;margin:0;gap:4px;padding:5px;border:1.5px solid #eee1c5;border-radius:99px;background:#29313290;backdrop-filter:blur(18px);white-space:nowrap;transition:background .3s}
- .cinematicHeader .siteNav a{font-size:13px;letter-spacing:.02em;text-transform:none;padding:12px 28px;border-radius:99px;color:#dfc589;transition:background .25s,color .25s}
- .cinematicHeader .siteNav a:hover,.cinematicHeader .siteNav a[aria-current=page]{background:#f4ead62b;color:#ffe2a1}
+ .cinematicHeader .siteNav{position:static;transform:none;justify-self:center;margin:0;gap:4px;padding:5px;border:1.5px solid #e2e2e2;border-radius:99px;background:#29313290;backdrop-filter:blur(18px);white-space:nowrap;transition:background .3s}
+ .cinematicHeader .siteNav a{font-size:13px;letter-spacing:.02em;text-transform:none;padding:12px 28px;border-radius:99px;color:#c6c6c6;transition:background .25s,color .25s}
+ .cinematicHeader .siteNav a:hover,.cinematicHeader .siteNav a[aria-current=page]{background:#ebebeb2b;color:#e3e3e3}
  .cinematicHeader.isScrolled .siteNav{background:#252a2b}
 }
 @media(min-width:801px) and (max-width:1100px){.cinematicHeader .navWrap{grid-template-columns:158px minmax(0,1fr) 130px;gap:10px}.cinematicHeader .siteNav a{padding:12px 13px;font-size:12px}.cinematicHeader .headerCta{padding:10px 14px}}
-@media(max-width:800px){.hero.heroCinematic{min-height:760px;min-height:100svh;padding:110px 0 90px}.cinematicHeader .navWrap{min-height:72px}.cinematicHeader .menuToggle span{background:#e6ca8c}.cinematicHeader .siteNav{background:#15191c;border-color:#635b49}.hero.heroCinematic h1{font-size:clamp(32px,6vw,52px);letter-spacing:.09em}.hero.heroCinematic p{font-size:16px;letter-spacing:.08em}.cinematicHeader .headerCta{font-size:10px;padding:10px 14px}}
+@media(max-width:800px){.hero.heroCinematic{min-height:760px;min-height:100svh;padding:110px 0 90px}.cinematicHeader .navWrap{min-height:72px}.cinematicHeader .menuToggle span{background:#cbcbcb}.cinematicHeader .siteNav{background:#15191c;border-color:#5b5b5b}.hero.heroCinematic h1{font-size:clamp(32px,6vw,52px);letter-spacing:.09em}.hero.heroCinematic p{font-size:16px;letter-spacing:.08em}.cinematicHeader .headerCta{font-size:10px;padding:10px 14px}}
 @media(max-width:600px){.hero.heroCinematic{min-height:680px;min-height:92svh;padding:100px 0 90px}.cinematicContent{width:calc(100% - 36px);padding:32px 0}.cinematicEyebrow{font-size:8px;letter-spacing:.22em;margin-bottom:22px}.hero.heroCinematic h1{font-size:clamp(27px,7vw,42px);line-height:1.3;letter-spacing:.065em;margin-bottom:10px}.hero.heroCinematic p{font-size:14px;letter-spacing:.05em;line-height:1.85;margin-bottom:28px}.heroCinematic .heroSlide img,.heroCinematic .heroSlide:nth-child(2) img{object-position:72% center}.heroCinematic .heroSlideImages::after{background:linear-gradient(180deg,#06090c55,#06090c99 45%,#06090ca6)}.cinematicBooking{font-size:14px;min-height:52px;padding:13px 26px}.heroCinematic .heroSlideControls{bottom:25px}.cinematicHeader .brandMark{flex-basis:128px}.cinematicHeader .navWrap{min-height:64px}.heroCinematic+.searchOverlap{margin-top:0;padding-top:18px;background:var(--ivory)}}
 @keyframes cinematicEntrance{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){.cinematicContent{animation:none}.cinematicBooking,.cinematicHeader .siteNav,.cinematicHeader .siteNav a{transition:none}.cinematicBooking:hover{transform:none}}

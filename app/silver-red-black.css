@@ -1,0 +1,76 @@
+/* Black surfaces, silver typography, and red actions. */
+:root{--surface-page:#090a0c;--surface-card:#15171b;--surface-input:#101216;--accent:#d92f3d;--accent-hover:#ef4050;--text-primary:#f1f2f4;--text-secondary:#aeb3bb;--gold:var(--accent);--champagne:#cbd0d8;--bronze:#cbd0d8}
+html body{background:var(--surface-page);color:var(--text-primary)}
+#main-content,#main-content .homeNatural,#main-content .homeFeaturedFleet,#main-content .homeWhyChoose,
+#main-content .premiumServices,#main-content .fleetPage,#main-content .vehicleDetailIntro,
+#main-content .section,#main-content .ivorySection,#main-content .customServicePanel,
+#main-content .aboutStoryPanel,#main-content .aboutPhotoPanel{background:var(--surface-page)}
+html body .siteHeader.siteHeader,html body .siteHeader.cinematicHeader.isScrolled,
+html body .siteHeader.cinematicHeader.menuOpen,html body .cinematicHeader .siteNav.isOpen{background:#0c0d10}
+#main-content .hero.heroCinematic{background:#090a0c!important}
+#main-content .vehicleCard,#main-content .vehicleCardBody,#main-content .vehicleImageWrap,
+#main-content .vehiclePlaceholder,#main-content .homeBenefit,#main-content .premiumServiceCard,
+#main-content .enquiryShell,#main-content .detailAside,#main-content .detailFacts>div,
+#main-content .fleetSearchPanel,#main-content .searchNotice{background:var(--surface-card)}
+#main-content input,#main-content select,#main-content textarea{background:var(--surface-input);color:var(--text-primary);border-color:#42464f}
+#main-content input::placeholder,#main-content textarea::placeholder{color:#aeb1b5}
+#main-content h1,#main-content h2,#main-content h3,#main-content .vehicleCard h3 a{color:var(--text-primary)}
+#main-content p,#main-content .vehicleCardSummary{color:var(--text-secondary)}
+#main-content .eyebrow,#main-content .homeEyebrow,#main-content .premiumServicesEyebrow,
+#main-content .cinematicEyebrow,#main-content .premiumServiceNumber,#main-content .homeBenefitNumber,
+#main-content .textLink,#main-content .vehicleDetailsLink,#main-content .backLink{color:var(--champagne)}
+#main-content .hero h1 span,#main-content .hero h1 em{color:var(--champagne)}
+#main-content .btnPrimary,#main-content .homePrimaryLink,#main-content .customServicePrimary,
+#main-content .vehicleEnquiryLink,#main-content .fleetServiceOption.active{background:var(--accent);border-color:var(--accent);color:#ffffff}
+#main-content .btnPrimary:hover,#main-content .homePrimaryLink:hover,#main-content .customServicePrimary:hover{background:var(--accent-hover);color:#ffffff}
+html body .arrowIcon,html body .collectionArrow{background:var(--accent);border-color:var(--accent);color:#ffffff}
+html body a:hover .arrowIcon,html body button:hover .arrowIcon{background:var(--accent-hover)}
+html body .collectionArrow .arrowIcon,html body .fleetServiceOption .arrowIcon{background:transparent;border:0;color:inherit}
+#main-content .vehicleCard,#main-content .homeBenefit,#main-content .premiumServiceCard,#main-content .serviceStory,#main-content .collectionPick{border-color:#353942}
+#main-content .vehicleCard:hover,#main-content .vehicleCard:focus-within,#main-content .premiumServiceCard:hover{border-color:var(--accent)}
+#main-content .vehicleImageWrap{border-bottom-color:#353942}
+#main-content .premiumBadge{background:#17191e;border-color:#4a4e58;color:var(--champagne)}
+#main-content .premiumBadgeIcon{background:#d92f3d12;border-color:#d92f3d40;color:var(--champagne)}
+#main-content .premiumBadgeLabel{background:none;color:inherit}
+#main-content .fleetServiceOption{background:#15171b;border-color:#353942;color:#d5d8de}
+#main-content .servicesGoldRule{background:var(--accent)}
+#main-content .btnGoldOutline,#main-content .btnOutline,#main-content .customServiceSecondary,#main-content .cinematicBooking{border-color:#777e8a;color:var(--champagne)}
+html body .footer.footer,html body .footer.footer .footerGrid{background:#0c0d10}
+html body .footer h4,html body .footerEnquire{color:var(--champagne);border-color:#4a4e58}
+html body .footer p,html body .footer li a,html body .footerBottom{color:#aeb3bb}
+::selection{background:#d92f3d;color:#ffffff}
+/* Red is reserved for actions; silver carries typography and navigation. */
+:root{--border-subtle:#30343c;--white:#f1f2f4;--ink:#090a0c;--charcoal:#15171b;--ivory:#090a0c;--stone:#30343c}
+#main-content .hero.heroCinematic{background:var(--surface-page)!important}
+#main-content .hero.heroCinematic h1,#main-content .hero.heroCinematic h1 span{color:var(--text-primary)}
+#main-content .hero.heroCinematic p{color:var(--champagne)}
+#main-content .heroCinematic .heroSlideImages::after{background:linear-gradient(180deg,#090a0c80,transparent 55%,#090a0c 100%)}
+#main-content .heroCinematic .cinematicBooking{background:var(--accent);border-color:var(--accent);color:#fff;backdrop-filter:none}
+#main-content .heroCinematic .cinematicBooking:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:#fff}
+html body .brandMark img,html body .footerLogo img{filter:none;background:transparent}
+html body .cinematicHeader .siteNav{background:#111318a6;border-color:#787f8b}
+html body .cinematicHeader .siteNav a,html body .homeHeader .siteNav a{color:var(--champagne)}
+html body .cinematicHeader .siteNav a[aria-current=page]{background:#ffffff14;color:#fff;box-shadow:inset 0 -2px var(--accent)}
+html body .cinematicHeader .siteNav a:hover{background:#ffffff0d;color:#fff}
+html body .siteHeader .headerCta,html body .homeHeader:not(.isScrolled) .headerCta{color:#f1f2f4;border-color:var(--accent);background:#d92f3d12}
+html body .menuToggle span{background:var(--champagne)}
+#main-content .homeNatural .searchFields .btn,#main-content .premiumFleet .fleetSearchFields .btn,
+#main-content .premiumFleet .vehicleEnquiryLink,#main-content .premiumFleet.refinedPages .fleetServiceOption.active,
+#main-content .vdPrimary{background:var(--accent);border-color:var(--accent);color:#fff}
+#main-content .homeNatural .searchFields .btn:hover,#main-content .vdPrimary:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
+#main-content .premiumFleet.refinedPages .fleetServiceOption{background:var(--surface-card);border-color:var(--border-subtle);color:var(--champagne)}
+#main-content .premiumBadge,#main-content .vehicleCardBadges .premiumBadge{background:#111318f2;border-color:#555b66;color:var(--champagne);box-shadow:none}
+#main-content .premiumBadgeIcon,#main-content .vehicleCardBadges .premiumBadgeIcon{background:#ffffff08;border-color:#ffffff20;color:var(--champagne)}
+#main-content .homeNatural .searchFields label,#main-content .fleetSearchFields label,#main-content .formGrid label,
+#main-content .contactChannels a{color:var(--champagne)}
+#main-content .homeNatural .searchFields input,#main-content .homeNatural .searchFields select{background:var(--surface-input);color:var(--text-primary);border-color:#42464f}
+#main-content .homeNatural .homeSectionBadge,#main-content .homeFleetEnd .btn,
+#main-content .premiumServicesIntro h1 span,#main-content .fleetIntro h1 span{color:var(--champagne);border-color:#555b66}
+#main-content .vdPrimary{color:#fff}
+#main-content .vdSecondary{color:var(--champagne)}
+#main-content .vdQuote{border-color:var(--border-subtle)}
+html body .mobileContact{background:#101216;color:#f1f2f4;border-color:var(--accent);box-shadow:0 6px 24px #0004}
+html body :focus-visible{outline-color:var(--accent)}
+html body .contactChannels a:hover,html body .footer a:hover{color:#fff}
+::selection{background:var(--accent);color:#fff}
+@media(max-width:800px){#main-content .heroCinematic .heroSlideImages::after{background:linear-gradient(180deg,#090a0c55,transparent 58%,transparent 83%,#090a0c 100%)}#main-content .heroCinematic .heroFleetLink{min-height:44px;display:inline-flex;align-items:center;justify-content:center;margin-top:8px}}

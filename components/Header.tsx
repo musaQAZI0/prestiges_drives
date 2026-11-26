@@ -50,7 +50,7 @@ export default function Header() {
     };
   }, [pathname]);
   return <header className={`siteHeader ${pathname === '/' ? 'homeHeader' : ''} ${(['/', '/services', '/about', '/fleet', '/contact'].includes(pathname) || pathname.startsWith('/fleet/')) ? 'cinematicHeader' : ''} ${scrolled ? 'isScrolled' : ''} ${open ? 'menuOpen' : ''} ${atBottom && !open ? 'isHidden' : ''} `}><div className="container navWrap">
-    <Link href="/" className="brandMark" aria-label="Prestige Drives home" onClick={() => setOpen(false)}><Image src="/assets/optimized/logo/prestige-drives-transparent-v3.webp" alt="Prestige Drives" width={180} height={81} priority sizes="205px" /></Link>
+    <Link href="/" className="brandMark" aria-label="Prestige Drives home" onClick={() => setOpen(false)}><Image src="/assets/optimized/logo/prestige-drives-silver-red-v1.webp" alt="Prestige Drives" width={180} height={81} priority sizes="205px" /></Link>
     <nav id="main-navigation" className={`siteNav ${open ? 'isOpen' : ''}`} aria-label="Main navigation">{links.map(link => <Link key={link.href} href={link.href} prefetch={true} aria-current={(pathname === link.href || (link.href !== '/' && pathname.startsWith(`${link.href}/`))) ? 'page' : undefined} onClick={() => setOpen(false)}>{link.label}</Link>)}</nav>
     <Link href="/contact" prefetch={true} className="headerCta" onClick={() => setOpen(false)}>Get a quote</Link>
     <button type="button" className="menuToggle" aria-controls="main-navigation" aria-expanded={open} aria-label={open ? 'Close menu' : 'Open menu'} onClick={() => { if (!open) links.filter(link => link.href !== pathname).forEach(link => router.prefetch(link.href)); setOpen(!open); }}><span /><span /><span /></button>

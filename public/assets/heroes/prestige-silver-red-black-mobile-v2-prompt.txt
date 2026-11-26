@@ -1,0 +1,3 @@
+Built-in image_gen edit/recomposition. Reference: prestige-silver-red-black-v1.webp.
+Prompt: undefined
+Output: /assets/optimized/heroes/prestige-silver-red-black-mobile-v2.webp.

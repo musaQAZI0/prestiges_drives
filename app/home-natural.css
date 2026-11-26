@@ -1,49 +1,49 @@
 /* Solid black homepage sections with gold accents. */
-.homeNatural{background:#000;color:#f0e5ce}
-.homeNatural h2{font-family:Arial,sans-serif;font-size:clamp(30px,3.2vw,44px);font-weight:500;line-height:1.2;letter-spacing:-.035em;color:#f0e5ce;margin:14px 0 20px}
-.homeNatural p{color:#c8bda5;line-height:1.8}
-.homeEyebrow{font-size:10px;font-weight:600;letter-spacing:.18em;color:#d6b96f}
+.homeNatural{background:#000;color:#e6e6e6}
+.homeNatural h2{font-family:Arial,sans-serif;font-size:clamp(30px,3.2vw,44px);font-weight:500;line-height:1.2;letter-spacing:-.035em;color:#e6e6e6;margin:14px 0 20px}
+.homeNatural p{color:#bebebe;line-height:1.8}
+.homeEyebrow{font-size:10px;font-weight:600;letter-spacing:.18em;color:#b9b9b9}
 .homeNatural .homeBooking{padding-top:30px;padding-bottom:0}
-.homeNatural .searchModule{background:transparent;border:0;border-bottom:1px solid #bfa15c35;border-radius:0;padding:0 0 30px;box-shadow:none;backdrop-filter:none}
+.homeNatural .searchModule{background:transparent;border:0;border-bottom:1px solid #a2a2a235;border-radius:0;padding:0 0 30px;box-shadow:none;backdrop-filter:none}
 .homeNatural .searchIntro{display:none}
 .homeNatural .searchFields{margin-top:0}
-.homeNatural .searchFields label{color:#e7dac0;font-size:11px}
-.homeNatural .searchFields input,.homeNatural .searchFields select{background:#161811;color:#f0e5ce;color-scheme:dark;border:1px solid #bfa15c40;border-radius:4px;min-height:50px}
-.homeNatural .searchModule input::placeholder{color:#aaa18b}
-.homeNatural .searchFields .btn,.homePrimaryLink{background:#c5a65e;border:1px solid #c5a65e;color:#10110d;border-radius:4px;min-height:50px}
+.homeNatural .searchFields label{color:#dbdbdb;font-size:11px}
+.homeNatural .searchFields input,.homeNatural .searchFields select{background:#171717;color:#e6e6e6;color-scheme:dark;border:1px solid #a2a2a240;border-radius:4px;min-height:50px}
+.homeNatural .searchModule input::placeholder{color:#a1a1a1}
+.homeNatural .searchFields .btn,.homePrimaryLink{background:#a7a7a7;border:1px solid #a7a7a7;color:#10110d;border-radius:4px;min-height:50px}
 .homeWelcome{display:grid;grid-template-columns:1fr 2fr;gap:50px;padding-top:90px;padding-bottom:90px;align-items:start}
 .homeWelcome>.homeEyebrow{padding-top:22px}
 .homeWelcome p{max-width:650px;margin:0;font-size:17px}
 .homeNatural .homeFeaturedFleet{background:#000;padding:80px 0}
 .homeNatural .homeSectionIntro{max-width:650px;text-align:left;margin:0 0 38px}
-.homeNatural .homeSectionBadge{padding:0;border:0;background:none;border-radius:0;color:#d6b96f;font-size:10px;letter-spacing:.18em;text-transform:uppercase}
+.homeNatural .homeSectionBadge{padding:0;border:0;background:none;border-radius:0;color:#b9b9b9;font-size:10px;letter-spacing:.18em;text-transform:uppercase}
 .homeNatural .homeSectionBadge::before{content:none}
-.homeNatural .homeSectionIntro h2{color:#f0e5ce;font-weight:500}
-.homeNatural .homeSectionIntro p{color:#c8bda5}
+.homeNatural .homeSectionIntro h2{color:#e6e6e6;font-weight:500}
+.homeNatural .homeSectionIntro p{color:#bebebe}
 .homeNatural .vehicleCard{background:#000;border:0;border-radius:4px;box-shadow:none;animation:none}
 .homeNatural .vehicleCard:hover{transform:none;box-shadow:none}
 .homeNatural .vehicleCard .vehicleImageWrap{aspect-ratio:3/2;background:#000;border-radius:4px}
 .homeNatural .vehicleImage{object-fit:contain}
 .homeNatural .vehicleCardBadges,.homeNatural .vehicleCardKicker,.homeNatural .vehicleCardSummary,.homeNatural .vehicleEnquiryLink{display:none}
 .homeNatural .vehicleCardBody{padding:22px 20px;background:#000}
-.homeNatural .vehicleCardBody h3,.homeNatural .vehicleCardBody h3 a{color:#f0e5ce;font-size:24px;margin:0 0 16px;font-weight:500}
+.homeNatural .vehicleCardBody h3,.homeNatural .vehicleCardBody h3 a{color:#e6e6e6;font-size:24px;margin:0 0 16px;font-weight:500}
 .homeNatural .cardActions{border:0;padding:0}
-.homeNatural .vehicleDetailsLink{color:#e2c783;font-size:12px}
+.homeNatural .vehicleDetailsLink{color:#c7c7c7;font-size:12px}
 .homeNatural .homeFleetEnd{margin-top:32px}
-.homeNatural .homeFleetEnd p{color:#b6aa90}
-.homeNatural .homeFleetEnd .btn{border-radius:4px;color:#e2c783;border-color:#bfa15c80;background:transparent}
+.homeNatural .homeFleetEnd p{color:#ababab}
+.homeNatural .homeFleetEnd .btn{border-radius:4px;color:#c7c7c7;border-color:#a2a2a280;background:transparent}
 .homeNatural .homeWhyChoose{padding:90px 0;background:#000;border:0}
 .homeNatural .homeBenefitsGrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:42px;margin-top:46px}
-.homeNatural .homeBenefit{padding:24px 0 0;text-align:left;border:0;border-top:1px solid #bfa15c40;border-radius:0;background:none;box-shadow:none}
-.homeBenefitNumber{font-size:12px;color:#d6b96f;display:block;margin-bottom:20px}
-.homeNatural .homeBenefit h3{color:#f0e5ce;font-size:19px;font-weight:500;margin-bottom:12px}
-.homeNatural .homeBenefit p{color:#c8bda5;font-size:15px}
-.homeClosing{display:flex;justify-content:space-between;align-items:center;gap:40px;padding-top:60px;padding-bottom:75px;border-top:1px solid #bfa15c35}
+.homeNatural .homeBenefit{padding:24px 0 0;text-align:left;border:0;border-top:1px solid #a2a2a240;border-radius:0;background:none;box-shadow:none}
+.homeBenefitNumber{font-size:12px;color:#b9b9b9;display:block;margin-bottom:20px}
+.homeNatural .homeBenefit h3{color:#e6e6e6;font-size:19px;font-weight:500;margin-bottom:12px}
+.homeNatural .homeBenefit p{color:#bebebe;font-size:15px}
+.homeClosing{display:flex;justify-content:space-between;align-items:center;gap:40px;padding-top:60px;padding-bottom:75px;border-top:1px solid #a2a2a235}
 .homeClosing h2{font-size:clamp(28px,3vw,38px);margin-bottom:12px}
 .homeClosing p{margin:0}
 .homePrimaryLink{display:inline-flex;align-items:center;justify-content:center;gap:30px;padding:14px 25px;font-size:14px;white-space:nowrap}
-.homeNatural a:focus-visible,.homeNatural button:focus-visible{outline:2px solid #d6b96f;outline-offset:5px}
-.homePrimaryLink:hover{background:#c4ad77}
+.homeNatural a:focus-visible,.homeNatural button:focus-visible{outline:2px solid #b9b9b9;outline-offset:5px}
+.homePrimaryLink:hover{background:#aeaeae}
 body:has(.homeNatural) .footer,body:has(.homeNatural) .footer .footerGrid{background:#000;backdrop-filter:none}
 @media(max-width:1000px){.homeNatural .vehicleGrid{gap:18px}.homeNatural .vehicleCardBody{padding:20px 16px}.homeNatural .vehicleCardBody h3 a{font-size:21px}}
 @media(max-width:700px){.homeNatural .homeBooking{padding-top:24px}.homeNatural .searchFields{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 10px}.homeNatural .searchFields label:nth-child(-n+2),.homeNatural .searchFields .btn{grid-column:1/-1}.homeNatural .searchFields input,.homeNatural .searchFields select{font-size:16px;min-width:0}.homeWelcome{grid-template-columns:1fr;gap:10px;padding-top:54px;padding-bottom:54px}.homeWelcome>.homeEyebrow{padding:0}.homeWelcome p{font-size:16px}.homeNatural .homeFeaturedFleet{padding:54px 0}.homeNatural .vehicleGrid{grid-template-columns:1fr;gap:28px}.homeNatural .homeFleetEnd{align-items:flex-start;text-align:left;gap:20px}.homeNatural .homeWhyChoose{padding:56px 0}.homeNatural .homeBenefitsGrid{grid-template-columns:1fr;gap:26px;margin-top:30px}.homeNatural .homeBenefit{padding-top:22px}.homeClosing{flex-direction:column;align-items:flex-start;padding-top:46px;padding-bottom:54px;gap:25px}.homeNatural .homeSectionIntro h2{font-size:32px}}

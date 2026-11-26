@@ -6,7 +6,7 @@
 .refinedPages .premiumServiceCard,
 .serviceStory,
 .collectionPick {
-  border: 1px solid #8f7745;
+  border: 1px solid #787878;
   border-radius: 14px;
   overflow: hidden;
 }
@@ -19,7 +19,7 @@
 }
 .homeNatural .vehicleCard .vehicleImageWrap {
   border-radius: 0;
-  border-bottom: 1px solid #8f7745;
+  border-bottom: 1px solid #787878;
 }
 @media (hover: hover) {
   .vehicleCard:hover,
@@ -29,7 +29,7 @@
   .refinedPages .premiumServiceCard:hover,
   .serviceStory:hover,
   .collectionPick:hover {
-    border-color: #d6b96f;
+    border-color: #b9b9b9;
   }
 }
 .vehicleCard:focus-within,
@@ -38,7 +38,7 @@
 .refinedPages .premiumServiceCard:focus-within,
 .serviceStory:focus-within,
 .collectionPick:focus-within {
-  border-color: #d6b96f;
+  border-color: #b9b9b9;
 }
 @media (max-width: 600px) {
   .homeNatural .homeBenefit,

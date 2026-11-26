@@ -1,9 +1,9 @@
-.premiumFleet .fleetIntro.premiumServicesIntro{margin:8px auto 0;padding:32px 24px 80px;border:1px solid #bfa15c45;border-radius:26px;background:radial-gradient(ellipse at top left,#c5a65e19,transparent 70%),#0c0e0ab3}
-.premiumFleet .fleetIntro>.eyebrow{display:inline-flex;padding:9px 16px;border-radius:99px;background:#c5a65e1c;color:#e2c783;font-size:9px}
+.premiumFleet .fleetIntro.premiumServicesIntro{margin:8px auto 0;padding:32px 24px 80px;border:1px solid #a2a2a245;border-radius:26px;background:radial-gradient(ellipse at top left,#a7a7a719,transparent 70%),#0c0e0ab3}
+.premiumFleet .fleetIntro>.eyebrow{display:inline-flex;padding:9px 16px;border-radius:99px;background:#a7a7a71c;color:#c7c7c7;font-size:9px}
 .premiumFleet .fleetIntro h1{font-size:clamp(32px,3.6vw,50px);letter-spacing:.035em;text-transform:none}
 .premiumFleet .fleetIntro .servicesGoldRule{display:none}.premiumFleet .fleetIntro p{font-size:15px;letter-spacing:.02em;max-width:710px}
 .premiumFleet .fleetSearchPanel{margin:-48px 26px 28px;border-radius:22px;background:#11130ff5;box-shadow:0 16px 34px #0003}
-.premiumFleet .fleetResultSummary{display:flex;gap:5px;align-items:center;margin:24px 0 18px;color:#d6c7a9}
-.premiumFleet .fleetResultSummary strong{color:#f0e5ce}.premiumFleet .fleetResultSummary>span{margin-left:auto;color:#bda77a;font-size:12px}
+.premiumFleet .fleetResultSummary{display:flex;gap:5px;align-items:center;margin:24px 0 18px;color:#c8c8c8}
+.premiumFleet .fleetResultSummary strong{color:#e6e6e6}.premiumFleet .fleetResultSummary>span{margin-left:auto;color:#a8a8a8;font-size:12px}
 .fleetBackHome{display:flex;justify-content:center;margin:42px 0 20px}.fleetBackHome a{display:flex;gap:24px;align-items:center;justify-content:center;border-radius:99px;padding:16px 28px;font-size:13px;min-height:52px}
 @media(max-width:600px){.premiumFleet .fleetIntro.premiumServicesIntro{padding:26px 18px 68px}.premiumFleet .fleetIntro h1{font-size:33px}.premiumFleet .fleetSearchPanel{margin:-40px 10px 24px}.premiumFleet .fleetIntro p{font-size:13px}.premiumFleet .fleetResultSummary{font-size:12px}.premiumFleet .fleetResultSummary>span{font-size:10px}}
