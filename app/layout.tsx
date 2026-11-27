@@ -30,12 +30,12 @@ export const metadata: Metadata = {
   description: 'Premium car rental services in Pakistan.',
   icons: {
     icon: [
-      { url: '/prestige-icon-red-32.png', type: 'image/png', sizes: '32x32' },
-      { url: '/prestige-icon-red-64.png', type: 'image/png', sizes: '64x64' },
-      { url: '/prestige-icon-red-192.png', type: 'image/png', sizes: '192x192' }
+      { url: '/prestige-icon-red-32.png?v=2', type: 'image/png', sizes: '32x32' },
+      { url: '/prestige-icon-red-64.png?v=2', type: 'image/png', sizes: '64x64' },
+      { url: '/prestige-icon-red-192.png?v=2', type: 'image/png', sizes: '192x192' }
     ],
-    shortcut: '/favicon-red-silver.ico',
-    apple: { url: '/prestige-icon-red-180.png', sizes: '180x180', type: 'image/png' }
+    shortcut: '/favicon-red-silver.ico?v=2',
+    apple: { url: '/prestige-icon-red-180.png?v=2', sizes: '180x180', type: 'image/png' }
   }
 };
 
